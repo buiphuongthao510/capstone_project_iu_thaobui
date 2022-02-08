@@ -68,7 +68,7 @@
             </div>
           </div>
 
-          <div class="button">Save Profile</div>
+          <button type="submit">Save Profile</button>
         
         </div>
       </form>

@@ -38,11 +38,31 @@
           <div>Help</div>
         </div>
       </div>
+      <?php 
+            include './includes/dbConnect.php';
+            session_start();
+
+            $user_email = $_SESSION['$email'];
+            //select statements
+            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE $user_email"; 
+
+            $select = mysqli_query($conn, $sql_select);
+
+            // display contents 
+            if (!$select) {
+                echo 'error';
+            } else {
+                while ($data = mysqli_fetch_assoc($select)) {
+                        echo "<div>First name: {$data['first_name']}</div>" ;
+                    
+                }
+            }
+        ?>
       <div class="right">
         <div class="title gi">General Information</div>
         <div class="line">
           <div class="form-item">
-            <div>First name</div>
+            <div>First name: </div>
             <!-- <input type="text" placeholder="Sam" /> -->
           </div>
           <div class="form-item">

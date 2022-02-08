@@ -38,37 +38,40 @@
           <div>Help</div>
         </div>
       </div>
-      <div class="right">
-        <div class="title gi">General Information</div>
-        <div class="line">
-          <div class="form-item">
-            <div>First name</div>
-            <input type="text" placeholder="Sam" />
+      <form action="update-profile.php" method="POST">
+        <div class="right">
+          <div class="title gi">General Information</div>
+          <div class="line">
+            <div class="form-item">
+              <div>First name</div>
+              <input type="text" placeholder="Sam" name="fname"/>
+            </div>
+            <div class="form-item">
+              <div>Last name</div>
+              <input type="text" placeholder="Fischer" name="lname"/>
+            </div>
           </div>
-          <div class="form-item">
-            <div>Last name</div>
-            <input type="text" placeholder="Fischer" />
+          <div class="line">
+            <div class="form-item">
+              <div>Date of Birth</div>
+              <input type="text" placeholder="mm/dd/yyyy" name="dob"/>
+            </div>
+            <div class="form-item">
+              <div>Gender</div>
+              <input type="text" placeholder="Fischer" name="gender"/>
+            </div>
           </div>
-        </div>
-        <div class="line">
-          <div class="form-item">
-            <div>Date of Birth</div>
-            <input type="text" placeholder="mm/dd/yyyy" />
+          <div class="line">
+            <div class="form-item">
+              <div>Email</div>
+              <input type="text" placeholder="sfsich@email.com" name="email"/>
+            </div>
           </div>
-          <div class="form-item">
-            <div>Gender</div>
-            <input type="text" placeholder="Fischer" />
-          </div>
-        </div>
-        <div class="line">
-          <div class="form-item">
-            <div>Email</div>
-            <input type="text" placeholder="sfsich@email.com" />
-          </div>
-        </div>
 
-        <div class="button">Save Profile</div>
-      </div>
+          <div class="button">Save Profile</div>
+        
+        </div>
+      </form>
     </section>
     <?php include './includes/footer.php'?>
   </body>

@@ -10,6 +10,16 @@ $dob = $_POST['dob'];
 $gender = $_POST['gender'];
 $email = $_POST['email'];
 
-echo $fname;
+//replace data
+$sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$dob', email = '$email'";
+
+$update = mysqli_query($conn, $sql);
+if (!$update) {
+    // echo mysqli_error();
+    echo "BROKEN";
+} else {
+    echo '<script>alert("Succesfully Updated")</script>';
+    header("Location: https://cgi.luddy.indiana.edu/~team21/front/front/4/profile.php");
+}
 
 ?>

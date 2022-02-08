@@ -16,7 +16,9 @@ $sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$
 $update = mysqli_query($conn, $sql);
 if (!$update) {
     // echo mysqli_error();
-    echo "BROKEN";
+    // echo "BROKEN";
+    echo $sql;
+    
 } else {
     echo '<script>alert("Succesfully Updated")</script>';
     header("Location: https://cgi.luddy.indiana.edu/~team21/front/front/4/profile.php");

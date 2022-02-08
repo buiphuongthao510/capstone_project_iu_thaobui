@@ -50,7 +50,7 @@
 
             // display contents 
             if (!$select) {
-                echo 'error';
+                echo $sql_select;
             } else {
                 while ($data = mysqli_fetch_assoc($select)) {
                         echo "<div>First name: {$data['first_name']}</div>" ;

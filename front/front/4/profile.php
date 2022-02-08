@@ -9,19 +9,7 @@
   </head>
 
   <body>
-    <header>
-      <div class="logo">Youthon</div>
-      <div class="menu-list">
-        <a href="">Events</a>
-        <a href="">Organizations</a>
-        <a href="">Donation</a>
-        <a href="">Search</a>
-      </div>
-      <div class="button-wrap">
-        <div class="button login">Log in</div>
-        <div class="button">Register</div>
-      </div>
-    </header>
+    <?php include './includes/header.php'; ?>
 
     <section class="nav">
       <div class="left">
@@ -55,43 +43,33 @@
         <div class="line">
           <div class="form-item">
             <div>First name</div>
-            <input type="text" placeholder="Sam" />
+            <!-- <input type="text" placeholder="Sam" /> -->
           </div>
           <div class="form-item">
             <div>Last name</div>
-            <input type="text" placeholder="Fischer" />
+            <!-- <input type="text" placeholder="Fischer" /> -->
           </div>
         </div>
         <div class="line">
           <div class="form-item">
             <div>Date of Birth</div>
-            <input type="text" placeholder="mm/dd/yyyy" />
+            <!-- <input type="text" placeholder="mm/dd/yyyy" /> -->
           </div>
           <div class="form-item">
             <div>Gender</div>
-            <input type="text" placeholder="Fischer" />
+            <!-- <input type="text" placeholder="Fischer" /> -->
           </div>
         </div>
         <div class="line">
           <div class="form-item">
             <div>Email</div>
-            <input type="text" placeholder="sfsich@email.com" />
+            <!-- <input type="text" placeholder="sfsich@email.com" /> -->
           </div>
         </div>
 
-        <div class="button">Edit Profile</div>
-        <div class="button">Save Profile</div>
+        <a href="edit-profile.php"><button>Edit Profile</button></a>
       </div>
     </section>
-
-    <footer>
-      <div class="link-wrap">
-        <a>Resourcas</a>
-        <a>Help deak</a>
-        <a>Report</a>
-        <a>Q&A</a>
-      </div>
-      <div class="f-logo">Youthon</div>
-    </footer>
+    <?php include './includes/footer.php'?>
   </body>
 </html>

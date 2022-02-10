@@ -217,12 +217,12 @@
       <div class="f-logo">Youthon</div>
     </footer>  
     <?php
-    if ($authenticated) {      
+    // if ($authenticated) {      
     //validate since authenticated   
     if (isset($_GET["ticket"])) {
          echo $_GET["ticket"];
       }
-    }
+    // }
     ?>
   </body>
 </html>

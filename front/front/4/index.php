@@ -18,13 +18,12 @@
         <a href="">Search</a>
       </div>
       <div class="button-wrap">
-        <div class="button login">Log in</div>
-        <div class="button">Register</div>
-        <div class="button">
+        <div class="button login">
           <form action="login.php" method="POST">
             <button>Login</button>
           </form>
         </div>
+        <div class="button">Register</div>
       </div>
     </header>
     
@@ -216,6 +215,14 @@
         <a>Q&A</a>
       </div>
       <div class="f-logo">Youthon</div>
-    </footer>
+    </footer>  
+    <?php
+    if ($authenticated) {      
+    //validate since authenticated   
+    if (isset($_GET["ticket"])) {
+         echo $_GET["ticket"];
+      }
+    }
+    ?>
   </body>
 </html>

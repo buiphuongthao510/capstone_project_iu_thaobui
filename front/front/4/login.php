@@ -48,7 +48,7 @@ function cas_authenticate(){
     if (!$authenticated) {
       $_SESSION['LAST_SESSION'] = time(); // update last activity time stamp
       $_SESSION['CAS'] = true;
-      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=https://cas.iu.edu/cas/login?cassvc=IU&casurl='.$casurl.'">';
+      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=https://idp.login.iu.edu/idp/profile/cas/login?service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php'.$casurl.'">';
       //header("Location: https://cas.iu.edu/cas/login?cassvc=IU&casurl=$casurl");
       exit;
     }

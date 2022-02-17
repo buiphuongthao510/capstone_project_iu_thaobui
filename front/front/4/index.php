@@ -210,7 +210,7 @@
     </footer>  
     <?php
     $ticket = $_SERVER['QUERY_STRING'];
-    $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?" . $ticket . "&service=https://cgi.luddy.indiana.edu/~sravage/test-cas.php";
+    $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php";
     $result = file_get_contents($validate_url);
 
     echo $result;

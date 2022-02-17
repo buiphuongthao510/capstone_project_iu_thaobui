@@ -42,9 +42,10 @@
             include './includes/dbConnect.php';
             session_start();
 
-            $user_email = $_SESSION['$email'];
+            $username = $_SESSION["username"];
+            
             //select statements
-            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE $user_email"; 
+            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE $username"; 
 
             $select = mysqli_query($conn, $sql_select);
 

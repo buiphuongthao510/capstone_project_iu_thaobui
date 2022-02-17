@@ -209,10 +209,18 @@
       <div class="f-logo">Youthon</div>
     </footer>  
     <?php
+    session_start();
     $ticket = $_SERVER['QUERY_STRING'];
     $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php";
     $result = file_get_contents($validate_url);
 
+    include './includes/dbConnect.php';
+
+    $_SESSION["username"] = $result;
+    $sql_insert = "INSERT INTO members(username) VALUES($result)";
+
+    //check if username exists in database, if yes then proceed, if not insert new row
+    $insert = mysqli_query($conn, $sql_insert);
     echo $result;
     ?>
   </body>

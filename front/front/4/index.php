@@ -105,7 +105,7 @@ session_start();
     </section>
 
     <div style="text-align: center">
-      <div class="button more"><a href = 'events.php'>Explore more events</div>
+      <div class="button more"><a href = 'events.php'>Explore more events</div></a>
     </div>
 
     <section class="rank">

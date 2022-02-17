@@ -33,14 +33,6 @@ if ($conn->connect_error) {
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
-      <div class="button-wrap">
-        <div class="button login">
-          <form action="login.php" method="POST">
-            <button>Login</button>
-          </form>
-        </div>
-        <div class="button">Register</div>
-      </div>
     </header>
     
     <a href="profile.php">TEST</a>
@@ -237,12 +229,11 @@ if ($conn->connect_error) {
       <div class="f-logo">Youthon</div>
     </footer>  
     <?php
-    // if ($authenticated) {      
-    //validate since authenticated   
-    if (isset($_GET["ticket"])) {
-         echo $_GET["ticket"];
-      }
-    // }
+    $ticket = $_SERVER['QUERY_STRING'];
+    $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php";
+    $result = file_get_contents($validate_url);
+
+    echo $result;
     ?>
   </body>
 </html>

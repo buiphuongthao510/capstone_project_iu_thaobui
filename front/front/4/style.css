@@ -286,3 +286,11 @@ input {
 input:focus {
   border: 1px solid #990000;
 }
+
+#displayPhoto{
+  width: 390px;
+  height: 200px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}

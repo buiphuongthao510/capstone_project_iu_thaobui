@@ -1,18 +1,8 @@
 <?php
 
-$servername = "db.luddy.indiana.edu";
-$username = "i494f21_team21";
-$password = "my+sql=i494f21_team21";
-$dbname = "i494f21_team21";
-
-// Create connection
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " .$conn->connect_error);
-}
+include './includes/dbConnect.php';
+session_start();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,21 +73,33 @@ if ($conn->connect_error) {
       <div class="events-list">
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+            <?php
+              $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+            ?>
+          </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+          <?php
+          $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+          ?>
+          </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+            <?php
+              $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+            ?>
+          </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
@@ -106,7 +108,7 @@ if ($conn->connect_error) {
     </section>
 
     <div style="text-align: center">
-      <div class="button more">Explore more events</div>
+      <div class="button more"><a href = 'events.php'>Explore more events</div>
     </div>
 
     <section class="rank">

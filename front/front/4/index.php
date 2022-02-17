@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 <?php
 
 include './includes/dbConnect.php';
 session_start();
 ?>
 
-=======
->>>>>>> 64a420c5288f3170b649197e37b71e07deef2005
 <!DOCTYPE html>
 <html lang="en">
   <head>

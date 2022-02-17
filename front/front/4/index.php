@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 <?php
 
 include './includes/dbConnect.php';
 session_start();
 ?>
 
+=======
+>>>>>>> 64a420c5288f3170b649197e37b71e07deef2005
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,23 +26,22 @@ session_start();
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
+      <div class="button-wrap">
+        <div class="button login">
+          <a href="profile.php">TEST</a>
+        </div>
+      </div>
     </header>
-    
-    <a href="profile.php">TEST</a>
     <div class="banner">
-      <div class="text">Get Involved</div>
-      
+      <div class="text">xxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+      <div class="button">Join Today</div>
     </div>
 
     <section>
       <div class="title">Find your passion group</div>
       <div class="group-list">
         <a class="group-item">
-          <div>
-            <?php
-              $sql = 'SELECT COUNT(o_id);';
-            ?>
-          </div>
+          <div>#####</div>
           <div>Student</div>
           <div>organizations</div>
         </a>
@@ -61,9 +63,7 @@ session_start();
       <div>
         <div class="title">Club of the day</div>
         <div class="text">
-          <?php
-            $sql = 'SELECT name FROM organizations ORDER BY RAND() LIMIT 0,1;' ;
-          ?>
+          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         </div>
       </div>
     </section>
@@ -233,10 +233,18 @@ session_start();
       <div class="f-logo">Youthon</div>
     </footer>  
     <?php
+    session_start();
     $ticket = $_SERVER['QUERY_STRING'];
     $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php";
     $result = file_get_contents($validate_url);
 
+    include './includes/dbConnect.php';
+
+    $_SESSION["username"] = $result;
+    $sql_insert = "INSERT INTO members(username) VALUES($result)";
+
+    //check if username exists in database, if yes then proceed, if not insert new row
+    $insert = mysqli_query($conn, $sql_insert);
     echo $result;
     ?>
   </body>

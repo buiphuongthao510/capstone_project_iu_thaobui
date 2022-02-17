@@ -107,7 +107,7 @@
 
     </div>
     <div class="overview-right">
-	<form action="reserveEvent.html" method="POST">
+	<form action="reserveEvent.php" method="POST">
       <div class="up-item b-line">
         <img src="../img/banner2.png" alt="">
         <div>

@@ -71,7 +71,9 @@ if ($conn->connect_error) {
       <div>
         <div class="title">Club of the day</div>
         <div class="text">
-          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          <?php
+            $sql = 'SELECT name FROM organizations ORDER BY RAND() LIMIT 0,1;' ;
+          ?>
         </div>
       </div>
     </section>

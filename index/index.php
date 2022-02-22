@@ -232,7 +232,7 @@ session_start();
     <?php
     session_start();
     $ticket = $_SERVER['QUERY_STRING'];
-    $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php";
+    $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
     $result = file_get_contents($validate_url);
 
     include './includes/dbConnect.php';

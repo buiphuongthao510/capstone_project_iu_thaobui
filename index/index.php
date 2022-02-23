@@ -41,6 +41,9 @@ session_start();
           <div>
             <?php
               $sql = 'SELECT COUNT(o_id);';
+              $result = mysqli_query($conn, $sql);
+              $count = $mysqli_fetch_all($result, MYSQLI_ASSOC);
+              print_r($count)
 
             ?>
           </div>
@@ -80,7 +83,7 @@ session_start();
               $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
               $result = mysqli_query($conn, $sql);
               $eventName = $mysqli_fetch_all($result, MYSQLI_ASSOC);
-              print_r($eventName)
+              print_r($eventName);
               }
             ?>
           </div>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Youthon</title>
   </head>
 
   <body>
@@ -19,7 +19,7 @@
       </div>
       <div class="button-wrap">
         <div class="button login">
-          <a href="https://idp.login.iu.edu/idp/profile/cas/login?service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php">Login</a>
+          <a href="https://idp.login.iu.edu/idp/profile/cas/login?service=https://cgi.luddy.indiana.edu/~team21/index/index.php">Login</a>
         </div>
         <div class="button">Register</div>
       </div>

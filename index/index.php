@@ -238,9 +238,9 @@ session_start();
     include './includes/dbConnect.php';
 
     $_SESSION["username"] = $result;
-    $sql_insert = "INSERT INTO members(username) VALUES($result)";
-
-    //check if username exists in database, if yes then proceed, if not insert new row
+    
+    $sql_insert = "INSERT INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) SELECT * FROM (SELECT $result AS username, '' AS first_name, '' as last_name, '0000-00-00' as dob, '' as email, '' as phone, 0 as role, '' as picProfile) AS temp WHERE NOT EXISTS (SELECT username FROM members WHERE username = $result) LIMIT 1;";
+    
     $insert = mysqli_query($conn, $sql_insert);
     echo $result;
     ?>

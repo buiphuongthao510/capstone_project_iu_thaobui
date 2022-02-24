@@ -42,11 +42,21 @@ session_start();
           
             <?php
               // CONNECT DATABASE
-              include './includes/dbConnect.php';
-              session_start();
-            ?>  
+              $servername = "db.luddy.indiana.edu";
+              $username = "i494f21_team21";
+              $password = "my+sql=i494f21_team21";
+              $dbname = "i494f21_team21";
 
-            <?php
+              // Create connection
+              $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+              // Check connection
+              if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+              }
+            
+
+            
               // Query
               $sql = "SELECT COUNT(*) FROM organizations;";
               $result = mysqli_query($conn, $sql);

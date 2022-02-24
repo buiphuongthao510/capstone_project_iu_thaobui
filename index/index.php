@@ -55,18 +55,8 @@ session_start();
                 echo $sql;
               } else{
                   while($data = mysqli_fetch_assoc($result)) {
-<<<<<<< HEAD
             // display content
                     echo '<div>'.$data.'</div>';  
-=======
-            ?>
-
-            <!--disply content-->
-            <?php
-                    echo '<div>'.$data["count"].'</div>';  
-            ?>
-            <?php
->>>>>>> 2fe31cef81cbcdb58f2ef93521001fa409ebfa44
                   }
                 }
             ?>  

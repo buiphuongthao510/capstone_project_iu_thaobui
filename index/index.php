@@ -44,8 +44,9 @@ session_start();
               // CONNECT DATABASE
               include './includes/dbConnect.php';
               session_start();
-              
+            ?>  
 
+            <?php
               // Query
               $sql = "SELECT COUNT(*) FROM organizations;";
               $result = mysqli_query($conn, $sql);
@@ -56,16 +57,16 @@ session_start();
                   while($data = mysqli_fetch_assoc($result)) {
             ?>
 
-              //disply content
+            <!--disply content-->
             <?php
-                    echo '<div>'.$data.'</div>';  
+                    echo '<div>'.$data["count"].'</div>';  
             ?>
             <?php
                   }
                 }
             ?>  
 
-            ?>
+          
           
           <div>Student</div>
           <div>organizations</div>
@@ -113,7 +114,7 @@ session_start();
                 echo $sql_rand1;
               } else{
                 while($data = mysqli_fetch_assoc($result1)){
-                  echo "<div> {$data} </div>";
+                  echo "<div>".$data."</div>";
                 }
               }
         
@@ -134,7 +135,7 @@ session_start();
           
           //query
           $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
-          $result2 = mysqli_query($sql, $conn);
+          $result2 = mysqli_query($conn, $sql);
 
           //display data
 
@@ -294,7 +295,7 @@ session_start();
 
     $_SESSION["username"] = $result;
     
-    $sql_insert = "INSERT INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) SELECT * FROM (SELECT $result AS username, '' AS first_name, '' as last_name, '0000-00-00' as dob, '' as email, '' as phone, 0 as role, '' as picProfile) AS temp WHERE NOT EXISTS (SELECT username FROM members WHERE username = $result) LIMIT 1;";
+    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ($result,'','',0000-00-00,'','',0,'');";
 
     if ($conn->query($sql_insert) === TRUE) {
       echo "record inserted successfully";

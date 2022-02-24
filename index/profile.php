@@ -41,7 +41,8 @@
       <?php 
             include './includes/dbConnect.php';
             session_start();
-
+            echo $conn;
+            
             $username = $_SESSION["username"];
             
             //select statements

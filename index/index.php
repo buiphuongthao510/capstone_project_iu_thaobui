@@ -45,7 +45,7 @@ session_start();
               session_start();
 
               // Query
-              $sql = 'SELECT COUNT(*) FROM organizations;';
+              $sql = 'SELECT COUNT(*) FROM organizations';
               $result = mysqli_query($conn, $sql);
               
               //disply content

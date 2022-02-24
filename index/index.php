@@ -55,7 +55,7 @@ session_start();
                 echo $sql;
               } else{
                 while($data = mysqli_fetch_assoc($result)){
-                  echo "<div>" $data "</div>";
+                  echo '<div>'.$data.'</div>';
                 }
               }
 

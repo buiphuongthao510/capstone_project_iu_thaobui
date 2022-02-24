@@ -47,8 +47,9 @@
         </div>
 		</div>
 	
-		<form action="submitEvent.php" method="POST">
+		
         <div class="right">
+		<form action="submitEvent.php" method="POST">
           <div class="line">
             <div class="form-item">
               <div><b>Event Name</b></div>

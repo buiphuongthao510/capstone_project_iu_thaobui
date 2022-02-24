@@ -55,13 +55,8 @@ session_start();
                 echo $sql;
               } else{
                   while($data = mysqli_fetch_assoc($result)) {
-            ?>
-
-            <!--disply content-->
-            <?php
-                    echo '<div>'.$data["count"].'</div>';  
-            ?>
-            <?php
+            // display content
+                    echo '<div>'.$data.'</div>';  
                   }
                 }
             ?>  

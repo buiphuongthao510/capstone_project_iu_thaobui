@@ -41,8 +41,7 @@
       <?php 
             include './includes/dbConnect.php';
             session_start();
-            echo $conn;
-            
+
             $username = $_SESSION["username"];
             
             //select statements
@@ -53,6 +52,7 @@
             // display contents 
             if (!$select) {
                 echo $sql_select;
+                echo $conn;
             } else {
                 while ($data = mysqli_fetch_assoc($select)) {
                         echo "<div>First name: {$data['first_name']}</div>";

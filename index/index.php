@@ -58,7 +58,7 @@ session_start();
 
             
               // Query
-              $sql = "SELECT COUNT(*) FROM organizations;";
+              $sql = "SELECT COUNT(*) as 'count' FROM organizations;";
               $result = mysqli_query($conn, $sql);
 
               if(!$result) {
@@ -66,7 +66,7 @@ session_start();
               } else{
                   while($data = mysqli_fetch_assoc($result)) {
             // display content
-                    echo '<div>'.$data.'</div>';  
+                    echo '<div>'.$data['count'].'</div>';  
                   }
                 }
             ?>  

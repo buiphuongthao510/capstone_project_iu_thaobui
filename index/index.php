@@ -38,15 +38,22 @@ session_start();
       <div class="title">Find your passion group</div>
       <div class="group-list">
         <a class="group-item">
-          <div>
+          
             <?php
-              $sql = 'SELECT COUNT(o_id);';
+              $sql = 'SELECT COUNT(*) FROM organizations;';
               $result = mysqli_query($conn, $sql);
-              $count = $mysqli_fetch_all($result, MYSQLI_ASSOC);
-              print_r($count)
+              
+              //disply content
+              if(!$result) {
+                echo $sql;
+              } else{
+                while($data = mysqli_fetch_assoc($result)){
+                  echo "<div> {$data} Student Organizations</div>";
+                }
+              }
 
             ?>
-          </div>
+          
           <div>Student</div>
           <div>organizations</div>
         </a>
@@ -82,8 +89,8 @@ session_start();
             <?php
               $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
               $result = mysqli_query($conn, $sql);
-              $eventName = $mysqli_fetch_all($result, MYSQLI_ASSOC);
-              print_r($eventName);
+              echo $rows['event_name'];
+        
               }
             ?>
           </div>

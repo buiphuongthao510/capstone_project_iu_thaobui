@@ -40,20 +40,12 @@ session_start();
       <div class="group-list">
         <a class="group-item">
           
-      <?php  
-        $servername = "db.luddy.indiana.edu";
-        $username = "i494f21_team21";
-        $password = "my+sql=i494f21_team21";
-        $dbname = "i494f21_team21";
+            <?php
+              // CONNECT DATABASE
+              include './includes/dbConnect.php';
+              session_start();
+            ?>  
 
-      // Create connection
-        $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-      // Check connection
-        if ($conn->connect_error) {
-          die("Connection failed: " .$conn->connect_error);
-        }
-      ?>
             <?php
               // Query
               $sql = "SELECT COUNT(*) FROM organizations;";
@@ -63,8 +55,18 @@ session_start();
                 echo $sql;
               } else{
                   while($data = mysqli_fetch_assoc($result)) {
+<<<<<<< HEAD
             // display content
                     echo '<div>'.$data.'</div>';  
+=======
+            ?>
+
+            <!--disply content-->
+            <?php
+                    echo '<div>'.$data["count"].'</div>';  
+            ?>
+            <?php
+>>>>>>> 2fe31cef81cbcdb58f2ef93521001fa409ebfa44
                   }
                 }
             ?>  
@@ -138,7 +140,7 @@ session_start();
           
           //query
           $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
-          $result2 = mysqli_query($sql, $conn);
+          $result2 = mysqli_query($conn, $sql);
 
           //display data
 
@@ -294,14 +296,28 @@ session_start();
     $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
     $result = file_get_contents($validate_url);
 
-    include './includes/dbConnect.php';
+    $servername = "db.luddy.indiana.edu";
+    $username = "i494f21_team21";
+    $password = "my+sql=i494f21_team21";
+    $dbname = "i494f21_team21";
+
+    // Create connection
+    $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " .$conn->connect_error);
+    }
 
     $_SESSION["username"] = $result;
     
-    $sql_insert = "INSERT INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) SELECT * FROM (SELECT $result AS username, '' AS first_name, '' as last_name, '0000-00-00' as dob, '' as email, '' as phone, 0 as role, '' as picProfile) AS temp WHERE NOT EXISTS (SELECT username FROM members WHERE username = $result) LIMIT 1;";
-    
-    $insert = mysqli_query($conn, $sql_insert);
-    echo $result;
+    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('$result','','',0000-00-00,'','',0,'');";
+
+    if ($conn->query($sql_insert) === TRUE) {
+      echo "record inserted successfully";
+    } else {
+      echo "Error: " .$sql_insert. "<br>".$conn->error;
+    }
     ?>
   </body>
 </html>

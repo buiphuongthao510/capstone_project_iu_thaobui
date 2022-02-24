@@ -2,6 +2,7 @@
 
 include './includes/dbConnect.php';
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +44,7 @@ session_start();
               // CONNECT DATABASE
               include './includes/dbConnect.php';
               session_start();
+              
 
               // Query
               $sql = 'SELECT COUNT(*) FROM organizations';

@@ -40,6 +40,11 @@ session_start();
         <a class="group-item">
           
             <?php
+              // CONNECT DATABASE
+              include './includes/dbConnect.php';
+              session_start();
+
+              // Query
               $sql = 'SELECT COUNT(*) FROM organizations;';
               $result = mysqli_query($conn, $sql);
               
@@ -48,7 +53,7 @@ session_start();
                 echo $sql;
               } else{
                 while($data = mysqli_fetch_assoc($result)){
-                  echo "<div> {$data} Student Organizations</div>";
+                  echo "<div> {$data} </div>";
                 }
               }
 
@@ -87,11 +92,19 @@ session_start();
           <img src="./img/banner2.png" />
           <div class="name">
             <?php
-              $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
-              $result = mysqli_query($conn, $sql);
-              echo $rows['event_name'];
-        
+              $sql_rand1 = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+              $result1 = mysqli_query($conn, $sql);
+              
+              //disply content
+              if(!$result1) {
+                echo $sql_rand1;
+              } else{
+                while($data = mysqli_fetch_assoc($result1)){
+                  echo "<div> {$data} </div>";
+                }
               }
+        
+            
             ?>
           </div>
           <div class="text">

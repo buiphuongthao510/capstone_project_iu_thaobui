@@ -49,16 +49,21 @@ session_start();
               // Query
               $sql = "SELECT COUNT(*) FROM organizations;";
               $result = mysqli_query($conn, $sql);
-              
-              //disply content
+
               if(!$result) {
                 echo $sql;
               } else{
                   while($data = mysqli_fetch_assoc($result)) {
+            ?>
+
+              //disply content
+            <?php
                     echo '<div>'.$data.'</div>';  
+            ?>
+            <?php
                   }
                 }
-              
+            ?>  
 
             ?>
           
@@ -95,6 +100,11 @@ session_start();
           <img src="./img/banner2.png" />
           <div class="name">
             <?php
+
+              // CONNECT DATABASE
+              include './includes/dbConnect.php';
+              session_start();
+              
               $sql_rand1 = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
               $result1 = mysqli_query($conn, $sql);
               
@@ -118,7 +128,17 @@ session_start();
           <img src="./img/banner2.png" />
           <div class="name">
           <?php
+          // CONNECT DATABASE
+          include './includes/dbConnect.php';
+          session_start();
+          
+          //query
           $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+          $result2 = mysqli_query($sql, $conn);
+
+          //display data
+
+
           ?>
           </div>
           <div class="text">
@@ -140,7 +160,7 @@ session_start();
     </section>
 
     <div style="text-align: center">
-      <div class="button more"><a href = 'events.php'>Explore more events</a></div>
+      <div class="button more"><a href = 'events/events.php'>Explore more events</a></div>
     </div>
 
     <section class="rank">

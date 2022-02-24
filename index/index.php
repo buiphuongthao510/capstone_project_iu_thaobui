@@ -40,6 +40,11 @@ session_start();
         <a class="group-item">
           
             <?php
+              // CONNECT DATABASE
+              include './includes/dbConnect.php';
+              session_start();
+
+              // Query
               $sql = 'SELECT COUNT(*) FROM organizations;';
               $result = mysqli_query($conn, $sql);
               

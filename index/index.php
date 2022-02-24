@@ -135,7 +135,7 @@ session_start();
           
           //query
           $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
-          $result2 = mysqli_query($sql, $conn);
+          $result2 = mysqli_query($conn, $sql);
 
           //display data
 
@@ -295,10 +295,13 @@ session_start();
 
     $_SESSION["username"] = $result;
     
-    $sql_insert = "INSERT INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) SELECT * FROM (SELECT $result AS username, '' AS first_name, '' as last_name, '0000-00-00' as dob, '' as email, '' as phone, 0 as role, '' as picProfile) AS temp WHERE NOT EXISTS (SELECT username FROM members WHERE username = $result) LIMIT 1;";
-    
-    $insert = mysqli_query($conn, $sql_insert);
-    echo $result;
+    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ($result,'','',0000-00-00,'','',0,'');";
+
+    if ($conn->query($sql_insert) === TRUE) {
+      echo "record inserted successfully";
+    } else {
+      echo "Error: " .$sql_insert. "<br>".$conn->error;
+    }
     ?>
   </body>
 </html>

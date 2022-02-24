@@ -80,7 +80,7 @@
         <div class="line">
           <?php while ($data = mysqli_fetch_assoc($select)) {?>
           <div class="form-item">
-            <div>First name:<?php echo $data['first_name']; ?> </div>
+            <div>First name: <?php echo $data['first_name']; ?> </div>
             <!-- <input type="text" placeholder="Sam" /> -->
           </div>
           <div class="form-item">

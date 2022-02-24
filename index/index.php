@@ -291,7 +291,18 @@ session_start();
     $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
     $result = file_get_contents($validate_url);
 
-    include './includes/dbConnect.php';
+    $servername = "db.luddy.indiana.edu";
+    $username = "i494f21_team21";
+    $password = "my+sql=i494f21_team21";
+    $dbname = "i494f21_team21";
+
+    // Create connection
+    $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " .$conn->connect_error);
+    }
 
     $_SESSION["username"] = $result;
     

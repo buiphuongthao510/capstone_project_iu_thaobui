@@ -49,12 +49,14 @@ session_start();
               // Query
               $sql = "SELECT COUNT(*) FROM organizations;";
               $result = mysqli_query($conn, $sql);
-            
+              
               //disply content
               if(!$result) {
                 echo $sql;
               } else{
-                  echo '<div>'.mysqli_fetch_assoc($result)).'</div>';
+                  while($data = mysqli_fetch_assoc($result)) {
+                    echo '<div>'.$data.'</div>'
+                  }
                 }
               
 

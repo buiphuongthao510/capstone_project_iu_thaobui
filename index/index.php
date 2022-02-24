@@ -63,13 +63,8 @@ session_start();
                 echo $sql;
               } else{
                   while($data = mysqli_fetch_assoc($result)) {
-            ?>
-
-            <!--disply content-->
-            <?php
+            // display content
                     echo '<div>'.$data.'</div>';  
-            ?>
-            <?php
                   }
                 }
             ?>  

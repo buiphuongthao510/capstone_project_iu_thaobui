@@ -53,17 +53,17 @@
           <div class="line">
             <div class="form-item">
               <div><b>Event Name</b></div>
-              <input type="text" name="eName"/>
+              <input type="text" name="event_name"/>
             </div>
             <div class="form-item">
               <div><b>Date</b></div>
-              <input type="text" placeholder="mm/dd/yyyy" name="date"/>
+              <input type="text" placeholder="mm/dd/yyyy" name="event_date"/>
             </div>
           </div>
           <div class="line">
             <div class="form-item">
               <div><b>Location</b></div>
-              <input type="text" name="location"/>
+              <input type="text" name="address"/>
             </div>
             <div class="form-item">
               <div><b>Contact Information</b></div>

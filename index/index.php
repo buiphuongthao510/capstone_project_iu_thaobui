@@ -1,3 +1,10 @@
+<?php
+
+include './includes/dbConnect.php';
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,13 +26,10 @@
       </div>
       <div class="button-wrap">
         <div class="button login">
-          <a href="https://idp.login.iu.edu/idp/profile/cas/login?service=https://cgi.luddy.indiana.edu/~team21/front/front/4/index.php">Login</a>
+          <a href="profile.php">TEST</a>
         </div>
-        <div class="button">Register</div>
       </div>
     </header>
-    
-    <a href="profile.php">TEST</a>
     <div class="banner">
       <div class="text">xxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
       <div class="button">Join Today</div>
@@ -35,7 +39,29 @@
       <div class="title">Find your passion group</div>
       <div class="group-list">
         <a class="group-item">
-          <div>#####</div>
+          
+            <?php
+              // CONNECT DATABASE
+              include './includes/dbConnect.php';
+              session_start();
+              
+
+              // Query
+              $sql = "SELECT COUNT(*) FROM organizations;";
+              $result = mysqli_query($conn, $sql);
+              
+              //disply content
+              if(!$result) {
+                echo $sql;
+              } else{
+                  while($data = mysqli_fetch_assoc($result)) {
+                    echo '<div>'.$data.'</div>';  
+                  }
+                }
+              
+
+            ?>
+          
           <div>Student</div>
           <div>organizations</div>
         </a>
@@ -67,21 +93,45 @@
       <div class="events-list">
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+            <?php
+              $sql_rand1 = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+              $result1 = mysqli_query($conn, $sql);
+              
+              //disply content
+              if(!$result1) {
+                echo $sql_rand1;
+              } else{
+                while($data = mysqli_fetch_assoc($result1)){
+                  echo "<div> {$data} </div>";
+                }
+              }
+        
+            
+            ?>
+          </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+          <?php
+          $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+          ?>
+          </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+            <?php
+              $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+            ?>
+          </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
@@ -90,7 +140,7 @@
     </section>
 
     <div style="text-align: center">
-      <div class="button more">Explore more events</div>
+      <div class="button more"><a href = 'events.php'>Explore more events</a></div>
     </div>
 
     <section class="rank">
@@ -204,6 +254,7 @@
         </div>
       </div>
     </section>
+
     <footer>
       <div class="link-wrap">
         <a>Resources</a>
@@ -213,6 +264,20 @@
       </div>
       <div class="f-logo">Youthon</div>
     </footer>  
+    <?php
+    session_start();
+    $ticket = $_SERVER['QUERY_STRING'];
+    $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
+    $result = file_get_contents($validate_url);
+
+    include './includes/dbConnect.php';
+
+    $_SESSION["username"] = $result;
     
+    $sql_insert = "INSERT INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) SELECT * FROM (SELECT $result AS username, '' AS first_name, '' as last_name, '0000-00-00' as dob, '' as email, '' as phone, 0 as role, '' as picProfile) AS temp WHERE NOT EXISTS (SELECT username FROM members WHERE username = $result) LIMIT 1;";
+    
+    $insert = mysqli_query($conn, $sql_insert);
+    echo $result;
+    ?>
   </body>
 </html>

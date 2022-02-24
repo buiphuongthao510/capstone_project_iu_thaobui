@@ -54,7 +54,10 @@
                 echo $sql_select;
             } else {
                 while ($data = mysqli_fetch_assoc($select)) {
-                        echo "<div>First name: {$data['first_name']}</div>" ;
+                        echo "<div>First name: {$data['first_name']}</div>";
+                        echo "<div>Last name: {$data['last_name']}</div>";
+                        echo "<div>Date of Birth: {$data['dob']}</div>";
+                        echo "<div>Email: {$data['email']}</div>";
                     
                 }
             }
@@ -67,23 +70,19 @@
             <!-- <input type="text" placeholder="Sam" /> -->
           </div>
           <div class="form-item">
-            <div>Last name</div>
+            <div>Last name: </div>
             <!-- <input type="text" placeholder="Fischer" /> -->
           </div>
         </div>
         <div class="line">
           <div class="form-item">
-            <div>Date of Birth</div>
+            <div>Date of Birth: </div>
             <!-- <input type="text" placeholder="mm/dd/yyyy" /> -->
           </div>
-          <div class="form-item">
-            <div>Gender</div>
-            <!-- <input type="text" placeholder="Fischer" /> -->
-          </div>
         </div>
         <div class="line">
           <div class="form-item">
-            <div>Email</div>
+            <div>Email: </div>
             <!-- <input type="text" placeholder="sfsich@email.com" /> -->
           </div>
         </div>

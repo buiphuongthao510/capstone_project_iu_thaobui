@@ -306,7 +306,7 @@ session_start();
 
     $_SESSION["username"] = $result;
     
-    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ($result,'','',0000-00-00,'','',0,'');";
+    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('$result','','',0000-00-00,'','',0,'');";
 
     if ($conn->query($sql_insert) === TRUE) {
       echo "record inserted successfully";

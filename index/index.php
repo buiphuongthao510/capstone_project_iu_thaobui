@@ -47,15 +47,15 @@ session_start();
               
 
               // Query
-              $sql = 'SELECT COUNT(*) FROM organizations';
+              $sql = 'SELECT COUNT(*) FROM organizations;';
               $result = mysqli_query($conn, $sql);
-              
+            
               //disply content
               if(!$result) {
                 echo $sql;
               } else{
                 while($data = mysqli_fetch_assoc($result)){
-                  echo "<div> {$data} </div>";
+                  echo "<div> $data </div>";
                 }
               }
 

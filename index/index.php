@@ -44,8 +44,9 @@ session_start();
               // CONNECT DATABASE
               include './includes/dbConnect.php';
               session_start();
-              
+            ?>  
 
+            <?php
               // Query
               $sql = "SELECT COUNT(*) FROM organizations;";
               $result = mysqli_query($conn, $sql);
@@ -56,16 +57,16 @@ session_start();
                   while($data = mysqli_fetch_assoc($result)) {
             ?>
 
-              //disply content
+            <!--disply content-->
             <?php
-                    echo '<div>'.$data.'</div>';  
+                    echo '<div>'.$data["count"].'</div>';  
             ?>
             <?php
                   }
                 }
             ?>  
 
-            ?>
+          
           
           <div>Student</div>
           <div>organizations</div>
@@ -113,7 +114,7 @@ session_start();
                 echo $sql_rand1;
               } else{
                 while($data = mysqli_fetch_assoc($result1)){
-                  echo "<div> {$data} </div>";
+                  echo "<div>".$data."</div>";
                 }
               }
         

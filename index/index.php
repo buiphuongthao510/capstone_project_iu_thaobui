@@ -42,11 +42,21 @@ session_start();
           
             <?php
               // CONNECT DATABASE
-              include './includes/dbConnect.php';
-              session_start();
-            ?>  
+              $servername = "db.luddy.indiana.edu";
+              $username = "i494f21_team21";
+              $password = "my+sql=i494f21_team21";
+              $dbname = "i494f21_team21";
 
-            <?php
+              // Create connection
+              $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+              // Check connection
+              if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+              }
+            
+
+            
               // Query
               $sql = "SELECT COUNT(*) FROM organizations;";
               $result = mysqli_query($conn, $sql);
@@ -55,13 +65,8 @@ session_start();
                 echo $sql;
               } else{
                   while($data = mysqli_fetch_assoc($result)) {
-            ?>
-
-            <!--disply content-->
-            <?php
-                    echo '<div>'.$data["count"].'</div>';  
-            ?>
-            <?php
+            // display content
+                    echo '<div>'.$data.'</div>';  
                   }
                 }
             ?>  
@@ -290,8 +295,18 @@ session_start();
     $ticket = $_SERVER['QUERY_STRING'];
     $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
     $result = file_get_contents($validate_url);
+    $servername = "db.luddy.indiana.edu";
+    $username = "i494f21_team21";
+    $password = "my+sql=i494f21_team21";
+    $dbname = "i494f21_team21";
 
-    include './includes/dbConnect.php';
+    // Create connection
+    $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " .$conn->connect_error);
+    }
 
     $_SESSION["username"] = $result;
     

@@ -2,6 +2,7 @@
 
 include './includes/dbConnect.php';
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +39,29 @@ session_start();
       <div class="title">Find your passion group</div>
       <div class="group-list">
         <a class="group-item">
-          <div>#####</div>
+          
+            <?php
+              // CONNECT DATABASE
+              include './includes/dbConnect.php';
+              session_start();
+              
+
+              // Query
+              $sql = "SELECT COUNT(*) FROM organizations;";
+              $result = mysqli_query($conn, $sql);
+              
+              //disply content
+              if(!$result) {
+                echo $sql;
+              } else{
+                  while($data = mysqli_fetch_assoc($result)) {
+                    echo '<div>'.$data.'</div>';  
+                  }
+                }
+              
+
+            ?>
+          
           <div>Student</div>
           <div>organizations</div>
         </a>
@@ -72,7 +95,19 @@ session_start();
           <img src="./img/banner2.png" />
           <div class="name">
             <?php
-              $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+              $sql_rand1 = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+              $result1 = mysqli_query($conn, $sql);
+              
+              //disply content
+              if(!$result1) {
+                echo $sql_rand1;
+              } else{
+                while($data = mysqli_fetch_assoc($result1)){
+                  echo "<div> {$data} </div>";
+                }
+              }
+        
+            
             ?>
           </div>
           <div class="text">
@@ -105,7 +140,7 @@ session_start();
     </section>
 
     <div style="text-align: center">
-      <div class="button more"><a href = 'events.php'>Explore more events</div>
+      <div class="button more"><a href = 'events.php'>Explore more events</a></div>
     </div>
 
     <section class="rank">

@@ -295,7 +295,6 @@ session_start();
     $ticket = $_SERVER['QUERY_STRING'];
     $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
     $result = file_get_contents($validate_url);
-
     $servername = "db.luddy.indiana.edu";
     $username = "i494f21_team21";
     $password = "my+sql=i494f21_team21";
@@ -311,7 +310,7 @@ session_start();
 
     $_SESSION["username"] = $result;
     
-    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('$result','','',0000-00-00,'','',0,'');";
+    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ($result,'','',0000-00-00,'','',0,'');";
 
     if ($conn->query($sql_insert) === TRUE) {
       echo "record inserted successfully";

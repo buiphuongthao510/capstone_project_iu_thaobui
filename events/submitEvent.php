@@ -26,6 +26,8 @@
 		$event_date = $_REQUEST['event_date'];
 		$address = $_REQUEST['address'];
 
+	//AUTO_INCREMENT o_id
+		$sql = "ALTER TABLE events MODIFY o_id int NOT NULL AUTO_INCREMENT";
 	// Insert Query 
 		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('".$event_name."','".$event_date."','".$address."')";
 

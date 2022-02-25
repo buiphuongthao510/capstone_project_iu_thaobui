@@ -8,21 +8,11 @@
 <body>
     <center>
     <?php
-    //connect to Database 
-		$servername = "db.luddy.indiana.edu";
-		$username = "i494f21_team21";
-		$password = "my+sql=i494f21_team21";
-		$dbname = "i494f21_team21";
-	// Create connection
-		$conn = mysqli_connect($servername,$username,$password,$dbname);
-
-	// Check connection
-		if ($conn->connect_error) {
-   			die("Connection failed: " .$conn->connect_error);
-		}
-
 	// Check if form is submitted 
 		if(isset($_POST['submitted'])) {
+
+			include('./includes/dbConnect.php');
+
 			// Set variables for vables in form field 
 			// Set varibles for SQL statement 
 			$event_name = $_POST['event_name'];

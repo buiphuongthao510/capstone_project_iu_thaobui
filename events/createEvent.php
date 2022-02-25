@@ -49,7 +49,7 @@
 	
 		
     <div class="right">
-		<form action="submitEvent.php" method="POST" enctype="multipart/form-data">
+		<form action="insert.php" method="POST" enctype="multipart/form-data">
           <div class="line">
             <div class="form-item">
               <input type="hidden" name="submitted" value="true" />

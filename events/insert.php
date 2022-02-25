@@ -21,21 +21,24 @@
    			die("Connection failed: " .$conn->connect_error);
 		}
 
-	// Taking values from form data 
-		$event_name = $_REQUEST['event_name'];
-		$event_date = $_REQUEST['event_date'];
-		$address = $_REQUEST['address'];
+	// Check if form is submitted 
+		if(isset($_POST['submitted'])) {
+			// Set variables for vables in form field 
+			// Set varibles for SQL statement 
+			$event_name = $_POST['event_name'];
+			$event_date = $_POST['event_date'];
+			$address = $_POST['address'];
+			$sqlinsert = "INSERT INTO events (event_name,event_date,address) 
+			VALUES ('$event_name', '$event_date', '$address')";
 
-	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('".$event_name."','".$event_date."','".$address."')";
+		if(!mysqli_query($conn, $sqlinsert)) {
+			die('error inserting data');
+		} // End of NESTED if statement
 
-		if(mysqli_query($conn, $sql)){
-			echo "Data updated successfully";
-			echo nl2br("\n$event_name\n $event_date\n $address");
-		}	else{
-			echo "ERROR: Hush! Sorry $sql. "
-			. mysqli_error($conn);
-		}
+		$newrecord = "Data added to Database successfully!";
+		echo $newrecord
+
+		} //End of main if statement 
 
 		// Close Connection 
 		mysqli_close($conn);

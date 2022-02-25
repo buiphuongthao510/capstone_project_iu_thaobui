@@ -24,10 +24,11 @@
 	// Taking values from form data 
 		$event_name = $_REQUEST['event_name'];
 		$event_date = $_REQUEST['event_date'];
+		$event_time = $_REQUEST['event_time'];
 		$address = $_REQUEST['address'];
 
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('".$event_name."','".$event_date."','".$address."')";
+		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('".$event_name."','".$event_date."','".$event_time"','".$address."')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

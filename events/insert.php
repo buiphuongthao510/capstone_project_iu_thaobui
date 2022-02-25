@@ -28,7 +28,7 @@
 		$address = $_REQUEST['address'];
 
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('".$event_name."','".$event_date."','".$event_time"','".$address."')";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address) VALUES ('".$event_name."','".$event_date."','".$event_time"','".$address."')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

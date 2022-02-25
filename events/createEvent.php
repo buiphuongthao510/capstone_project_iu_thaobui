@@ -52,7 +52,6 @@
 		<form action="insert.php" method="POST" enctype="multipart/form-data">
           <div class="line">
             <div class="form-item">
-              <input type="hidden" name="submitted" value="true" />
 			  <fieldset>
 				<label>Event Name: <input type="text" name="event_name" /></label>
 				<br />
@@ -63,7 +62,7 @@
 				<label>Upload Event Photo: <input type="file" name="photoInput" value="" /></label>	
 			  </fieldset>
 			  <br />
-			  <input type="submit" value="Create Event" />
+			  <button type="submit" name="submit">Create Event</button>
 			</form>
 			
 			</div>

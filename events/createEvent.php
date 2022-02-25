@@ -63,8 +63,6 @@
 				<label>Upload Event Photo: <input type="file" name="photoInput" value="" /></label>	
 			  </fieldset>
 			  <br />
-			  <input type="file" name="photoInput" value="" />
-			  <br />
 			  <input type="submit" value="Create Event" />
 			</form>
 			

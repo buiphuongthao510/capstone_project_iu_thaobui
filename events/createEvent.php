@@ -48,40 +48,29 @@
 		</div>
 	
 		
-        <div class="right">
-		<form action="insert.php" method="POST">
+    <div class="right">
+		<form action="submitEvent.php" method="POST" enctype="multipart/form-data">
           <div class="line">
             <div class="form-item">
-              <div><b>Event Name</b></div>
-              <input type="text" name="event_name"/>
-            </div>
-            <div class="form-item">
-              <div><b>Date</b></div>
-              <input type="text" placeholder="mm/dd/yyyy" name="event_date"/>
-            </div>
+              <input type="hidden" name="submitted" value="true" />
+			  <fieldset>
+				<label>Event Name: <input type="text" name="event_name" /></label>
+				<br />
+				<label>Date: <input type="text" placeholder="mm/dd/yyyy" name="event_date" /></label>
+				<br />
+				<label>Location: <input type="text" name="address" /></label>
+				<br />
+				<label>Upload Event Photo: <input type="file" name="photoInput" value="" /></label>	
+			  </fieldset>
+			  <br />
+			  <input type="file" name="photoInput" value="" />
+			  <br />
+			  <input type="submit" value="Create Event" />
+			</form>
+			
+			</div>
+  
           </div>
-          <div class="line">
-            <div class="form-item">
-              <div><b>Location</b></div>
-              <input type="text" name="address"/>
-            </div>
-            <div class="form-item">
-              <div><b>Contact Information</b></div>
-              <input type="text" name="contactInfo"/>
-            </div>
-          </div>
-		
-		<input type="file" id="photoInput">
-		<div id="displayPhoto"></div>
-		<script src="upload.js"></script>
-		
-		<h2> Event Information: </h2>
-			<textarea id="description" name="description" rows="10" cols="50">
-			</textarea>
-		<div class="button-wrap">
-			<button type="Create">Create</button>
-		</div>
-		
 		</div>
 		
     </section>

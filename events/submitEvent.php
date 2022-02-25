@@ -30,10 +30,10 @@
 		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('".$event_name."','".$event_date."','".$address."');";
 
 		if(mysqli_query($conn, $sql)){
-			echo "Data updated successfully";
+			echo "Data stored in database successfully";
 			echo nl2br("\n$event_name\n $event_date\n $address");
 		}	else{
-			echo "ERROR: Hush! Sorry $sql. "
+			echo "Data is not stored in database"
 			. mysqli_error($conn);
 		}
 

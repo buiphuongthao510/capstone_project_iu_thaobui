@@ -21,6 +21,8 @@
    			die("Connection failed: " .$conn->connect_error);
 		}
 
+	// Check if form is submitted 
+		if (isset($_POST('submitted')))
 	// Taking values from form data 
 		$event_name = $_REQUEST['event_name'];
 		$event_date = $_REQUEST['event_date'];

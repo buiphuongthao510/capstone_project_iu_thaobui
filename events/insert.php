@@ -34,10 +34,6 @@
 		if(!mysqli_query($conn, $sqlinsert)) {
 			die('error inserting data');
 		} // End of NESTED if statement
-
-		$newrecord = "Data added to Database successfully!";
-		echo $newrecord
-
 		} //End of main if statement 
 
 		// Close Connection 

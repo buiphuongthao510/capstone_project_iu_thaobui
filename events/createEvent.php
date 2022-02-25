@@ -57,6 +57,8 @@
 				<br />
 				<label>Date: <input type="text" placeholder="mm/dd/yyyy" name="event_date" /></label>
 				<br />
+        <label>Time: <input type="text" placeholder="hr:mm:ss" name="event_time" /></label>
+				<br />
 				<label>Location: <input type="text" name="address" /></label>
 				<br />
 				<label>Upload Event Photo: <input type="file" name="photoInput" value="" /></label>	

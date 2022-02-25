@@ -49,7 +49,7 @@
 	
 		
         <div class="right">
-		<form action="submitEvent.php" method="POST">
+		<form action="insert.php" method="POST">
           <div class="line">
             <div class="form-item">
               <div><b>Event Name</b></div>

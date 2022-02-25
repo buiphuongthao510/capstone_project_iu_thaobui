@@ -21,35 +21,20 @@
    			die("Connection failed: " .$conn->connect_error);
 		}
 
-	// Check if form is submitted 
-		if (isset($_POST['submit'])){
-		
-	// Check if all input fields are empty 
-		if (!empty($_POST['event_name']) && !empty($_POST['event_date']) && !empty($_POST['address'])){
+	// Taking values from form data 
+		$event_name = $_REQUEST['event_name'];
+		$event_date = $_REQUEST['event_date'];
+		$address = $_REQUEST['address'];
 
-		// Fetch values from form data 
-			$event_name = $_REQUEST['event_name'];
-			$event_date = $_REQUEST['event_date'];
-			$address = $_REQUEST['address'];
+	// Insert Query 
+		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('".$event_name."','".$event_date."','".$address."')";
 
-			// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,address) VALUES ('$event_name','$event_date','$address')";
-
-		$run_query = mysqli_query($conn,$sql) or die(mysqli_error());
-
-		// Check condition
-
-		if ($run_query){
-			echo "Form data successfully inserted into database!";
-		}
-		else {
-			echo "Form data NOT submitted";
-		}
-		}
-		else{
-			echo "All fields required!";
-		}
-
+		if(mysqli_query($conn, $sql)){
+			echo "Data updated successfully";
+			echo nl2br("\n$event_name\n $event_date\n $address");
+		}	else{
+			echo "ERROR: Hush! Sorry $sql. "
+			. mysqli_error($conn);
 		}
 
 		// Close Connection 

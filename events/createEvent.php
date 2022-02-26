@@ -55,9 +55,9 @@
 			  <fieldset>
 				<label>Event Name: <input type="text" name="event_name" /></label>
 				<br />
-				<label>Date: <input type="text" placeholder="mm/dd/yyyy" name="event_date" /></label>
+				<label>Date: <input type="text" placeholder="yyyy/mm/dd" name="event_date" /></label>
 				<br />
-        <label>Time: <input type="text" placeholder="hr:mm:ss" name="event_time" /></label>
+        <label>Time: <input type="text" placeholder="hr:mm:ss" name="event_date" /></label>
 				<br />
 				<label>Location: <input type="text" name="address" /></label>
 				<br />

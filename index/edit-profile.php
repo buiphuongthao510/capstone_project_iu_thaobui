@@ -44,27 +44,27 @@
           <div class="line">
             <div class="form-item">
               <div>First name</div>
-              <input type="text" placeholder="Sam" name="fname"/>
+              <input type="text" name="fname"/>
             </div>
             <div class="form-item">
               <div>Last name</div>
-              <input type="text" placeholder="Fischer" name="lname"/>
+              <input type="text" name="lname"/>
             </div>
           </div>
           <div class="line">
             <div class="form-item">
               <div>Date of Birth</div>
-              <input type="text" placeholder="mm/dd/yyyy" name="dob"/>
+              <input type="text" name="dob"/>
             </div>
             <div class="form-item">
               <div>Gender</div>
-              <input type="text" placeholder="Fischer" name="gender"/>
+              <input type="text" name="gender"/>
             </div>
           </div>
           <div class="line">
             <div class="form-item">
               <div>Email</div>
-              <input type="text" placeholder="sfsich@email.com" name="email"/>
+              <input type="text" name="email"/>
             </div>
           </div>
 

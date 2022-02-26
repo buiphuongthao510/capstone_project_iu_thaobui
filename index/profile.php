@@ -88,7 +88,7 @@
           </div>
         </div>
 
-        <a href="update-profile.php"><button>Edit Profile</button></a>
+        <a href="edit-profile.php"><button>Edit Profile</button></a>
       </div>
     </section>
     <?php include './includes/footer.php'?>

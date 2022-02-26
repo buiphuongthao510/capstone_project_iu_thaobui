@@ -13,12 +13,11 @@ $email = $_POST['email'];
 $username = $_SESSION["username"];
 
 //replace data
-$sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$dob', email = '$email' WHERE username = username = 'ldeeley7';";
+$sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$dob', email = '$email' WHERE username = 'ldeeley7';";
 
 $update = mysqli_query($conn, $sql);
 if (!$update) {
     //echo mysqli_error();
-    echo "BROKEN";
     echo $sql;
 
 } else {

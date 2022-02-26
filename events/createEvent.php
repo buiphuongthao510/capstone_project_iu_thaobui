@@ -57,7 +57,7 @@
 				<br />
 				<label>Date: <input type="text" placeholder="yyyy-mm-dd" name="event_date" /></label>
 				<br />
-        <label>Time: <input type="text" placeholder="hr:mm:ss" name="event_date" /></label>
+        <label>Time: <input type="text" placeholder="hr:mm:ss" name="event_time" /></label>
 				<br />
 				<label>Location: <input type="text" name="address" /></label>
 				<br />

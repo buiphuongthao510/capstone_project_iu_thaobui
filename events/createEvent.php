@@ -61,7 +61,7 @@
 				<br />
 				<label>Location: <input type="text" name="address" /></label>
 				<br />
-				<label>Upload Event Photo: <input type="file" name="photoInput" value="" /></label>	
+				<label>Upload Event Photo: <input type="file" name="picEvent" value="" /></label>	
 			  </fieldset>
 			  <br />
 			  <button type="submit" name="submit">Create Event</button>

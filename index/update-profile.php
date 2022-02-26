@@ -8,23 +8,22 @@ session_start();
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $dob = $_POST['dob'];
-$gender = $_POST['gender'];
 $email = $_POST['email'];
 
-$_SESSION['$email'] = $email;
+$username = $_SESSION["username"];
 
 //replace data
-$sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$dob', email = '$email'";
+$sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$dob', email = '$email' WHERE username = '$username';";
 
 $update = mysqli_query($conn, $sql);
 if (!$update) {
-    // echo mysqli_error();
-    // echo "BROKEN";
+    //echo mysqli_error();
+    echo "BROKEN";
     echo $sql;
 
 } else {
     echo '<script>alert("Succesfully Updated")</script>';
-    header("Location: https://cgi.luddy.indiana.edu/~team21/front/front/4/profile.php");
+    header("Location: https://cgi.luddy.indiana.edu/~team21/index/profile.php");
 }
 
 ?>

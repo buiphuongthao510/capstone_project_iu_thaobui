@@ -60,20 +60,6 @@
 
             $select = mysqli_query($conn, $sql_select);
 
-            // display contents 
-            // if (!$select) {
-            //     echo $sql_select;
-            //     echo $conn;
-            // } else {
-            //     while ($data = mysqli_fetch_assoc($select)) {
-            //             echo "<div>First name: {$data['first_name']}</div>";
-            //             echo "<div>Last name: {$data['last_name']}</div>";
-            //             echo "<div>Date of Birth: {$data['dob']}</div>";
-            //             echo "<div>Email: {$data['email']}</div>";
-                    
-            //     }
-            
-
         ?>
       <div class="right">
         <div class="title gi">General Information</div>
@@ -102,7 +88,7 @@
           </div>
         </div>
 
-        <a href="edit-profile.php"><button>Edit Profile</button></a>
+        <a href="update-profile.php"><button>Edit Profile</button></a>
       </div>
     </section>
     <?php include './includes/footer.php'?>

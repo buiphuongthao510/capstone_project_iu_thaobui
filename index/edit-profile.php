@@ -38,36 +38,56 @@
           <div>Help</div>
         </div>
       </div>
+      <?php 
+            $servername = "db.luddy.indiana.edu";
+            $username = "i494f21_team21";
+            $password = "my+sql=i494f21_team21";
+            $dbname = "i494f21_team21";
+            
+            // Create connection
+            $conn = mysqli_connect($servername,$username,$password,$dbname);
+            
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+            }
+            session_start();
+
+            $username = $_SESSION["username"];
+            
+            //select statements
+            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE username = 'ldeeley7';"; 
+
+            $select = mysqli_query($conn, $sql_select);
+
+        ?>
       <form action="update-profile.php" method="POST">
         <div class="right">
           <div class="title gi">General Information</div>
+          <?php while ($data = mysqli_fetch_assoc($select)) {?>
           <div class="line">
             <div class="form-item">
               <div>First name</div>
-              <input type="text" name="fname"/>
+              <input type="text" name="fname" value="<?php echo $data['first_name']; ?>"/>
             </div>
             <div class="form-item">
               <div>Last name</div>
-              <input type="text" name="lname"/>
+              <input type="text" name="lname" value="<?php echo $data['last_name'] ?>"/>
             </div>
           </div>
           <div class="line">
             <div class="form-item">
               <div>Date of Birth</div>
-              <input type="text" name="dob"/>
-            </div>
-            <div class="form-item">
-              <div>Gender</div>
-              <input type="text" name="gender"/>
-            </div>
+              <input type="text" name="dob" value="<?php echo $data['dob'] ?>"/>
           </div>
           <div class="line">
             <div class="form-item">
               <div>Email</div>
-              <input type="text" name="email"/>
+              <input type="text" name="email" value="<?php echo $data['email'] ?>"/>
             </div>
           </div>
-
+          <?php
+          }?>
           <button type="submit">Save Profile</button>
         
         </div>

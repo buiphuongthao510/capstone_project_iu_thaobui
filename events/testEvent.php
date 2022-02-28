@@ -19,7 +19,7 @@
       </div>
     </header>
 	
-	<?php include './includes/header.php'; ?>
+	  <?php include './includes/header.php'; ?>
 	
     <section class="nav">
       <div class="left">
@@ -50,11 +50,10 @@
 		</div>
 		
 		<?php
-		
-			$servername = "db.luddy.indiana.edu";
-            $username = "i494f21_team21";
-            $password = "my+sql=i494f21_team21";
-            $dbname = "i494f21_team21";
+			    $servername = "db.luddy.indiana.edu";
+          $username = "i494f21_team21";
+          $password = "my+sql=i494f21_team21";
+          $dbname = "i494f21_team21";
             
             // Create connection
             $conn = mysqli_connect($servername,$username,$password,$dbname);
@@ -65,49 +64,44 @@
             }
             session_start();
 			
-			$id = $_SESSION["id"];
+			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT events_name,event_date, event_time,address FROM events WHERE id = 1 ;";
+			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE id = 1 ;";
 			
 			$select = mysqli_query($conn, $sql_select);
-		?>
-	
 		
-    <div class="right">
-		<div class="title ei">Event Information</div>
-          
+  ?>
+		
+  <div class="right">
+		<div class="title ei">Event Information</div>      
     <div class="line"> 
 			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">
 			  <div>Event Name: <?php echo $data['event_name']; ?> </div>
+        <!-- <input type="text" placeholder="Culture Show" /> -->
       </div>
-				<br />
 			<div class="form-item">
-			  <div>Event Date: <?php echo $data['event_date']; ?> </div>
+			  <div>Event Date: <?php echo $data['event_date']; ?></div>
+        <!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
       </div>
-				<br />
-      <div class="form-item">
+      </div>
+      <div class="line">
+       <div class="form-item">
 			  <div>Event Time: <?php echo $data['event_time']; ?> </div>
+        <!-- <input type="text" placeholder="hh:mm:ss" /> -->
       </div>
-				<br />
-      <div class="form-item">
+      </div>
+      <div class="line">
+        <div class="form-item">
 			  <div>Location: <?php echo $data['location']; ?> </div>
-      </div>
-				<br />
-			<div class="form-item">
-			  <div>Event Name: </div>
         <?php }?>
+        <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
       </div>
-			  <br />
-			   <a href="eventEdit.php"><button>Edit Event Information</button></a>
-			</form>
-			
-			</div>
-  
-          </div>
-		</div>
-		
+      </div>
+
+			  <a href="eventEdit.php"><button>Edit Event Information</button></a>
+      </div>
     </section>
 
     <footer>

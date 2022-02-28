@@ -79,16 +79,16 @@
 			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">
         <fieldset>
-			  <label>Event Name: <?php echo $data['event_name']; ?> </label>
+			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />
-			  <label>Event Date: <?php echo $data['event_date']; ?></label>
+			  <label><b>Event Date:</b> <?php echo $data['event_date']; ?></label>
         <!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
       <br />
-			  <label>Event Time: <?php echo $data['event_time']; ?> </label>
+			  <label><b>Event Time:</b> <?php echo $data['event_time']; ?> </label>
         <!-- <input type="text" placeholder="hh:mm:ss" /> -->
       <br />
-			  <label>Location: <?php echo $data['address']; ?> </label>
+			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
         <?php }?>
       </fieldset>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->

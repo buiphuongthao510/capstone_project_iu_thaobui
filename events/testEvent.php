@@ -94,7 +94,7 @@
       </div>
       <div class="line">
         <div class="form-item">
-			  <div>Location: <?php echo $data['location']; ?> </div>
+			  <div>Location: <?php echo $data['address']; ?> </div>
         <?php }?>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
       </div>

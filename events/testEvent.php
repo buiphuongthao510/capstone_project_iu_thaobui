@@ -78,25 +78,19 @@
     <div class="line"> 
 			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">
-			  <div>Event Name: <?php echo $data['event_name']; ?> </div>
+        <fieldset>
+			  <label>Event Name: <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
-      </div>
-      <div class="line">
-			  <div class="form-item">
-			    <div>Event Date: <?php echo $data['event_date']; ?></div>
+      <br />
+			  <label>Event Date: <?php echo $data['event_date']; ?></label>
         <!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
-      </div>
-      </div>
-      <div class="line">
-       <div class="form-item">
-			  <div>Event Time: <?php echo $data['event_time']; ?> </div>
+      <br />
+			  <label>Event Time: <?php echo $data['event_time']; ?> </label>
         <!-- <input type="text" placeholder="hh:mm:ss" /> -->
-      </div>
-      </div>
-      <div class="line">
-        <div class="form-item">
-			  <div>Location: <?php echo $data['address']; ?> </div>
+      <br />
+			  <label>Location: <?php echo $data['address']; ?> </label>
         <?php }?>
+      </fieldset>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
       </div>
       </div>

@@ -90,8 +90,8 @@
 				<br />
 				<label>Location: <?php echo $data['address']; ?></label>
 				<br />
-				<label>Upload Event Photo: <input type="file" name="picEvent" value="" /></label>
-					<?php}?>
+				<label>Upload Event Photo: </label>
+					<?php }?>
 			  </fieldset>
 			  <br />
 			   <a href="eventEdit.php"><button>Edit Event Information</button></a>

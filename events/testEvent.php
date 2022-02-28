@@ -81,8 +81,9 @@
 			  <div>Event Name: <?php echo $data['event_name']; ?> </div>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       </div>
-			<div class="form-item">
-			  <div>Event Date: <?php echo $data['event_date']; ?></div>
+      <div class="line">
+			  <div class="form-item">
+			    <div>Event Date: <?php echo $data['event_date']; ?></div>
         <!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
       </div>
       </div>

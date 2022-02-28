@@ -76,23 +76,29 @@
 		
     <div class="right">
 		<div class="title ei">Event Information</div>
-          <div class="line">
-		  
+          
+    <div class="line"> 
 			<?php while ($data = mysqli_fetch_assoc($select)) {?>
-		  
-            <div class="form-item">
-			  <fieldset>
-				<label>Event Name: <?php echo $data['event_name']; ?></label>
+		  <div class="form-item">
+			  <div>Event Name: <?php echo $data['event_name']; ?> </div>
+      </div>
 				<br />
-				<label>Date: <?php echo $data['event_date']; ?></label>
+			<div class="form-item">
+			  <div>Event Date: <?php echo $data['event_date']; ?> </div>
+      </div>
 				<br />
-				<label>Time: <?php echo $data['event_time']; ?></label>
+      <div class="form-item">
+			  <div>Event Time: <?php echo $data['event_time']; ?> </div>
+      </div>
 				<br />
-				<label>Location: <?php echo $data['address']; ?></label>
+      <div class="form-item">
+			  <div>Location: <?php echo $data['location']; ?> </div>
+      </div>
 				<br />
-				<label>Upload Event Photo: </label>
-					<?php }?>
-			  </fieldset>
+			<div class="form-item">
+			  <div>Event Name: </div>
+        <?php }?>
+      </div>
 			  <br />
 			   <a href="eventEdit.php"><button>Edit Event Information</button></a>
 			</form>

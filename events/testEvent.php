@@ -68,7 +68,7 @@
 			$id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT events_name,event_date, event_time,address FROM events WHERE id = '1';";
+			$sql_select = "SELECT events_name,event_date, event_time,address FROM events WHERE id = 1 ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		?>

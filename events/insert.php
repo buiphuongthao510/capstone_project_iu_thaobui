@@ -37,7 +37,7 @@
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
 		}
-		header("Location: https://cgi.luddy.indiana.edu/~team21/events/events.php")
+		
 		// Close Connection 
 		mysqli_close($conn);
 

@@ -157,6 +157,12 @@
       <br />
       <p align="right">
         <button type="Create">More Info</button>
+      <br />
+      <br />
+      <br />     
+      <br />
+      <br />
+      <br />
       </p>
 
         <?php }?>

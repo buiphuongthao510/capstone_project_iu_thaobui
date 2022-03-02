@@ -9,6 +9,8 @@
   <title>Document</title>
 </head>
 
+<?php include './includes/header.php'; ?>
+
 <body>
   <header>
     <p class="logo">Youthon</p>
@@ -104,30 +106,55 @@
         <div class="koukou"></div>
         <div>Sports</div>
       </div>
+  </div>
 
-    </div>
+    	<?php
+		  $servername = "db.luddy.indiana.edu";
+          $username = "i494f21_team21";
+          $password = "my+sql=i494f21_team21";
+          $dbname = "i494f21_team21";
+            
+            // Create connection
+            $conn = mysqli_connect($servername,$username,$password,$dbname);
+            
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+            }
+            session_start();
+			
+			      $id = $_SESSION["id"];
+			
+			//select statements
+			$sql_select = "SELECT * FROM events WHERE event_name = '$event_name' && event_date = '$event_date' && event_time = '$event_time' && address = '$address'";
+			
+			$select = mysqli_query($conn, $sql_select);
+		
+  ?>
+	
     <div class="overview-right">
 	<form action="reserveEvent.php" method="POST">
       <div class="up-item b-line">
         <img src="../img/banner2.png" alt="">
-        <div>
-		  <label for="eName">Event Name:</label>
-		  <input type="text" id="eName" name="eName">
-		  <br>
-          <label for="date">Date:</label>
-		  <input type="text" id="date" name="date">
-		  <br>
-          <label for="location">Location:</label>
-		  <input type="text" id="loaction" name="location">
-		  <br>
-          <label for="conInfo">Contact Information:</label>
-		  <input type="conInfo" id="conInfo" name="conInfo">
-		  <br>
-		  <div class="button-wrap">
-			<button type="Create">More Info</button>
-		</div>
-        </div>
+		
+        <?php while ($data = mysql_fetch_array($select))?>
+		
+		  <div class="form-item">
+			<fieldset>
+			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
+			<!-- <input type="text" placeholder="Culture Show" /> -->
+			<br />
+			  <label><b>Event Date:</b> <?php echo $data['event_date']; ?></label>
+			<!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
+			<br />
+			  <label><b>Event Time:</b> <?php echo $data['event_time']; ?> </label>
+			<!-- <input type="text" placeholder="hh:mm:ss" /> -->
+			<br />
+			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
+        <?php }?>
+      </fieldset>
       </div>
+
       <div class="up-item b-line">
         <img src="../img/banner2.png" alt="">
         <div>

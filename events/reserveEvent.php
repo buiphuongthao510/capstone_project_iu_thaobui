@@ -68,7 +68,7 @@
 			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address FROM events ORDER BY id ;";
+			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE id=:id ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		

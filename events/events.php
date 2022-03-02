@@ -159,7 +159,8 @@
         <button type="Create">More Info</button>
       <br />
       <br />
-      <br />     
+      <br /> 
+      <hr>    
       <br />
       <br />
       <br />

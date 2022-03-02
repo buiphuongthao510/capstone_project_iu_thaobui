@@ -33,6 +33,7 @@
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
 			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address");
+			header("Location: https://cgi.luddy.indiana.edu/~team21/events/events.php")
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);

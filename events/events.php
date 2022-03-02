@@ -126,7 +126,7 @@
 			      $o_id = $_SESSION["o_id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE o_id = "NULL" ;";
+			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE o_id = 'NULL' ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		

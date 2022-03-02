@@ -139,7 +139,6 @@
 		
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
-		<div class="up-item b-line">
       <div>
         
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>

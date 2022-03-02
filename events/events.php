@@ -140,7 +140,6 @@
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
 		  <div class="form-item">
-			<fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />
@@ -152,7 +151,6 @@
 			<br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
         <?php }?>
-      </fieldset>
       </div>
 
       <div class="up-item b-line">

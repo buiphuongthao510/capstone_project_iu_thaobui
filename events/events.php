@@ -158,42 +158,7 @@
       </div>
         </div>
 
-      <div class="up-item b-line">
-        <img src="../img/banner2.png" alt="">
-        <div>
-          <div class="up-name" style="font-size: 24px;margin: 0 0 8px;">Event Name</div>
-          <div class="up-name">Date: xxxxx</div>
-          <div class="up-name">Location: xxxxx</div>
-          <div class="up-name">Contact Information: xxxxx</div>
-		  <div class="button-wrap">
-			<button type="Create">More Info</button>
-		</div>
-        </div>
-      </div>
-      <div class="up-item b-line">
-        <img src="../img/banner2.png" alt="">
-        <div>
-          <div class="up-name" style="font-size: 24px;margin: 0 0 8px;">Event Name</div>
-          <div class="up-name">Date: xxxxx</div>
-          <div class="up-name">Location: xxxxx</div>
-          <div class="up-name">Contact Information: xxxxx</div>
-		  <div class="button-wrap">
-			<button type="Create">More Info</button>
-		</div>
-        </div>
-      </div>
-      <div class="up-item b-line">
-        <img src="../img/banner2.png" alt="">
-        <div>
-          <div class="up-name" style="font-size: 24px;margin: 0 0 8px;">Event Name</div>
-          <div class="up-name">Date: xxxxx</div>
-          <div class="up-name">Location: xxxxx</div>
-          <div class="up-name">Contact Information: xxxxx</div>
-		  <div class="button-wrap">
-			<button type="Create">More Info</button>
-		</div>
-        </div>
-      </div>
+     
     </div>
   </div>
 </body>

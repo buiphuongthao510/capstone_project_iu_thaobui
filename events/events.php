@@ -141,6 +141,7 @@
 		
 		<div class="up-item b-line">
       <div>
+        <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />
@@ -160,6 +161,7 @@
       <button type="Create">More Info</button>
 
         <?php }?>
+        </fieldset>
       </div>
         </div>
 

@@ -79,16 +79,16 @@
 					<?php while ($data = mysqli_fetch_assoc($select)) {?>
 				  <div class="form-item">
 				<fieldset>
-					  <label><b>Event Name: <input type="text" name="event_name" </b> value="<?php echo $data['event_name']; ?>"/> </label>
+					  <label>Event Name: <input type="text" name="event_name" value="<?php echo $data['event_name']; ?>"/> </label>
 				<!-- <input type="text" placeholder="Culture Show" /> -->
 			  <br />
-        <label><b>Event Date: <input type="text" name="event_date" </b> value="<?php echo $data['event_date']; ?>"/> </label>
+        <label>Event Date: <input type="text" name="event_date" value="<?php echo $data['event_date']; ?>"/> </label>
 				<!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
 			  <br />
-        <label><b>Event Time: <input type="text" name="event_time" </b> value="<?php echo $data['event_time']; ?>"/> </label>
+        <label>Event Time: <input type="text" name="event_time" value="<?php echo $data['event_time']; ?>"/> </label>
 				<!-- <input type="text" placeholder="hh:mm:ss" /> -->
 			  <br />
-				<label><b>Location: <input type="text" name="address" </b> value="<?php echo $data['address']; ?>"/> </label>
+				<label>Location: <input type="text" name="address" value="<?php echo $data['address']; ?>"/> </label>
 				<?php }?>
 			  </fieldset>
 				<!-- <input type="text" placeholder="Wilkie Auditorium" /> -->

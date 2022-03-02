@@ -155,7 +155,9 @@
       <br />
       <br />
       <br />
-      <button type="Create">More Info</button>
+      <p align="right">
+        <button type="Create">More Info</button>
+      </p>
 
         <?php }?>
         </fieldset>

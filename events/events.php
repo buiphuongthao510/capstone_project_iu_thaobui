@@ -137,7 +137,7 @@
       <div class="up-item b-line">
         <img src="../img/banner2.png" alt="">
 		
-        <?php while ($data = mysql_fetch_array($select))?>
+        <?php while ($data = mysql_fetch_array($select)) {?>
 		
 		  <div class="form-item">
 			<fieldset>

@@ -144,13 +144,18 @@
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />
+      <br />
 			  <label><b>Event Date:</b> <?php echo $data['event_date']; ?></label>
 			<!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
 			<br />
+      <br />
 			  <label><b>Event Time:</b> <?php echo $data['event_time']; ?> </label>
 			<!-- <input type="text" placeholder="hh:mm:ss" /> -->
 			<br />
+      <br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>  
+      <br />
+      <br />
       <br />
       <button type="Create">More Info</button>
 

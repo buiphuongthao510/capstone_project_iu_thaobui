@@ -19,6 +19,8 @@
     <p style="flex: 1 1 auto;">Search</p>
     <div class="ui">UI</div>
   </header>
+
+  <?php include './includes/header.php'; ?>
   
 	<section class="nav">
       <div class="left">
@@ -48,31 +50,50 @@
         </div>
 		</div>
 		
+    <?php
+			    $servername = "db.luddy.indiana.edu";
+          $username = "i494f21_team21";
+          $password = "my+sql=i494f21_team21";
+          $dbname = "i494f21_team21";
+            
+            // Create connection
+            $conn = mysqli_connect($servername,$username,$password,$dbname);
+            
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+            }
+            session_start();
+			
+			      $id = $_SESSION["id"];
+			
+			//select statements
+			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE id = $id ;";
+			
+			$select = mysqli_query($conn, $sql_select);
+		
+  ?>
 		
 		<div class="overview-right">
 		  <div class="up-item b-line">
 			<img src="../img/banner2.png" alt="">
 			<div>
+      <?php while ($data = mysqli_fetch_assoc($select)) {?>
 			  <div class="form-item">
-				  <label for="eName" class="form-label"><b>Event Name:</b></label>
-				  <input type="text" class="form-item" id="eName" name="eName" tabindex="1" required>
-				</div>
-			  <div class="form-item">
-				  <label for="date" class="form-label"><b>Date:</b></label>
-				  <input type="text" class="form-item" id="date" name="date" tabindex="2" required>
-				</div>
-			  <div class="form-item">
-				  <label for="location" class="form-label"><b>Location:</b></label>
-				  <input type="text" class="form-item" id="location" name="location" tabindex="3" required>
-				</div>
-			  <div class="form-item">
-				  <label for="conInfo" class="form-label"><b>Contact Information:</b></label>
-				  <input type="text" class="form-item" id="conInfo" name="conInfo" tabindex="4" required>
-				</div>
-			  <div class="form-item">
-				  <label for="eInfo" class="form-label"><b>Event Information:</b></label>
-				  <textarea class="form-item" rows="10" cols="50" id="eInfo" name="eInfo" tabindex="5"></textarea>
-				</div>
+        <fieldset>
+			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
+        <!-- <input type="text" placeholder="Culture Show" /> -->
+      <br />
+			  <label><b>Event Date:</b> <?php echo $data['event_date']; ?></label>
+        <!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
+      <br />
+			  <label><b>Event Time:</b> <?php echo $data['event_time']; ?> </label>
+        <!-- <input type="text" placeholder="hh:mm:ss" /> -->
+      <br />
+			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
+        <?php }?>
+      </fieldset>
+        <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
 				
 				<div>
 			<form action="reserveEvent.php" method="POST">

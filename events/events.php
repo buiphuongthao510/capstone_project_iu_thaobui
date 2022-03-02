@@ -126,7 +126,7 @@
 			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT * FROM events WHERE event_name = '$event_name' && event_date = '$event_date' && event_time = '$event_time' && address = '$address'";
+			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE id = 1 ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -137,7 +137,7 @@
       <div class="up-item b-line">
         <img src="../img/banner2.png" alt="">
 		
-        <?php while ($data = mysql_fetch_array($select)) {?>
+        <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
 		  <div class="form-item">
 			<fieldset>

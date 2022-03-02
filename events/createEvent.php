@@ -49,7 +49,7 @@
 	
 		
     <div class="right">
-		<form action="insert.php" method="POST" enctype="multipart/form-data">
+		<form action="insertEvent.php" method="POST" enctype="multipart/form-data">
           <div class="line">
             <div class="form-item">
 			  <fieldset>

@@ -144,19 +144,13 @@
         <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
-			</fieldset>
-      <br />
-      <fieldset>
+			<br />
 			  <label><b>Event Date:</b> <?php echo $data['event_date']; ?></label>
 			<!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
-      </fieldset>
-      <br />
-      <fieldset>
+			<br />
 			  <label><b>Event Time:</b> <?php echo $data['event_time']; ?> </label>
 			<!-- <input type="text" placeholder="hh:mm:ss" /> -->
-      </fieldset>
-      <br />
-      <fieldset>
+			<br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>  
       <br />
       <br />
@@ -167,7 +161,6 @@
 
         <?php }?>
         </fieldset>
-    
       </div>
         </div>
 

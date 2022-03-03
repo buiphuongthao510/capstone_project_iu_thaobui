@@ -26,13 +26,14 @@
 		$event_date = $_REQUEST['event_date'];
 		$event_time = $_REQUEST['event_time'];
 		$address = $_REQUEST['address'];
+		$description = $_REQUEST['description'];
 
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."')";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description"')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
-			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address");
+			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description" );
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);

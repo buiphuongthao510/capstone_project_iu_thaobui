@@ -312,8 +312,8 @@ session_start();
       $_SESSION['username']=$username;
 
       $_SESSION['authenticated']=true;
-
-      $servername = "db.luddy.indiana.edu";
+    }
+    $servername = "db.luddy.indiana.edu";
       $username = "i494f21_team21";
       $password = "my+sql=i494f21_team21";
       $dbname = "i494f21_team21";
@@ -333,7 +333,6 @@ session_start();
       } else {
         echo "Error: " .$sql_insert. "<br>".$conn->error;
       }
-    }
     }
     ?>
   </body>

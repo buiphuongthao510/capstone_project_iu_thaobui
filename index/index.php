@@ -4,12 +4,6 @@ include './includes/dbConnect.php';
 session_start();
 
 ?>
-<?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-        header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -298,7 +292,10 @@ session_start();
     </footer>  
     <?php
     session_start();
-    if (isset($_GET["ticket"])){
+    if(!isset($_SESSION['CAS'])){
+      header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
+    }
+    if (isset($_GET["ticket"])) {
       $ticket = $_GET['ticket'];
       $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
       $contents = file_get_contents($validate_url);

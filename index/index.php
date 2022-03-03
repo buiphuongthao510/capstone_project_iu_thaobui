@@ -309,14 +309,14 @@ session_start();
       if ($node->length) {
       $username=$node[0]->textContent;
 
-      $_SESSION['username']=$username;
+      $_SESSION['username']=$cas_username;
 
       $_SESSION['authenticated']=true;
     }
     $servername = "db.luddy.indiana.edu";
-      $username = "i494f21_team21";
-      $password = "my+sql=i494f21_team21";
-      $dbname = "i494f21_team21";
+    $username = "i494f21_team21";
+    $password = "my+sql=i494f21_team21";
+    $dbname = "i494f21_team21";
 
       // Create connection
       $conn = mysqli_connect($servername,$username,$password,$dbname);
@@ -326,7 +326,7 @@ session_start();
       die("Connection failed: " .$conn->connect_error);
       }
     
-      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$username."','','',0000-00-00,'','',0,'');";
+      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
 
       if ($conn->query($sql_insert) === TRUE) {
         echo "record inserted successfully";

@@ -26,7 +26,7 @@ session_start();
       </div>
       <div class="button-wrap">
         <div class="button login">
-          <a href="profile.php">TEST</a>
+          <a href="profile.php"><button>User Profile</button></a>
         </div>
       </div>
     </header>

@@ -67,7 +67,7 @@
 			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE id = 1 ;";
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = 1 ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -91,7 +91,7 @@
 				<label>Location: <input type="text" name="address" value="<?php echo $data['address']; ?>"/> </label>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
         <br />
-				<label>Event Description <br /> <textarea id="description" name="description" rows="10" cols="50"></textarea value="<?php echo $data['address']; ?>"/> </label>
+				<label>Event Description: br /> <textarea id="description" name="description" rows="10" cols="50"></textarea value="<?php echo $data['address']; ?>"/> </label>
 				<?php }?>
 			  </fieldset>
 			  </div>

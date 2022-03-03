@@ -4,6 +4,12 @@ include './includes/dbConnect.php';
 session_start();
 
 ?>
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -292,30 +298,41 @@ session_start();
     </footer>  
     <?php
     session_start();
-    $ticket = $_SERVER['QUERY_STRING'];
-    $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
-    $result = file_get_contents($validate_url);
-    $servername = "db.luddy.indiana.edu";
-    $username = "i494f21_team21";
-    $password = "my+sql=i494f21_team21";
-    $dbname = "i494f21_team21";
+    if (isset($_GET["ticket"])){
+      $ticket = $_GET['ticket'];
+      $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
+      $contents = file_get_contents($validate_url);
+      $dom = new DomDocument();
+      $dom->loadXML($contents);
+      $xpath = new DomXPath($dom);
+      $node = $xpath->query("//cas:user");
+      if ($node->length) {
+      $username=$node[0]->textContent;
 
-    // Create connection
-    $conn = mysqli_connect($servername,$username,$password,$dbname);
+      $_SESSION['username']=$username;
 
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " .$conn->connect_error);
+      $_SESSION['authenticated']=true;
     }
+    $servername = "db.luddy.indiana.edu";
+      $username = "i494f21_team21";
+      $password = "my+sql=i494f21_team21";
+      $dbname = "i494f21_team21";
 
-    $_SESSION["username"] = $result;
+      // Create connection
+      $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+      die("Connection failed: " .$conn->connect_error);
+      }
     
-    $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$result."','','',0000-00-00,'','',0,'');";
+      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('$username','','',0000-00-00,'','',0,'');";
 
-    if ($conn->query($sql_insert) === TRUE) {
-      echo "record inserted successfully";
-    } else {
-      echo "Error: " .$sql_insert. "<br>".$conn->error;
+      if ($conn->query($sql_insert) === TRUE) {
+        echo "record inserted successfully";
+      } else {
+        echo "Error: " .$sql_insert. "<br>".$conn->error;
+      }
     }
     ?>
   </body>

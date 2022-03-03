@@ -29,7 +29,7 @@
 		$description = $_REQUEST['description'];
 
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description"')";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

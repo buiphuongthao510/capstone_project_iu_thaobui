@@ -92,6 +92,7 @@
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
       <br />
 				<label><b>Event Description: <br /> <?php echo $data['description']; ?> </label>
+        <!-- <textarea id="description" name="description" rows="10" cols="50"> placeholder="description"</textarea> -->
         <?php }?>
       </fieldset>
 

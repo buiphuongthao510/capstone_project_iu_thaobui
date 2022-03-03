@@ -108,23 +108,33 @@ session_start();
             <?php
 
               // CONNECT DATABASE
-              include './includes/dbConnect.php';
-              session_start();
-              
-              $sql_rand1 = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+              $servername = "db.luddy.indiana.edu";
+              $username = "i494f21_team21";
+              $password = "my+sql=i494f21_team21";
+              $dbname = "i494f21_team21";
+
+              // Create connection
+              $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+              // Check connection
+              if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+              }
+            
+              // Query
+              $sql_rand1 = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
               $result1 = mysqli_query($conn, $sql);
               
-              //disply content
               if(!$result1) {
                 echo $sql_rand1;
               } else{
-                while($data = mysqli_fetch_assoc($result1)){
-                  echo "<div>".$data."</div>";
+                  while($data = mysqli_fetch_assoc($result1)) {
+            // display content
+                    echo '<div>'.$data['name'].'</div>';  
+                  }
                 }
-              }
+            ?>  
         
-            
-            ?>
           </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -135,17 +145,34 @@ session_start();
           <div class="name">
           <?php
           // CONNECT DATABASE
-          include './includes/dbConnect.php';
-          session_start();
+           // CONNECT DATABASE
+           $servername = "db.luddy.indiana.edu";
+           $username = "i494f21_team21";
+           $password = "my+sql=i494f21_team21";
+           $dbname = "i494f21_team21";
+
+           // Create connection
+           $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+           // Check connection
+           if ($conn->connect_error) {
+             die("Connection failed: " .$conn->connect_error);
+           }
           
           //query
-          $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
+          $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
           $result2 = mysqli_query($conn, $sql);
 
-          //display data
-
-
-          ?>
+          if(!$result2) {
+            echo $sql;
+          } else{
+              while($data = mysqli_fetch_assoc($result2)) {
+        // display content
+                echo '<div>'.$data['name'].'</div>';  
+              }
+            }
+        ?>  
+    
           </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

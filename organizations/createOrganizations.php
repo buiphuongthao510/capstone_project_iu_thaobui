@@ -41,7 +41,7 @@
 		</div>
 
         <div class="right">
-		<form action="insertOrganizations.php" method="POST" enctype="multipart/form-data">
+		<form action="insertOrganization.php" method="POST" enctype="multipart/form-data">
           <div class="line">
             <div class="form-item">
 			  <fieldset>

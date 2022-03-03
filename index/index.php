@@ -326,7 +326,7 @@ session_start();
       die("Connection failed: " .$conn->connect_error);
       }
     
-      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('$username','','',0000-00-00,'','',0,'');";
+      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$username."','','',0000-00-00,'','',0,'');";
 
       if ($conn->query($sql_insert) === TRUE) {
         echo "record inserted successfully";

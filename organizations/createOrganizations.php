@@ -49,9 +49,9 @@
 				<br />
 				<label>Email: <input type="text" placeholder="xxx@xx.xxx" name="email" /></label>
 				<br />
-                <label>Phone: <input type="text" placeholder="xxxxxxxxxx" name="phone" /></label>
+        <label>Phone: <input type="text" placeholder="xxxxxxxxxx" name="phone" /></label>
 				<br />
-				<label>Introduction: <input type="text" name="bio" /></label>
+				<label>Description: <input type="text" name="bio" rows = 10/></label>
 				<br />
 				<label>Upload Organization Photo: <input type="file" name="picProfile" value="" /></label>	
 			  </fieldset>

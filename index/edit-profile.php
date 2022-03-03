@@ -88,8 +88,9 @@
           </div>
           <?php
           }?>
-          <button type="submit">Save Profile</button>
-        
+          <div class="line">
+            <button type="submit">Save Profile</button>
+          </div>
         </div>
       </form>
     </section>

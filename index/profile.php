@@ -17,11 +17,6 @@
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
-      <div class="button-wrap">
-        <div class="button login">
-          <a href="profile.php"><button>User Profile</button></a>
-        </div>
-      </div>
     </header>
 
     <section class="nav">

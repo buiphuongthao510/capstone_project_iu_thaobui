@@ -53,7 +53,7 @@
 				<br />
 				<label>Introduction: <input type="text" name="bio" /></label>
 				<br />
-				<label>Upload Organization Photo: <input type="file" name="picOrganization" value="" /></label>	
+				<label>Upload Organization Photo: <input type="file" name="picProfile" value="" /></label>	
 			  </fieldset>
 			  <br />
 			  <button type="submit" name="submit">Create Organization </button>

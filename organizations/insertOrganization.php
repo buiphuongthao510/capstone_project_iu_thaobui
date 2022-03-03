@@ -26,14 +26,14 @@
 		$email = $_REQUEST['email'];
 		$phone = $_REQUEST['phone'];
 		$bio = $_REQUEST['bio'];
-        $picProfile = $_REQUEST['picProfile']
+        
 
 	// Insert Query 
-		$sql = "INSERT INTO organizations(name,email,phone,bio,picProfile) VALUES ('".$name."','".$email."','".$phone."','".$bio."','".$picProfile."')";
+		$sql = "INSERT INTO organizations(name,email,phone,bio) VALUES ('".$name."','".$email."','".$phone."','".$bio."')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
-			echo nl2br("\n$name\n $email\n $phone\n $bio\n $picProfile");
+			echo nl2br("\n$name\n $email\n $phone\n $bio");
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);

@@ -49,7 +49,7 @@
 				<br />
 				<label>Email: <input type="text" placeholder="xxx@xx.xxx" name="email" /></label>
 				<br />
-                <label>Phone: <input type="text" placeholder="xxx-xxx-xxxx" name="phone" /></label>
+                <label>Phone: <input type="text" placeholder="xxxxxxxxxx" name="phone" /></label>
 				<br />
 				<label>Introduction: <input type="text" name="bio" /></label>
 				<br />

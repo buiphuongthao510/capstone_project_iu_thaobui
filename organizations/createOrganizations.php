@@ -22,19 +22,19 @@
     <section class="nav">
       <div class="left">
         <div class="avatar">
-          <img src="./img/banner2.png" alt="" />
+          <img src=".events/img/banner2.png" alt="" />
           <div class="user-name">User name</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
+          <img src=".events/img/banner2.png" alt="" />
           <div>My Memebership</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
+          <img src=".events/img/banner2.png" alt="" />
           <div>My Organizations</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
+          <img src=".events/img/banner2.png" alt="" />
           <div>Create Organization</div>
         </div>
         

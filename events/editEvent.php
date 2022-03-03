@@ -89,9 +89,11 @@
 				<!-- <input type="text" placeholder="hh:mm:ss" /> -->
 			  <br />
 				<label>Location: <input type="text" name="address" value="<?php echo $data['address']; ?>"/> </label>
+        <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
+        <br />
+				<label>Event Description <br /> <textarea id="description" name="description" rows="10" cols="50"></textarea value="<?php echo $data['address']; ?>"/> </label>
 				<?php }?>
 			  </fieldset>
-				<!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
 			  </div>
 			  </div>
 

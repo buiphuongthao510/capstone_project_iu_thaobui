@@ -4,12 +4,6 @@ include './includes/dbConnect.php';
 session_start();
 
 ?>
-<?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-        header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -325,7 +319,10 @@ session_start();
     </footer>  
     <?php
     session_start();
-    if (isset($_GET["ticket"])){
+    if(!isset($_SESSION['CAS'])){
+      header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
+    }
+    if (isset($_GET["ticket"])) {
       $ticket = $_GET['ticket'];
       $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
       $contents = file_get_contents($validate_url);
@@ -336,14 +333,14 @@ session_start();
       if ($node->length) {
       $username=$node[0]->textContent;
 
-      $_SESSION['username']=$username;
+      $_SESSION['username']=$cas_username;
 
       $_SESSION['authenticated']=true;
-
-      $servername = "db.luddy.indiana.edu";
-      $username = "i494f21_team21";
-      $password = "my+sql=i494f21_team21";
-      $dbname = "i494f21_team21";
+    }
+    $servername = "db.luddy.indiana.edu";
+    $username = "i494f21_team21";
+    $password = "my+sql=i494f21_team21";
+    $dbname = "i494f21_team21";
 
       // Create connection
       $conn = mysqli_connect($servername,$username,$password,$dbname);
@@ -353,14 +350,13 @@ session_start();
       die("Connection failed: " .$conn->connect_error);
       }
     
-      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('$username','','',0000-00-00,'','',0,'');";
+      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
 
       if ($conn->query($sql_insert) === TRUE) {
-        echo "record inserted successfully";
+        echo $cas_username;
       } else {
         echo "Error: " .$sql_insert. "<br>".$conn->error;
       }
-    }
     }
     ?>
   </body>

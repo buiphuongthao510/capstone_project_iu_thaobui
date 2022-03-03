@@ -29,7 +29,7 @@
         $picProfile = $_REQUEST['picProfile']
 
 	// Insert Query 
-		$sql = "INSERT INTO organizaitons(name,email,phone,bio, picProfile) VALUES ('".$name."','".$email."','".$phone."','".$bio."','".$picProfile."')";
+		$sql = "INSERT INTO organizations(name,email,phone,bio,picProfile) VALUES ('".$name."','".$email."','".$phone."','".$bio."','".$picProfile."')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

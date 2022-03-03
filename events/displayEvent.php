@@ -91,7 +91,7 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
       <br />
 			<br />
-				<label>Event Description <br /> <?php echo $data['description']; ?> </label>
+				<label><b>Event Description: <br /> <?php echo $data['description']; ?> </label>
         <?php }?>
       </fieldset>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->

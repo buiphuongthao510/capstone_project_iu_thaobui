@@ -319,7 +319,7 @@ session_start();
     </footer>  
     <?php
     session_start();
-    if(!isset($_SESSION['CAS'])){
+    if(!isset($_SESSION['username'])){
       header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
     }
     if (isset($_GET["ticket"])) {

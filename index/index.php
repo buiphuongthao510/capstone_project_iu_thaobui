@@ -4,12 +4,6 @@ include './includes/dbConnect.php';
 session_start();
 
 ?>
-<?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-        header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">

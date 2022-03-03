@@ -6,4 +6,4 @@
         <a>Q&A</a>
       </div>
       <div class="f-logo">Youthon</div>
-    </footer>
+</footer>

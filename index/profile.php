@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Profile</title>
   </head>
 
   <body>
-    <?php include './includes/header.php'; ?>
+  <header>
+      <div class="logo">Youthon</div>
+      <div class="menu-list">
+        <a href="">Events</a>
+        <a href="">Organizations</a>
+        <a href="">Donation</a>
+        <a href="">Search</a>
+      </div>
+    </header>
 
     <section class="nav">
       <div class="left">
@@ -91,6 +99,14 @@
         <a href="edit-profile.php"><button>Edit Profile</button></a>
       </div>
     </section>
-    <?php include './includes/footer.php'?>
+    <footer>
+      <div class="link-wrap">
+        <a>Resourcas</a>
+        <a>Help deak</a>
+        <a>Report</a>
+        <a>Q&A</a>
+      </div>
+      <div class="f-logo">Youthon</div>
+    </footer>
   </body>
 </html>

@@ -24,8 +24,6 @@
         <div class="button">Register</div>
       </div>
     </header>
-    
-    <a href="profile.php">TEST</a>
     <div class="banner">
       <div class="text">xxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
       <div class="button">Join Today</div>

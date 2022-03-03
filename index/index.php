@@ -12,21 +12,21 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Youthon: Home Page</title>
   </head>
 
   <body>
     <header>
-      <div class="logo">Youthon</div>
+      <div class="logo"><a href="index.php">Youthon</a></div>
       <div class="menu-list">
-        <a href="">Events</a>
+        <a href="/events/events.php">Events</a>
         <a href="">Organizations</a>
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
       <div class="button-wrap">
         <div class="button login">
-          <a href="profile.php">TEST</a>
+          <a href="profile.php"><button>User Profile</button></a>
         </div>
       </div>
     </header>

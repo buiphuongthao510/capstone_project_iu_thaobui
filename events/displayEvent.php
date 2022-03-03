@@ -90,7 +90,6 @@
       <br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
       <br />
-			<br />
 				<label><b>Event Description: <br /> <?php echo $data['description']; ?> </label>
         <?php }?>
       </fieldset>

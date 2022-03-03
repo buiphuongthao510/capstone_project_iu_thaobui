@@ -326,7 +326,7 @@ session_start();
       $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
 
       if ($conn->query($sql_insert) === TRUE) {
-        echo $cas_username;
+        echo "username: " .$cas_username. "<br>";
       } else {
         echo "Error: " .$sql_insert. "<br>".$conn->error;
       }

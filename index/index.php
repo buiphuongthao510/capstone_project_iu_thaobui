@@ -17,9 +17,9 @@ session_start();
 
   <body>
     <header>
-      <div class="logo">Youthon</div>
+      <div class="logo"><a href="index.php">Youthon</a></div>
       <div class="menu-list">
-        <a href="">Events</a>
+        <a href="/events/events.php">Events</a>
         <a href="">Organizations</a>
         <a href="">Donation</a>
         <a href="">Search</a>

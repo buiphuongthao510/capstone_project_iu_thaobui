@@ -9,15 +9,19 @@
   </head>
 
   <body>
-    <header>
-      <div class="logo">Youthon</div>
+  <header>
+      <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">
-        <a href="">Events</a>
-        <a href="">Organizations</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
-    </header>
+      <div class="button-wrap">
+        <div class="button login">Log in</div>
+        <div class="button">Register</div>
+      </div>
+  </header>
 
     <section class="nav">
       <div class="left">

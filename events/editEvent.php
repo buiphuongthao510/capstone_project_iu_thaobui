@@ -91,7 +91,7 @@
 				<label>Location: <input type="text" name="address" value="<?php echo $data['address']; ?>"/> </label>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
         <br />
-				<label>Event Description: <br /><textarea name="description"><?php echo $data['description']; ?></textarea> </label>
+				<label>Event Description: <br /><textarea name="description" rows="10" cols="50"><?php echo $data['description']; ?></textarea> </label>
 				<?php }?>
 			  </fieldset>
 			  </div>

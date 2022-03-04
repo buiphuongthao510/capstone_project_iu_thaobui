@@ -33,7 +33,7 @@
           <div>Organizations</div>
         </div>
         <div class="nav-item">
-          <div>Events</div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Events</a></div>
         </div>
       </div>
       <?php 

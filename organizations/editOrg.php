@@ -24,15 +24,16 @@
     <section class="nav">
       <div class="left">
         <div class="avatar">
-        <div class="user-name">
-            <a href = "https://cgi.luddy.indiana.edu/~team21/organizations/org_membership.php">Membership </a>
-        </div>
+          <div class="user-name">Username</div>
         </div>
         <div class="nav-item">
-          <div><a href = "https://cgi.luddy.indiana.edu/~team21/organizations/createOrganizations.php">Create Organization</div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/organizations/org_membership.php">Membership</a></div>
         </div>
         <div class="nav-item">
-          <div>Edit Organization</div>
+          <div><a href = "https://cgi.luddy.indiana.edu/~team21/organizations/createOrganizations.php">Create Organization</a></div>
+        </div>
+        <div class="nav-item">
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Edit Organization</a></div>
         </div>
       </div>
     <?php 

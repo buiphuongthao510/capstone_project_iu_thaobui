@@ -8,6 +8,16 @@
   <link href="./style.css" rel="stylesheet">
   <link href="./createEvent.css" rel="stylesheet">
   <title>Document</title>
+
+  <style>
+    .description {
+      width: 250px;
+      border-style: solid;
+      border-color: black;
+      padding: 25px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -93,8 +103,10 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
       <br />
       <br />
+      <div class="description">
       <label><b>Event Description:</b> <?php echo $data['description']; ?></textarea> </label>
-        <?php }?>
+      </div>
+      <?php }?>
       
       </fieldset>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->

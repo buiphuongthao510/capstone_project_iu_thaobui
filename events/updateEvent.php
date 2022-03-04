@@ -36,7 +36,7 @@
 
 			} else {
 				echo '<script>alert("New data successfully updated!!")</script>';
-				header("Location: https://cgi.luddy.indiana.edu/~team21/events/displayEvent.php");
+				header("Location: https://cgi.luddy.indiana.edu/~team21/events/editEvent.php");
 			}
 			
 ?>

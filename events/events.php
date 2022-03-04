@@ -13,9 +13,9 @@
 
 <body>
   <header>
-    <p class="logo">Youthon</p>
-    <p>Events</p>
-    <p>Organizations</p>
+    <p class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></p>
+    <p><a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a></p>
+    <p><a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a></p>
     <p>Donation</p>
     <p style="flex: 1 1 auto;">Search</p>
     <div class="ui">UI</div>

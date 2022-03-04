@@ -122,11 +122,11 @@ session_start();
               }
             
               // Query
-              $sql_rand1 = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
+              $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
               $result1 = mysqli_query($conn, $sql);
               
               if(!$result1) {
-                echo $sql_rand1;
+                echo $sql;
               } else{
                   while($data = mysqli_fetch_assoc($result1)) {
             // display content
@@ -144,7 +144,7 @@ session_start();
           <img src="./img/banner2.png" />
           <div class="name">
           <?php
-          // CONNECT DATABASE
+
            // CONNECT DATABASE
            $servername = "db.luddy.indiana.edu";
            $username = "i494f21_team21";
@@ -182,8 +182,35 @@ session_start();
           <img src="./img/banner2.png" />
           <div class="name">
             <?php
-              $sql = 'SELECT event_name FROM events ORDER BY RAND() LIMIT 0,1;';
-            ?>
+            // CONNECT DATABASE
+           $servername = "db.luddy.indiana.edu";
+           $username = "i494f21_team21";
+           $password = "my+sql=i494f21_team21";
+           $dbname = "i494f21_team21";
+
+           // Create connection
+           $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+           // Check connection
+           if ($conn->connect_error) {
+             die("Connection failed: " .$conn->connect_error);
+           }
+          
+           //Query
+              $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
+
+              $result3 = mysqli_query($conn, $sql);
+
+              if(!$result3) {
+                echo $sql;
+              } else{
+                  while($data = mysqli_fetch_assoc($result3)) {
+            // display content
+                    echo '<div>'.$data['name'].'</div>';  
+                  }
+                }
+            ?>  
+
           </div>
           <div class="text">
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

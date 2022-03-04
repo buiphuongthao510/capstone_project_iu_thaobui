@@ -11,10 +11,11 @@
 
   <style>
     .description {
+      border-radius: 25px;
       width: 250px;
       border-style: solid;
-      border-color: black;
-      padding: 25px;
+      border-color: #A9A9A9;
+      padding: 15px;
     }
   </style>
 

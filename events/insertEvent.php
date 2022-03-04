@@ -27,15 +27,15 @@
 		$event_time = $_REQUEST['event_time'];
 		$address = $_REQUEST['address'];
 		$description = $_REQUEST['description'];
+		$picName = mysql_real_escape_string($_FILES["picEvent"]["picName"]);
+		$picData = mysql_real_escape_string(file_get_contents($_FILES["picEvent"]["tmpName"]));
+		$picType = mysql_real_escape_string($_FILES["picEvent"["type"]);
 	
 
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,blob) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$picName."','".$picData."')";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,blob) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$picEvent."','".$picName."')";
 
 		if(mysqli_query($conn, $sql)){
-			$picName = mysql_real_escape_string($_FILES["picEvent"]["picName"]);
-			$picData = mysql_real_escape_string(file_get_contents($_FILES["picEvent"]["tmpName"]));
-			$picType = mysql_real_escape_string($_FILES["picEvent"["type"]);
 
 			if(substr($picType,0,5) == "picEvent")
 			{

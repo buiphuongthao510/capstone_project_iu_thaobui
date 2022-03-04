@@ -18,6 +18,15 @@
     <p>Donation</p>
     <p style="flex: 1 1 auto;">Search</p>
     <div class="ui">UI</div>
+
+    <style>
+    description {
+      width: 250px;
+      border-style: solid;
+      border-color: black;
+      padding: 25px;
+    }
+    </style>
   </header>
 
   <?php include './includes/header.php'; ?>
@@ -73,6 +82,7 @@
 			$select = mysqli_query($conn, $sql_select);
 		
   ?>
+
 		
 		<div class="overview-right">
 		  <div class="up-item b-line">
@@ -93,8 +103,10 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
       <br />
       <br />
+      <div class="description">
       <label><b>Event Description:</b> <?php echo $data['description']; ?></label>
         <?php }?>
+      </div>
       
       </fieldset>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->

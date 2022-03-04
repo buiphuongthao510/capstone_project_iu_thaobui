@@ -126,7 +126,7 @@
 			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address FROM events ORDER BY id ;";
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events ORDER BY id ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -152,7 +152,7 @@
 			<br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>  
       <br />
-      <label>Event Description:<br/> <?php echo $data['description']; ?> </label>
+      <label>Event Description: <br /><textarea name="description" rows="10" cols="50"><?php echo $data['description']; ?></textarea> </label>
       <br />
       <br />
       <br />

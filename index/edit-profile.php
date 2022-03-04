@@ -20,30 +20,18 @@
     </header>
 
     <section class="nav">
-      <div class="left">
+    <div class="left">
         <div class="avatar">
-          <img src="./img/banner2.png" alt="" />
-          <div class="user-name">User name</div>
+          <div class="user-name">Username</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Overview</div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">Profile</a></div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Dashboard</div>
+          <div>Organizations</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Registered Event</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Settings</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Help</div>
+          <div>Events</div>
         </div>
       </div>
       <?php 

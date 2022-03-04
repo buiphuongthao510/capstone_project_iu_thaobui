@@ -35,6 +35,7 @@
         <div class="nav-item">
           <div>Events</div>
         </div>
+      </div>
       <?php 
             $servername = "db.luddy.indiana.edu";
             $username = "i494f21_team21";

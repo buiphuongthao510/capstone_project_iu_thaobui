@@ -103,6 +103,7 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
       <br />
+      <br />
       <b>Event Description</b>
       <div class="description">
       <label> <?php echo $data['description']; ?></textarea> </label>

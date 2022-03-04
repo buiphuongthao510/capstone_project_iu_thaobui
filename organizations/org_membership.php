@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="C:\Users\Zoey\team-21\index\style.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
     <title>Organization</title>
   </head>
 
@@ -61,12 +61,7 @@
     ?>
 
     <div class="right">
-        <div class="title gi">Memebership</div>
-        <div class="line">
-          <?php while ($data = mysqli_fetch_assoc()) {?>
-          <div class="form-item">
-            <div>Organization name: <?php echo 'no info now'; ?> </div>
-        </div>
+        
     </section>
     <footer>
       <div class="link-wrap">

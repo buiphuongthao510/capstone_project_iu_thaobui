@@ -28,28 +28,16 @@
     <section class="nav">
       <div class="left">
         <div class="avatar">
-          <img src="./img/banner2.png" alt="" />
-          <div class="user-name">User name</div>
+        <div class="user-name">Username</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Overview</div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Registered Events</a></div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Dashboard</div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/createEvent.php">Create Event</a></div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Create Event</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Settings</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Help</div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/editEvent.php">Edit Event</a></div>
         </div>
 		</div>
 		

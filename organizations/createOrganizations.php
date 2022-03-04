@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./events/createEvent.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="./createOrg.css" rel="stylesheet" />
+    <title>Create Event</title>
   </head>
 
   <body>
@@ -23,26 +23,20 @@
       </div>
   </header>
 
-    <section class="nav">
+  <section class="nav">
       <div class="left">
         <div class="avatar">
-          <img src=".events/img/banner2.png" alt="" />
-          <div class="user-name">User name</div>
+          <div class="user-name">
+            <a href = "https://cgi.luddy.indiana.edu/~team21/organizations/org_membership.php">Membership </a>
+          </div>
         </div>
         <div class="nav-item">
-          <img src=".events/img/banner2.png" alt="" />
-          <div>My Memebership</div>
-        </div>
-        <div class="nav-item">
-          <img src=".events/img/banner2.png" alt="" />
-          <div>My Organizations</div>
-        </div>
-        <div class="nav-item">
-          <img src=".events/img/banner2.png" alt="" />
           <div>Create Organization</div>
         </div>
-        
-		</div>
+        <div class="nav-item">
+          <div>Edit Organization</div>
+        </div>
+      </div>
 
         <div class="right">
 		<form action="insertOrganization.php" method="POST" enctype="multipart/form-data">

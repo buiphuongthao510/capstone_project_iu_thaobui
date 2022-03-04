@@ -10,10 +10,12 @@
 
   <body>
   <header>
-      <div class="logo">Youthon</div>
+      <div class="logo">
+        <a href = "https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a>
+      </div>
       <div class="menu-list">
-        <a href="">Events</a>
-        <a href="">Organizations</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
@@ -22,28 +24,16 @@
     <section class="nav">
       <div class="left">
         <div class="avatar">
-          <img src="./img/banner2.png" alt="" />
-          <div class="user-name">User name</div>
+          <div class="user-name">Username</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Overview</div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">Profile</a></div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Dashboard</div>
+          <div>Organizations</div>
         </div>
         <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Registered Event</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Settings</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Help</div>
+          <div>Events</div>
         </div>
       </div>
       <?php 

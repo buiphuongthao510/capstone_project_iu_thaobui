@@ -35,7 +35,7 @@
           <div><a href = "https://cgi.luddy.indiana.edu/~team21/organizations/createOrganizations.php">Create Organization</a></div>
         </div>
         <div class="nav-item">
-          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Edit Organization</a></div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php">Edit Organization</a></div>
         </div>
       </div>
         <div class="right">

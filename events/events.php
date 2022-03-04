@@ -152,7 +152,7 @@
 			<br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>  
       <br />
-      <label>Event Description: <br /><textarea name="description" rows="10" cols="50"><?php echo $data['description']; ?></textarea> </label>
+      <label>Event Description:<br/> <?php echo $data['description']; ?> </label>
       <br />
       <br />
       <br />

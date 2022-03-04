@@ -27,24 +27,11 @@
 		$event_time = $_REQUEST['event_time'];
 		$address = $_REQUEST['address'];
 		$description = $_REQUEST['description'];
-		$picName = mysql_real_escape_string($_FILES["picEvent"]["picName"]);
-		$picData = mysql_real_escape_string(file_get_contents($_FILES["picEvent"]["tmpName"]));
-		$picType = mysql_real_escape_string($_FILES["picEvent"["type"]);
-	
 
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,blob) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$picEvent."','".$picName."')";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."')";
 
 		if(mysqli_query($conn, $sql)){
-
-			if(substr($picType,0,5) == "picEvent")
-			{
-				echo "Working code";
-			}
-			else{
-				echo "Only images are allowed!";
-			}
-
 			echo "Data updated successfully";
 			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description" );
 		}	else{

@@ -106,7 +106,7 @@
       </div>
       </div>
 
-			  <a href="editEvent.php"><button>Edit Event Information</button></a>
+			  <a href="saveEvent.php"><button>Edit Event Information</button></a>
       </div>
     </section>
 

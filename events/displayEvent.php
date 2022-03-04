@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./createEvent.css" rel="stylesheet" />
     <title>Document</title>
+
+    <style>
+    .description {
+      border-radius: 10px;
+      width: 250px;
+      border-style: solid;
+      border-width: thin;
+      border-color: black;
+      padding: 15px;
+    }
+  </style>
+
   </head>
 
   <body>
@@ -91,8 +103,10 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
       <br />
-      <label><b>Event Description:</b> <?php echo $data['description']; ?> </label>
-        <!-- <textarea id="description" name="description" rows="10" cols="50"> placeholder="description"</textarea> -->
+      <b>Event Description</b>
+      <div class="description">
+      <label> <?php echo $data['description']; ?></textarea> </label>
+      </div>
         <?php }?>
       </fieldset>
 

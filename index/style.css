@@ -260,6 +260,11 @@ footer {
   height: 25px;
   background: #990000;
 }
+
+.nav-item::hover {
+  color: #FF9999;
+}
+
 .title.gi {
   text-align: left;
 }
@@ -286,10 +291,6 @@ input {
 }
 input:focus {
   border: 1px solid #990000;
-}
-
-a {
-  text-decoration: none;
 }
 
 #displayPhoto{

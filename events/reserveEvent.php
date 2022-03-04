@@ -103,8 +103,9 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
       <br />
       <br />
+      <b>Event Description</b>
       <div class="description">
-      <label><b>Event Description:</b> <?php echo $data['description']; ?></textarea> </label>
+      <label> <?php echo $data['description']; ?></textarea> </label>
       </div>
       <?php }?>
       

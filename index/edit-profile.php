@@ -84,8 +84,8 @@
           </div>
           <?php
           }?>
-          <button type="submit">Save Profile</button>
         </div>
+        <button type="submit">Save Profile</button>
       </form>
     </section>
     <footer>

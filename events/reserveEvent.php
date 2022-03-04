@@ -93,7 +93,7 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>
       <br />
       <br />
-      <label><b>Event Description:</b> <br /><textarea rows="10" cols="50"><?php echo $data['description']; ?></textarea> </label>
+      <label><b>Event Description:</b> <?php echo $data['description']; ?></label>
         <?php }?>
       
       </fieldset>

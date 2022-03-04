@@ -11,7 +11,7 @@
 
   <style>
     .description {
-      border-radius: 25px;
+      border-radius: 10px;
       width: 250px;
       border-style: solid;
       border-color: #A9A9A9;

@@ -37,32 +37,6 @@
   <?php include './includes/header.php'; ?>
   
 	<section class="nav">
-      <div class="left">
-        <div class="avatar">
-          <img src="./img/banner2.png" alt="" />
-          <div class="user-name">User name</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Overview</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Dashboard</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Create Event</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Settings</div>
-        </div>
-        <div class="nav-item">
-          <img src="./img/banner2.png" alt="" />
-          <div>Help</div>
-        </div>
-		</div>
 		
     <?php
 			    $servername = "db.luddy.indiana.edu";

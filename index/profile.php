@@ -30,7 +30,7 @@
           <div><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">Profile</a></div>
         </div>
         <div class="nav-item">
-          <div>Organizations</div>
+          <div><a href ="https://cgi.luddy.indiana.edu/~team21/organizations/org_membership.php">Organizations</a></div>
         </div>
         <div class="nav-item">
           <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Events</a></div>

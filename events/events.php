@@ -13,13 +13,20 @@
 
 <body>
   <header>
-    <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
+  <ul>
+      <li><a class="logo" href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></li>
+      <li><a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a></li>
+      <li><a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a></li>
+      <li><a href="#Donation">Donation</a></li>
+      <li><a href="#Donation">Search</a></li>
+  </ul>
+    <!-- <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <p>Donation</p>
         <p style="flex: 1 1 auto;">Search</p>
-      </div>
+      </div> -->
     <div class="ui">UI</div>
   </header>
 

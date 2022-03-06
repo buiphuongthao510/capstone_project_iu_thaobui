@@ -8,50 +8,18 @@
   <link href="./styleEvent.css" rel="stylesheet">
   <title>Document</title>
 </head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #990000;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: red;
-}
-</style>
 
 <?php include './includes/header.php'; ?>
 
 <body>
   <header>
-  <ul>
-    <li><a class="active" href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></li>
-    <li><a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a></li>
-    <li><a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a></li>
-    <li><a href="#Donation">Donation</a></li>
-    <li><a href="#Search">Search</a></li>
-  </ul>
-    <!-- <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
+    <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <p>Donation</p>
         <p style="flex: 1 1 auto;">Search</p>
-      </div> -->
+      </div>
     <div class="ui">UI</div>
   </header>
 

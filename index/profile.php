@@ -37,6 +37,7 @@
         </div>
         <div class="nav-item">
           <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
+        </div>
       </div>
       <?php 
             $servername = "db.luddy.indiana.edu";
@@ -87,7 +88,6 @@
             <!-- <input type="text" placeholder="sfsich@email.com" /> -->
           </div>
         </div>
-
         <a href="edit-profile.php"><button>Edit Profile</button></a>
       </div>
     </section>

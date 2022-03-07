@@ -31,7 +31,7 @@ session_start();
       </div>
     </header>
     <div class="banner">
-      <div class="text">xxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+      <div class="text">Welcome to Youthon</div>
       <div class="button">Join Today</div>
     </div>
 
@@ -77,12 +77,12 @@ session_start();
           <div>organizations</div>
         </a>
         <a class="group-item">
-          <div>#####</div>
+          <div>0</div>
           <div>Transactions</div>
           <div>made</div>
         </a>
         <a class="group-item">
-          <div>#####</div>
+          <div>0</div>
           <div>Funding</div>
           <div>raised</div>
         </a>
@@ -260,22 +260,22 @@ session_start();
           </div>
           <div class="row">
             <div class="order">7</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">8</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">9</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">10</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
         </div>
@@ -283,52 +283,52 @@ session_start();
           <div class="title-sub">Enegagement Points Leaders</div>
           <div class="row">
             <div class="order order-1">1</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order order-2">2</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order order-3">3</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">4</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">5</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">6</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">7</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">8</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">9</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">10</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
         </div>

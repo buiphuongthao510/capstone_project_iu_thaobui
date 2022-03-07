@@ -266,6 +266,7 @@ footer {
 
 .nav-item::hover {
   color: #FF9999;
+  text-decoration: none;
 }
 
 .title.gi {

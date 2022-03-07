@@ -20,7 +20,7 @@
         <a href="">Search</a>
       </div>
     </header>
-    
+
     <section class="nav">
       <div class="left">
         <div class="avatar">
@@ -34,6 +34,9 @@
         </div>
         <div class="nav-item">
           <div><a href="https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php">Edit Organization</a></div>
+        </div>
+        <div class="nav-item">
+          <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
         </div>
       </div>
     <?php 

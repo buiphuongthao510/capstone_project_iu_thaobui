@@ -17,11 +17,11 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <a href="#Donation">Donation</a>
-        <a href="#Search">Search</a>
+        <a href="">Donation</a>
+        <a href="">Search</a>
         <!-- <p style="flex: 1 1 auto;">Search</p> -->
       </div>
-    <!-- <div class="ui">UI</div> -->
+    <div class="ui">UI</div>
   </header>
 
   <div class="main">

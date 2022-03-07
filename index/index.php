@@ -32,7 +32,6 @@ session_start();
     </header>
     <div class="banner">
       <div class="text">Welcome to Youthon</div>
-      <div class="button">Join Today</div>
     </div>
 
     <section>

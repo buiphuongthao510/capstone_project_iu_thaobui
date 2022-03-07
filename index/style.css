@@ -27,6 +27,9 @@ header .logo {
   text-decoration: none;
   margin: 0 32px 0 0;
 }
+a:link {
+  text-decoration: none;
+}
 .button-wrap {
   flex: 1;
   text-align: right;

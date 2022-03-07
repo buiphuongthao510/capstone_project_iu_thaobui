@@ -39,33 +39,56 @@
           <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
         </div>
       </div>
-    <?php 
-      $servername = "db.luddy.indiana.edu";
-      $username = "i494f21_team21";
-      $password = "my+sql=i494f21_team21";
-      $dbname = "i494f21_team21";
+      <?php
+		  $servername = "db.luddy.indiana.edu";
+          $username = "i494f21_team21";
+          $password = "my+sql=i494f21_team21";
+          $dbname = "i494f21_team21";
+            
+            // Create connection
+            $conn = mysqli_connect($servername,$username,$password,$dbname);
+            
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+            }
+            session_start();
+			
+			      $id = $_SESSION["id"];
+			
+			//select statements
+			$sql_select = "SELECT name,email,phone,bio FROM organizations WHERE id = 1 ;";
+			
+			$select = mysqli_query($conn, $sql_select);
+		
+  ?>
+		
+  <div class="right">
+		<div class="title ei">Registered Event</div>      
+    <div class="line"> 
+			<?php while ($data = mysqli_fetch_assoc($select)) {?>
+		  <div class="form-item">
+        <fieldset>
+			  <label><b>Organization Name:</b> <?php echo $data['name']; ?> </label>
+        
+      <br />
+			  <label><b>Organization email:</b> <?php echo $data['email']; ?></label>
+        
+      <br />
+			  <label><b>Phone:</b> <?php echo $data['Phone']; ?> </label>
+        
+      <br />
+			  <label><b>Bio:</b> <?php echo $data['bio']; ?> </label>
+        
+      <br />
+      <br />
       
-      // Create connection
-      $conn = mysqli_connect($servername,$username,$password,$dbname);
-      
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " .$conn->connect_error);
-      }
-      session_start();
+        <?php }?>
+      </fieldset>
 
-      $username = $_SESSION["username"];
-      
-      //select statements
-      $sql_select = ""; 
-
-      $select = mysqli_query($conn, $sql_select);
-
-    ?>
-
-    <div class="right">
-      <div class="title gi">Membership</div>
-    </div>   
+      </div>
+      </div>
+      </div>
     </section>
     <footer>
       <div class="link-wrap">

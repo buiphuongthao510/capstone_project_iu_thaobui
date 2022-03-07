@@ -25,7 +25,7 @@
       </div>
     </header>
     <div class="banner">
-      <div class="text">xxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+      <div class="text">Welcome to Youthon</div>
       <div class="button">Join Today</div>
     </div>
 
@@ -33,17 +33,50 @@
       <div class="title">Find your passion group</div>
       <div class="group-list">
         <a class="group-item">
-          <div>#####</div>
+          
+            <?php
+              // CONNECT DATABASE
+              $servername = "db.luddy.indiana.edu";
+              $username = "i494f21_team21";
+              $password = "my+sql=i494f21_team21";
+              $dbname = "i494f21_team21";
+
+              // Create connection
+              $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+              // Check connection
+              if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+              }
+            
+
+            
+              // Query
+              $sql = "SELECT COUNT(*) as 'count' FROM organizations;";
+              $result = mysqli_query($conn, $sql);
+
+              if(!$result) {
+                echo $sql;
+              } else{
+                  while($data = mysqli_fetch_assoc($result)) {
+            // display content
+                    echo '<div>'.$data['count'].'</div>';  
+                  }
+                }
+            ?>  
+
+          
+          
           <div>Student</div>
           <div>organizations</div>
         </a>
         <a class="group-item">
-          <div>#####</div>
+          <div>0</div>
           <div>Transactions</div>
           <div>made</div>
         </a>
         <a class="group-item">
-          <div>#####</div>
+          <div>0</div>
           <div>Funding</div>
           <div>raised</div>
         </a>
@@ -55,7 +88,6 @@
       <div>
         <div class="title">Club of the day</div>
         <div class="text">
-          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         </div>
       </div>
     </section>
@@ -65,30 +97,120 @@
       <div class="events-list">
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+            <?php
+
+              // CONNECT DATABASE
+              $servername = "db.luddy.indiana.edu";
+              $username = "i494f21_team21";
+              $password = "my+sql=i494f21_team21";
+              $dbname = "i494f21_team21";
+
+              // Create connection
+              $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+              // Check connection
+              if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+              }
+            
+              // Query
+              $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
+              $result1 = mysqli_query($conn, $sql);
+              
+              if(!$result1) {
+                echo $sql;
+              } else{
+                  while($data = mysqli_fetch_assoc($result1)) {
+            // display content
+                    echo '<div>'.$data['name'].'</div>';  
+                  }
+                }
+            ?>  
+        
+          </div>
           <div class="text">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+          <?php
+
+           // CONNECT DATABASE
+           $servername = "db.luddy.indiana.edu";
+           $username = "i494f21_team21";
+           $password = "my+sql=i494f21_team21";
+           $dbname = "i494f21_team21";
+
+           // Create connection
+           $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+           // Check connection
+           if ($conn->connect_error) {
+             die("Connection failed: " .$conn->connect_error);
+           }
+          
+          //query
+          $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
+          $result2 = mysqli_query($conn, $sql);
+
+          if(!$result2) {
+            echo $sql;
+          } else{
+              while($data = mysqli_fetch_assoc($result2)) {
+        // display content
+                echo '<div>'.$data['name'].'</div>';  
+              }
+            }
+        ?>  
+    
+          </div>
           <div class="text">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">Event name</div>
+          <div class="name">
+            <?php
+            // CONNECT DATABASE
+           $servername = "db.luddy.indiana.edu";
+           $username = "i494f21_team21";
+           $password = "my+sql=i494f21_team21";
+           $dbname = "i494f21_team21";
+
+           // Create connection
+           $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+           // Check connection
+           if ($conn->connect_error) {
+             die("Connection failed: " .$conn->connect_error);
+           }
+          
+           //Query
+              $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
+
+              $result3 = mysqli_query($conn, $sql);
+
+              if(!$result3) {
+                echo $sql;
+              } else{
+                  while($data = mysqli_fetch_assoc($result3)) {
+            // display content
+                    echo '<div>'.$data['name'].'</div>';  
+                  }
+                }
+            ?>  
+
+          </div>
           <div class="text">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
       </div>
     </section>
 
     <div style="text-align: center">
-      <div class="button more">Explore more events</div>
+      <div class="button more"><a href = "https://cgi.luddy.indiana.edu/~team21/events/events.php">Explore more events</a></div>
     </div>
 
     <section class="rank">

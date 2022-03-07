@@ -93,8 +93,8 @@
     </section>
     <footer>
       <div class="link-wrap">
-        <a>Resourcas</a>
-        <a>Help deak</a>
+        <a>Resources</a>
+        <a>Help desk</a>
         <a>Report</a>
         <a>Q&A</a>
       </div>

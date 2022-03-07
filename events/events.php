@@ -17,8 +17,9 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <p>Donation</p>
-        <p style="flex: 1 1 auto;">Search</p>
+        <a href="#Donation">Donation</a>
+        <a href="#Search">Search</a>
+        <!-- <p style="flex: 1 1 auto;">Search</p> -->
       </div>
     <div class="ui">UI</div>
   </header>

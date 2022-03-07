@@ -353,6 +353,8 @@ session_start();
       $ticket = $_GET['ticket'];
       $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
       $contents = file_get_contents($validate_url);
+      echo "username: " .$cas_username. "<br>";
+      echo "contents: " .$contents. "<br>";
       $dom = new DomDocument();
       $dom->loadXML($contents);
       $xpath = new DomXPath($dom);
@@ -360,9 +362,9 @@ session_start();
       if ($node->length) {
       $username=$node[0]->textContent;
 
-      $_SESSION['username']=$cas_username;
+      $_SESSION['username'] = $cas_username;
 
-      $_SESSION['authenticated']=true;
+      $_SESSION['authenticated'] = true;
     }
     $servername = "db.luddy.indiana.edu";
     $username = "i494f21_team21";
@@ -380,7 +382,9 @@ session_start();
       $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
 
       if ($conn->query($sql_insert) === TRUE) {
-        echo "username: " .$cas_username. "<br>";
+        // echo "username: " .$cas_username. "<br>";
+        // echo "contents: " .$contents. "<br>";
+
       } else {
         echo "Error: " .$sql_insert. "<br>".$conn->error;
       }

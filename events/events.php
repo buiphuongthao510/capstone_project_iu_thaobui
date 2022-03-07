@@ -21,7 +21,7 @@
         <a href="#Search">Search</a>
         <!-- <p style="flex: 1 1 auto;">Search</p> -->
       </div>
-    <div class="ui">UI</div>
+    <!-- <div class="ui">UI</div> -->
   </header>
 
   <div class="main">

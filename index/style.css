@@ -23,8 +23,8 @@ header .logo {
   text-decoration: none;
 }
 
-header .logo .a:visited{
-  color : #990000
+a:link{
+  text-decoration: none;
 }
 
 .menu-list a {

@@ -51,9 +51,7 @@
         <div class="nav-item">
           <div><a href="https://cgi.luddy.indiana.edu/~team21/events/editEvent.php">Edit Event</a></div>
         </div>
-        <div class="nav-item">
-          <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
-        </div>
+
         <div class="nav-item">
           <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
         </div>
@@ -118,8 +116,8 @@
 
     <footer>
       <div class="link-wrap">
-        <a>Resource</a>
-        <a>Help deak</a>
+        <a>Resources</a>
+        <a>Help desk</a>
         <a>Report</a>
         <a>Q&A</a>
       </div>

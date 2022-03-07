@@ -107,8 +107,8 @@
   
   <footer>
       <div class="link-wrap">
-        <a>Resource</a>
-        <a>Help deak</a>
+        <a>Resources</a>
+        <a>Help desk</a>
         <a>Report</a>
         <a>Q&A</a>
       </div>

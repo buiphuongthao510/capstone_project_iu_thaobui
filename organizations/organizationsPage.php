@@ -22,6 +22,7 @@
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
+      <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
     </header>
 
   <div class="main">

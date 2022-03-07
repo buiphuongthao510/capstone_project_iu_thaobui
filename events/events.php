@@ -21,7 +21,7 @@
         <a href="">Search</a>
         <!-- <p style="flex: 1 1 auto;">Search</p> -->
       </div>
-    <div class="ui">UI</div>
+    <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
   </header>
 
   <div class="main">

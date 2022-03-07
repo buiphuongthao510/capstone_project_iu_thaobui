@@ -109,7 +109,7 @@ session_start();
           }
 
         //query
-          $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
+          $sql = 'SELECT name as name FROM organizations ORDER BY RAND() LIMIT 1;';
           $result2 = mysqli_query($conn, $sql);
 
         if(!$result2) {

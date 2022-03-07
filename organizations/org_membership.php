@@ -54,17 +54,17 @@
             }
             session_start();
 			
-			      $id = $_SESSION["id"];
+			      $id = $_SESSION["o_id"];
 			
 			//select statements
-			$sql_select = "SELECT name,email,phone,bio FROM organizations WHERE id = 1 ;";
+			$sql_select = "SELECT name,email,phone,bio FROM organizations WHERE o_id = 1 ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
   ?>
 		
   <div class="right">
-		<div class="title ei">Registered Event</div>      
+		<div class="title ei">Membership</div>      
     <div class="line"> 
 			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">

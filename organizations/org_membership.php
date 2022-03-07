@@ -20,7 +20,7 @@
         <a href="">Search</a>
       </div>
     </header>
-
+    
     <section class="nav">
       <div class="left">
         <div class="avatar">

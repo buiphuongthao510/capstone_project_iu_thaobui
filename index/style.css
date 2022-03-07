@@ -22,6 +22,11 @@ header .logo {
   margin: 0 32px 0 0;
   text-decoration: none;
 }
+
+header .logo .a:visited{
+  color : #990000
+}
+
 .menu-list a {
   color: #990000;
   text-decoration: none;

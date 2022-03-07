@@ -1,10 +1,3 @@
-<?php
-
-include './includes/dbConnect.php';
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +5,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Youthon: Home Page</title>
+    <title>Youthon</title>
   </head>
 
   <body>
@@ -26,8 +19,9 @@ session_start();
       </div>
       <div class="button-wrap">
         <div class="button login">
-          <a href="profile.php"><button>User Profile</button></a>
+          <a href="https://idp.login.iu.edu/idp/profile/cas/login?service=https://cgi.luddy.indiana.edu/~team21/index/index.php">Login</a>
         </div>
+        <div class="button">Register</div>
       </div>
     </header>
     <div class="banner">

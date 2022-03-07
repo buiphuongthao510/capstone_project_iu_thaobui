@@ -233,7 +233,7 @@ footer {
 .left {
   display: flex;
   flex-direction: column;
-  margin: 0 128px 0 0;
+  margin: 0 150px 0 0;
 }
 .avatar {
   margin: 0 auto;

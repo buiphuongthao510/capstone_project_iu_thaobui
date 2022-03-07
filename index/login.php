@@ -210,7 +210,7 @@
     </section>
 
     <div style="text-align: center">
-      <div class="button more"><a href = 'events/events.php'>Explore more events</a></div>
+      <div class="button more"><a href = "https://cgi.luddy.indiana.edu/~team21/events/events.php">Explore more events</a></div>
     </div>
 
     <section class="rank">

@@ -21,7 +21,6 @@
         <div class="button login">
           <a href="https://idp.login.iu.edu/idp/profile/cas/login?service=https://cgi.luddy.indiana.edu/~team21/index/index.php">Login</a>
         </div>
-        <div class="button">Register</div>
       </div>
     </header>
     <div class="banner">

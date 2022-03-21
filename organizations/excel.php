@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 
-// require_once '../includes/PHPExcel.php';
+require_once '../includes/PHPExcel.php';
 
 $servername = "db.luddy.indiana.edu";
 $username = "i494f21_team21";
@@ -22,7 +22,7 @@ $select = mysqli_query($conn, $sql_select);
 
 $filename="members.xls";
 // Create new PHPExcel object
-// $objPHPExcel = new PHPExcel();
+$objPHPExcel = new PHPExcel();
 // Set document properties
 $objPHPExcel->getProperties()->setTitle("members");
 

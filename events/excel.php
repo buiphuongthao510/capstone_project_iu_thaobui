@@ -22,7 +22,7 @@ $select = mysqli_query($conn, $sql_select);
 
 $filename="members.xls";
 // Create new PHPExcel object
-$objPHPExcel = new PHPExcel();
+// $objPHPExcel = new PHPExcel();
 // Set document properties
 $objPHPExcel->getProperties()->setTitle("members");
 

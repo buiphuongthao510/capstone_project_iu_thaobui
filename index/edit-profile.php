@@ -49,7 +49,7 @@
             }
             session_start();
 
-            $username = $_SESSION["username"];
+            $cas_username = $_SESSION["username"];
             
             //select statements
             $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE username = '".$cas_username."';"; 

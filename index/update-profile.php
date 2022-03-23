@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 session_start();
 
-$username = $_SESSION["username"];
+$cas_username = $_SESSION["username"];
 
 
 //variable assignments

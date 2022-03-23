@@ -1,8 +1,8 @@
 <?php
-
-include './includes/dbConnect.php';
-session_start();
-
+    session_start();
+    if(!isset($_SESSION['username'])){
+      header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -369,10 +369,6 @@ session_start();
       <div class="f-logo">Youthon</div>
     </footer>  
     <?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-      header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
-    }
     if (isset($_GET["ticket"])) {
       $ticket = $_GET['ticket'];
       // $ticket = "ST-AADXGZLDOJSXIMPIGNZABZNY4VKQTHKRWBB5ABWQRPZBT4T2V4HFLPMUATRL2VYNR7BUN74MUKRPW7WIIXSGYPBHNYGOJEOOL2HPNWRJH7NQO4WNC6NDAVRS5CIAESRJAYF5ZFGSPLHITMNCRLZSWH2ZHN7L2JSSCYVF7HDM63BMRZDU4SEXIIRZKERVDGH5SL4VKEXSXSZKRGVCDYRRVBUPNWIDXJ4W6GB6K4TGTBU4TBUNRJ63J332TTZD237VS3HXCAMHRO6OSKKSMBSGRBWSAREXY7FGB7HYXHCQELRFRIEEUGSVVYWAFECPREUATQYG4NRVBWORAI6EVRKKLD5S7RZL3VT7ICMKLGL2IEH7ACPBL3YHEE35YOJU3NJ46CGE5G4OIK2Z4MNEH7TBQ---";

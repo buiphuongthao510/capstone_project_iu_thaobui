@@ -52,7 +52,7 @@
             $username = $_SESSION["username"];
             
             //select statements
-            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE username = 'ldeeley7';"; 
+            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE username = '".$cas_username."';"; 
 
             $select = mysqli_query($conn, $sql_select);
 

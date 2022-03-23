@@ -5,7 +5,6 @@
       echo 'alert("Unauthorized page! Please login first!");';
       echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/index/login.php";';
       echo '</script>';
-      //header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
     }
 ?>
 

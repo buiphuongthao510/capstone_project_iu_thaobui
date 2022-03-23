@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+      echo '<script type="text/javascript">';
+      echo 'alert("Unauthorized page! Please login first!");';
+      echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/index/login.php";';
+      echo '</script>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

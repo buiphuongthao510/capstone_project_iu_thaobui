@@ -1,10 +1,10 @@
 <?php
     session_start();
     if(!isset($_SESSION['username'])){
-      header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
       echo '<script type="text/javascript">';
       echo  ' alert("Unauthorized page! Please login first!")';
       echo '</script>';
+      header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
     }
 ?>
 

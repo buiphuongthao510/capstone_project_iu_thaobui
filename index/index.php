@@ -386,6 +386,8 @@ session_start();
       $node = $xpath->query("//cas:user");
       if ($node->length) {
       $username=$node[0]->textContent;
+      $cas_username = $username;
+
 
       $_SESSION['username'] = $cas_username;
 

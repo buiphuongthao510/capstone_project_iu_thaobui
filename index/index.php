@@ -7,7 +7,52 @@
       echo '</script>';
     }
 ?>
+<?php
+    session_start();
+    if (isset($_GET["ticket"])) {
+      $ticket = $_GET['ticket'];
+      // $ticket = "ST-AADXGZLDOJSXIMPIGNZABZNY4VKQTHKRWBB5ABWQRPZBT4T2V4HFLPMUATRL2VYNR7BUN74MUKRPW7WIIXSGYPBHNYGOJEOOL2HPNWRJH7NQO4WNC6NDAVRS5CIAESRJAYF5ZFGSPLHITMNCRLZSWH2ZHN7L2JSSCYVF7HDM63BMRZDU4SEXIIRZKERVDGH5SL4VKEXSXSZKRGVCDYRRVBUPNWIDXJ4W6GB6K4TGTBU4TBUNRJ63J332TTZD237VS3HXCAMHRO6OSKKSMBSGRBWSAREXY7FGB7HYXHCQELRFRIEEUGSVVYWAFECPREUATQYG4NRVBWORAI6EVRKKLD5S7RZL3VT7ICMKLGL2IEH7ACPBL3YHEE35YOJU3NJ46CGE5G4OIK2Z4MNEH7TBQ---";
+      $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?ticket=".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
+      $contents = file_get_contents($validate_url);
+      echo "username: " .$cas_username. "<br>";
+      echo "contents: " .$contents. "<br>";
+      $dom = new DomDocument();
+      $dom->loadXML($contents);
+      $xpath = new DomXPath($dom);
+      $node = $xpath->query("//cas:user");
+      if ($node->length) {
+      $username=$node[0]->textContent;
+      $cas_username = $username;
 
+
+      $_SESSION['username'] = $cas_username;
+
+      $_SESSION['authenticated'] = true;
+    }
+    $servername = "db.luddy.indiana.edu";
+    $username = "i494f21_team21";
+    $password = "my+sql=i494f21_team21";
+    $dbname = "i494f21_team21";
+
+      // Create connection
+      $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+      die("Connection failed: " .$conn->connect_error);
+      }
+    
+      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
+
+      if ($conn->query($sql_insert) === TRUE) {
+        // echo "username: " .$cas_username. "<br>";
+        // echo "contents: " .$contents. "<br>";
+
+      } else {
+        echo "Error: " .$sql_insert. "<br>".$conn->error;
+      }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -371,50 +416,6 @@
       </div>
       <div class="f-logo">Youthon</div>
     </footer>  
-    <?php
-    if (isset($_GET["ticket"])) {
-      $ticket = $_GET['ticket'];
-      // $ticket = "ST-AADXGZLDOJSXIMPIGNZABZNY4VKQTHKRWBB5ABWQRPZBT4T2V4HFLPMUATRL2VYNR7BUN74MUKRPW7WIIXSGYPBHNYGOJEOOL2HPNWRJH7NQO4WNC6NDAVRS5CIAESRJAYF5ZFGSPLHITMNCRLZSWH2ZHN7L2JSSCYVF7HDM63BMRZDU4SEXIIRZKERVDGH5SL4VKEXSXSZKRGVCDYRRVBUPNWIDXJ4W6GB6K4TGTBU4TBUNRJ63J332TTZD237VS3HXCAMHRO6OSKKSMBSGRBWSAREXY7FGB7HYXHCQELRFRIEEUGSVVYWAFECPREUATQYG4NRVBWORAI6EVRKKLD5S7RZL3VT7ICMKLGL2IEH7ACPBL3YHEE35YOJU3NJ46CGE5G4OIK2Z4MNEH7TBQ---";
-      $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?ticket=".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
-      $contents = file_get_contents($validate_url);
-      echo "username: " .$cas_username. "<br>";
-      echo "contents: " .$contents. "<br>";
-      $dom = new DomDocument();
-      $dom->loadXML($contents);
-      $xpath = new DomXPath($dom);
-      $node = $xpath->query("//cas:user");
-      if ($node->length) {
-      $username=$node[0]->textContent;
-      $cas_username = $username;
-
-
-      $_SESSION['username'] = $cas_username;
-
-      $_SESSION['authenticated'] = true;
-    }
-    $servername = "db.luddy.indiana.edu";
-    $username = "i494f21_team21";
-    $password = "my+sql=i494f21_team21";
-    $dbname = "i494f21_team21";
-
-      // Create connection
-      $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-      // Check connection
-      if ($conn->connect_error) {
-      die("Connection failed: " .$conn->connect_error);
-      }
     
-      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
-
-      if ($conn->query($sql_insert) === TRUE) {
-        // echo "username: " .$cas_username. "<br>";
-        // echo "contents: " .$contents. "<br>";
-
-      } else {
-        echo "Error: " .$sql_insert. "<br>".$conn->error;
-      }
-    }
-    ?>
   </body>
 </html>

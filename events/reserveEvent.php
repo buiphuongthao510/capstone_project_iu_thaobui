@@ -54,6 +54,7 @@
             session_start();
 			
 			      $id = $_SESSION["id"];
+
 			
 			//select statements
 			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = 1 ;";
@@ -91,14 +92,10 @@
         <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
 				
 				<div>
-			<form action="reserveEvent.php" method="POST">
-				<input type="radio" name="choice" > I will be attenting this event!
-				<br>
-				<input type="radio" name="choice" > I won't be attenting this event!
 			</div>
 			
 			<div class="button-wrap">
-				<button type="Create">Reserve</button>
+				<a href="sendReversationEmail.php">Reserve</a>
 			</div>
 			</div>
 		  </div> 

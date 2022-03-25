@@ -137,8 +137,8 @@
     <div class="overview-right">
 	<form action="reserveEvent.php" method="POST">
       <div class="up-item b-line">
-        <img src="../img/banner2.png" alt="">
-		
+        <a href="#">
+          		
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
       <div>

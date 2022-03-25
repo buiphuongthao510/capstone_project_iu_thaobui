@@ -163,7 +163,7 @@
       <br />
       <br />
       <p align="right">
-        <button type="Create">More Info</button>
+        <button type="Create" id="" >More Info</button>
       <br />
       <br />
       <br /> 

@@ -29,10 +29,17 @@ if(!isset($_SESSION['username'])){
     $to = $user_email;
     $subject = 'Event Reservation Confirmation Youthon';
     $message = 'Thank you for your registration to Youthons event!';
-    $headers = 'From: thaobui@iu.edu' . "\r\n" . 'Reply-To: thaobui@iu.edu' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-    mail($to, $subject, $message, $headers);
-    echo '<script type="text/javascript">';
-    echo 'alert("Confirmation sent! Please check your email!");';
-    echo '</script>';
+    $send = mail($to, $subject, $message);
+    if ($send == true){
+        echo '<script type="text/javascript">';
+        echo 'alert("Confirmation sent! Please check your email!");';
+        echo '</script>';
+    } else {
+        echo $user_email;
+        echo '<script type="text/javascript">';
+        echo 'alert("Message could not be send...");';
+        echo '</script>';
+    }
+    
 }
 ?>

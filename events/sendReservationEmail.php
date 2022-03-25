@@ -24,7 +24,8 @@ if(!isset($_SESSION['username'])){
     //select statements
     $sql_select = "SELECT email FROM members WHERE username = '".$cas_username."';";
     $sql_email = mysqli_query($conn, $sql_select);
-    $user_email = mysqli_fetch_assoc($sql_email);
+    $data = mysqli_fetch_assoc($sql_email);
+    $user_email = $data['email'];
 
     $to = $user_email;
     $subject = 'Event Reservation Confirmation Youthon';

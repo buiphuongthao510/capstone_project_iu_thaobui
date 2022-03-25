@@ -57,7 +57,8 @@
 				<br />
 				<label>Location: <input type="text" name="address" /></label>
 				<br />
-				<label>Upload Event Photo: <input type="file" name="picEvent" value="" /></label>	
+				<label>Upload Event Photo: </label>	
+        <input type="file" name="picEvent" id="image"/>
 			  <br />
 				<br />
 				<label>Event Description <br /> <textarea id="description" name="description" rows="10" cols="50"></textarea></label>

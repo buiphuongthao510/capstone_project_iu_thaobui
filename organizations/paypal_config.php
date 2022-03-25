@@ -35,8 +35,8 @@ $enableSandbox = true;
 $paypalConfig = [
     'client_id' => 'AQUEYoQSYN_rCeR3FZ_xN8XEau6D467F7s1CnY54QFfBUMoSvQLkby8rDSSY1CadwM-b_yX4s44NxOsU',
     'client_secret' => 'EIDh3tuJ70_jrAoQYA_HGMHvd98ETOnklgPQWiNhKCaljxG4gYAtb68-re5byX545G-UwnB66ROWbYHL',
-    'return_url' => 'http://localhost/paypal-rest-api/response.php',
-    'cancel_url' => 'http://localhost/paypal-rest-api/payment-cancelled.html'
+    'return_url' => 'http:///response.php',
+    'cancel_url' => 'http:///payment-cancelled.html'
 ];
 
 // Database settings. Change these for your database configuration.

@@ -138,8 +138,8 @@
     <div class="overview-right">
 	<form action="reserveEvent.php" method="POST">
       <div class="up-item b-line">
-        <a href="#">
-          		
+        <a href="#"> 
+          </a>
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
       <div>

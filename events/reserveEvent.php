@@ -95,7 +95,7 @@
 			</div>
 			
 			<div class="button-wrap">
-				<a href="sendReversationEmail.php">Reserve</a>
+				<a href="./sendReservationEmail.php">Reserve</a>
 			</div>
 			</div>
 		  </div> 

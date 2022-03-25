@@ -38,6 +38,23 @@
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
 		}
+
+		if(isset($_POST['submit']))
+		{
+			$file = addslashes(file_get_contents($_FILES["picEvent"]["tmp_name"]));
+			
+			$query = "INSERT INTO 'events'('picEvent') VALUE ('$file') ";
+			$query_run = mysqli_query($conn,$query);
+
+			if($query_run)
+			{
+				echo '<script type="text/javascript"> alert("Image Uploaded") </script>';
+
+			}
+			else {
+				echo '<script type="text/javascript"> alert("Image NOT Uploaded") </script>';
+			}
+		}
 		
 		// Close Connection 
 		mysqli_close($conn);

@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./styleEvent.css" rel="stylesheet">
   <title>Events</title>
+<style>
+  img{
+    border: 5px solid black;
+  }
+  </style>
+
 </head>
 
 <?php include './includes/header.php'; ?>

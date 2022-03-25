@@ -22,10 +22,18 @@ header .logo {
   margin: 0 32px 0 0;
   text-decoration: none;
 }
+
+a:link{
+  text-decoration: none;
+}
+
 .menu-list a {
   color: #990000;
   text-decoration: none;
   margin: 0 32px 0 0;
+}
+a:link {
+  text-decoration: none;
 }
 .button-wrap {
   flex: 1;
@@ -263,6 +271,7 @@ footer {
 
 .nav-item::hover {
   color: #FF9999;
+  text-decoration: none;
 }
 
 .title.gi {

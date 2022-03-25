@@ -1,10 +1,58 @@
 <?php
-
-include './includes/dbConnect.php';
-session_start();
-
+    session_start();
+    if(!isset($_SESSION['username'])){
+      echo '<script type="text/javascript">';
+      echo 'alert("Unauthorized page! Please login first!");';
+      echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/index/login.php";';
+      echo '</script>';
+    }
 ?>
+<?php
+    session_start();
+    if (isset($_GET["ticket"])) {
+      $ticket = $_GET['ticket'];
+      // $ticket = "ST-AADXGZLDOJSXIMPIGNZABZNY4VKQTHKRWBB5ABWQRPZBT4T2V4HFLPMUATRL2VYNR7BUN74MUKRPW7WIIXSGYPBHNYGOJEOOL2HPNWRJH7NQO4WNC6NDAVRS5CIAESRJAYF5ZFGSPLHITMNCRLZSWH2ZHN7L2JSSCYVF7HDM63BMRZDU4SEXIIRZKERVDGH5SL4VKEXSXSZKRGVCDYRRVBUPNWIDXJ4W6GB6K4TGTBU4TBUNRJ63J332TTZD237VS3HXCAMHRO6OSKKSMBSGRBWSAREXY7FGB7HYXHCQELRFRIEEUGSVVYWAFECPREUATQYG4NRVBWORAI6EVRKKLD5S7RZL3VT7ICMKLGL2IEH7ACPBL3YHEE35YOJU3NJ46CGE5G4OIK2Z4MNEH7TBQ---";
+      $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?ticket=".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
+      $contents = file_get_contents($validate_url);
+      // echo "username: " .$cas_username. "<br>";
+      // echo "contents: " .$contents. "<br>";
+      $dom = new DomDocument();
+      $dom->loadXML($contents);
+      $xpath = new DomXPath($dom);
+      $node = $xpath->query("//cas:user");
+      if ($node->length) {
+      $username=$node[0]->textContent;
+      $cas_username = $username;
 
+
+      $_SESSION['username'] = $cas_username;
+
+      $_SESSION['authenticated'] = true;
+    }
+    $servername = "db.luddy.indiana.edu";
+    $username = "i494f21_team21";
+    $password = "my+sql=i494f21_team21";
+    $dbname = "i494f21_team21";
+
+      // Create connection
+      $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+      die("Connection failed: " .$conn->connect_error);
+      }
+    
+      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
+
+      if ($conn->query($sql_insert) === TRUE) {
+        // echo "username: " .$cas_username. "<br>";
+        // echo "contents: " .$contents. "<br>";
+
+      } else {
+        echo "Error: " .$sql_insert. "<br>".$conn->error;
+      }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,8 +79,7 @@ session_start();
       </div>
     </header>
     <div class="banner">
-      <div class="text">xxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-      <div class="button">Join Today</div>
+      <div class="text">Welcome to Youthon</div>
     </div>
 
     <section>
@@ -77,12 +124,12 @@ session_start();
           <div>organizations</div>
         </a>
         <a class="group-item">
-          <div>#####</div>
+          <div>0</div>
           <div>Transactions</div>
           <div>made</div>
         </a>
         <a class="group-item">
-          <div>#####</div>
+          <div>0</div>
           <div>Funding</div>
           <div>raised</div>
         </a>
@@ -92,9 +139,37 @@ session_start();
     <section class="club">
       <img src="./img/banner2.png" />
       <div>
-        <div class="title">Club of the day</div>
+        <div class="title">
+        <?php
+        // CONNECT DATABASE
+          $servername = "db.luddy.indiana.edu";
+          $username = "i494f21_team21";
+          $password = "my+sql=i494f21_team21";
+          $dbname = "i494f21_team21";
+
+        // Create connection
+          $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+        // Check connection
+          if ($conn->connect_error) {
+            die("Connection failed: " .$conn->connect_error);
+          }
+
+        //query
+          $sql = 'SELECT name as name FROM organizations ORDER BY RAND() LIMIT 1;';
+          $result2 = mysqli_query($conn, $sql);
+
+        if(!$result2) {
+         echo $sql;
+        } else{
+          while($data = mysqli_fetch_assoc($result2)) {
+        // display content
+          echo '<div>'.$data['name'].'</div>';  
+        }
+      }
+      ?>  
+        </div>
         <div class="text">
-          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         </div>
       </div>
     </section>
@@ -137,7 +212,6 @@ session_start();
         
           </div>
           <div class="text">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
@@ -175,7 +249,6 @@ session_start();
     
           </div>
           <div class="text">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
         <div class="events-item">
@@ -213,14 +286,13 @@ session_start();
 
           </div>
           <div class="text">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </div>
         </div>
       </div>
     </section>
 
     <div style="text-align: center">
-      <div class="button more"><a href = 'events/events.php'>Explore more events</a></div>
+      <div class="button more"><a href = "https://cgi.luddy.indiana.edu/~team21/events/events.php">Explore more events</a></div>
     </div>
 
     <section class="rank">
@@ -260,22 +332,22 @@ session_start();
           </div>
           <div class="row">
             <div class="order">7</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">8</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">9</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">10</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
         </div>
@@ -283,52 +355,52 @@ session_start();
           <div class="title-sub">Enegagement Points Leaders</div>
           <div class="row">
             <div class="order order-1">1</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order order-2">2</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order order-3">3</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">4</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">5</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">6</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">7</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">8</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row">
             <div class="order">9</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
           <div class="row bg">
             <div class="order">10</div>
-            <div class="name">Organlzation's name</div>
+            <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
         </div>
@@ -344,47 +416,6 @@ session_start();
       </div>
       <div class="f-logo">Youthon</div>
     </footer>  
-    <?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-      header('Location: https://cgi.luddy.indiana.edu/~team21/index/login.php');
-    }
-    if (isset($_GET["ticket"])) {
-      $ticket = $_GET['ticket'];
-      $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
-      $contents = file_get_contents($validate_url);
-      $dom = new DomDocument();
-      $dom->loadXML($contents);
-      $xpath = new DomXPath($dom);
-      $node = $xpath->query("//cas:user");
-      if ($node->length) {
-      $username=$node[0]->textContent;
-
-      $_SESSION['username']=$cas_username;
-
-      $_SESSION['authenticated']=true;
-    }
-    $servername = "db.luddy.indiana.edu";
-    $username = "i494f21_team21";
-    $password = "my+sql=i494f21_team21";
-    $dbname = "i494f21_team21";
-
-      // Create connection
-      $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-      // Check connection
-      if ($conn->connect_error) {
-      die("Connection failed: " .$conn->connect_error);
-      }
     
-      $sql_insert = "INSERT IGNORE INTO members (username, first_name, last_name, dob, email, phone, role, picProfile) VALUES ('".$cas_username."','','',0000-00-00,'','',0,'');";
-
-      if ($conn->query($sql_insert) === TRUE) {
-        echo "username: " .$cas_username. "<br>";
-      } else {
-        echo "Error: " .$sql_insert. "<br>".$conn->error;
-      }
-    }
-    ?>
   </body>
 </html>

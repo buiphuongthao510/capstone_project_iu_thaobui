@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+      echo '<script type="text/javascript">';
+      echo 'alert("Unauthorized page! Please login first!");';
+      echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/index/login.php";';
+      echo '</script>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +43,7 @@
         </div>
         <div class="nav-item">
           <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Events</a></div>
-        </div>
+        </div>      
       </div>
       <?php 
             $servername = "db.luddy.indiana.edu";
@@ -51,10 +60,10 @@
             }
             session_start();
 
-            $username = $_SESSION["username"];
+            $cas_username = $_SESSION["username"];
             
             //select statements
-            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE username = 'ldeeley7';"; 
+            $sql_select = "SELECT first_name,last_name, dob,email FROM members WHERE username = '".$cas_username."';"; 
 
             $select = mysqli_query($conn, $sql_select);
 
@@ -85,14 +94,13 @@
             <!-- <input type="text" placeholder="sfsich@email.com" /> -->
           </div>
         </div>
-
         <a href="edit-profile.php"><button>Edit Profile</button></a>
       </div>
     </section>
     <footer>
       <div class="link-wrap">
-        <a>Resourcas</a>
-        <a>Help deak</a>
+        <a>Resources</a>
+        <a>Help desk</a>
         <a>Report</a>
         <a>Q&A</a>
       </div>

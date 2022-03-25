@@ -2,7 +2,7 @@
 <html>
   
 <head>
-    <title>Insert-Page page</title>
+    <title>Insert Org</title>
 </head>
   
 <body>

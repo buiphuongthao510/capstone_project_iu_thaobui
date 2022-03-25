@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 session_start();
 
-$username = $_SESSION["username"];
+$cas_username = $_SESSION["username"];
 
 
 //variable assignments
@@ -26,7 +26,7 @@ $email = $_POST['email'];
 $username = $_SESSION["username"];
 
 //replace data
-$sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$dob', email = '$email' WHERE username = 'ldeeley7';";
+$sql = "UPDATE members SET first_name = '$fname', last_name = '$lname', dob = '$dob', email = '$email' WHERE username = '".$cas_username."';";
 
 $update = mysqli_query($conn, $sql);
 if (!$update) {

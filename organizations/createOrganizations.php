@@ -5,23 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./createOrg.css" rel="stylesheet" />
-    <title>Create Event</title>
+    <title>Create Org</title>
   </head>
 
   <body>
   <header>
-      <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
+      <div class="logo">
+        <a href = "https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a>
+      </div>
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <a href="">Donation</a>
         <a href="">Search</a>
       </div>
-      <div class="button-wrap">
-        <div class="button login">Log in</div>
-        <div class="button">Register</div>
-      </div>
-  </header>
+    </header>
 
   <section class="nav">
       <div class="left">
@@ -36,6 +34,9 @@
         </div>
         <div class="nav-item">
           <div><a href="https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php">Edit Organization</a></div>
+        </div>
+        <div class="nav-item">
+          <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
         </div>
       </div>
         <div class="right">
@@ -65,8 +66,8 @@
 
 <footer>
   <div class="link-wrap">
-    <a>Resource</a>
-    <a>Help deak</a>
+    <a>Resources</a>
+    <a>Help desk</a>
     <a>Report</a>
     <a>Q&A</a>
   </div>

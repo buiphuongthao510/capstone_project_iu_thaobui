@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./styleEvent.css" rel="stylesheet">
-  <title>Document</title>
+  <title>Events</title>
 </head>
 
 <?php include './includes/header.php'; ?>
@@ -17,10 +17,11 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <p>Donation</p>
-        <p style="flex: 1 1 auto;">Search</p>
+        <a href="">Donation</a>
+        <a href="">Search</a>
+        <!-- <p style="flex: 1 1 auto;">Search</p> -->
       </div>
-    <div class="ui">UI</div>
+    <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
   </header>
 
   <div class="main">

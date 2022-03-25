@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./createEvent.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Edit Event</title>
 
     <style>
     .description {
@@ -50,6 +50,10 @@
         </div>
         <div class="nav-item">
           <div><a href="https://cgi.luddy.indiana.edu/~team21/events/editEvent.php">Edit Event</a></div>
+        </div>
+
+        <div class="nav-item">
+          <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
         </div>
 		</div>
 		
@@ -112,8 +116,8 @@
 
     <footer>
       <div class="link-wrap">
-        <a>Resource</a>
-        <a>Help deak</a>
+        <a>Resources</a>
+        <a>Help desk</a>
         <a>Report</a>
         <a>Q&A</a>
       </div>

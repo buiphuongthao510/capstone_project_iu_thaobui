@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Organization</title>
+    <title>Edit Org</title>
   </head>
 
   <body>
@@ -34,6 +34,9 @@
         </div>
         <div class="nav-item">
           <div><a href="https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php">Edit Organization</a></div>
+        </div>
+        <div class="nav-item">
+          <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
         </div>
       </div>
     <?php 
@@ -65,8 +68,8 @@
     </section>
     <footer>
       <div class="link-wrap">
-        <a>Resourcas</a>
-        <a>Help deak</a>
+        <a>Resources</a>
+        <a>Help desk</a>
         <a>Report</a>
         <a>Q&A</a>
       </div>

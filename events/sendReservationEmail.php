@@ -34,11 +34,13 @@ if(!isset($_SESSION['username'])){
     if ($send == true){
         echo '<script type="text/javascript">';
         echo 'alert("Confirmation sent! Please check your email!");';
+        echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/events.php";';
         echo '</script>';
     } else {
         echo $user_email;
         echo '<script type="text/javascript">';
         echo 'alert("Message could not be send...");';
+        echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/events.php";';
         echo '</script>';
     }
     

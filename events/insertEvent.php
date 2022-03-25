@@ -41,9 +41,9 @@
 
 		if(isset($_POST['submit']))
 		{
-			$file = addslashes(file_get_contents($_FILES["picEvent"]["tmp_name"]));
+			$file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
 			
-			$query = "INSERT INTO 'events'('picEvent') VALUE ('$file') ";
+			$query = "INSERT INTO 'events'('picEvent') VALUES ('$file') ";
 			$query_run = mysqli_query($conn,$query);
 
 			if($query_run)

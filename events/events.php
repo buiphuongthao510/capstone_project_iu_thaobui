@@ -142,7 +142,7 @@
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
       <div>
-      <img src="img/IUlogo.png">
+      <img src="img/IUlogo.png" ALIGN="left" />
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />

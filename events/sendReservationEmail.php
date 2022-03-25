@@ -24,15 +24,23 @@ if(!isset($_SESSION['username'])){
     //select statements
     $sql_select = "SELECT email FROM members WHERE username = '".$cas_username."';";
     $sql_email = mysqli_query($conn, $sql_select);
-    $user_email = mysqli_fetch_assoc($sql_email);
+    $data = mysqli_fetch_assoc($sql_email);
+    $user_email = $data['email'];
 
     $to = $user_email;
     $subject = 'Event Reservation Confirmation Youthon';
     $message = 'Thank you for your registration to Youthons event!';
-    $headers = 'From: thaobui@iu.edu' . "\r\n" . 'Reply-To: thaobui@iu.edu' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-    mail($to, $subject, $message, $headers);
-    echo '<script type="text/javascript">';
-    echo 'alert("Confirmation sent! Please check your email!");';
-    echo '</script>';
+    $send = mail($to, $subject, $message);
+    if ($send == true){
+        echo '<script type="text/javascript">';
+        echo 'alert("Confirmation sent! Please check your email!");';
+        echo '</script>';
+    } else {
+        echo $user_email;
+        echo '<script type="text/javascript">';
+        echo 'alert("Message could not be send...");';
+        echo '</script>';
+    }
+    
 }
 ?>

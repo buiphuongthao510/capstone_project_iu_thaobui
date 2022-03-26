@@ -9,7 +9,7 @@
   <title>Events</title>
 <style>
   img{
-    border: 5px solid black;
+    border: 5px solid;
   }
   </style>
 
@@ -145,7 +145,7 @@
 	<form action="reserveEvent.php" method="POST">
       <div class="up-item b-line">
 
-        <?php while ($data = mysqli_fetch_assoc($select)) { $id = $data['id'];?>
+        <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
       <div>
       <img src="img/IUlogo.png" ALIGN="left" />
@@ -163,7 +163,7 @@
       <br />
       <br />
       <p align="right">
-        <button type="Create">More Info <?php echo "<a href='reserveEvent.php?id=$id'"; ?></button>
+        <button type="Create">More Info</button>
       <br />
       <br />
       <br /> 

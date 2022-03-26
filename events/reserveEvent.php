@@ -58,7 +58,7 @@
 			
 			//select statements
       
-			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events ORDER BY id LIMIT 1;
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events ORDER BY id LIMIT 1";
 			
 			$select = mysqli_query($conn, $sql_select);
 		

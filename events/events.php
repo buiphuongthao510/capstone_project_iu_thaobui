@@ -145,7 +145,7 @@
 	<form action="reserveEvent.php" method="POST">
       <div class="up-item b-line">
 
-        <?php while ($data = mysqli_fetch_assoc($select)) {?>
+        <?php while ($data = mysqli_fetch_assoc($select)) { $id = $data['id'];?>
 		
       <div>
       <img src="img/IUlogo.png" ALIGN="left" />
@@ -163,7 +163,7 @@
       <br />
       <br />
       <p align="right">
-        <button type="Create">More Info</button>
+        <button type="Create">More Info <?php echo "<a href='reserveEvent.php?id=$id'"; ?></button>
       <br />
       <br />
       <br /> 

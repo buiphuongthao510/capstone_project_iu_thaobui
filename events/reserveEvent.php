@@ -51,14 +51,14 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
-            session_start();
+            
 			
-			      $id = $_SESSION["id"];
+			      $id = $_GET['id'];
 
 			
 			//select statements
       
-			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events ORDER BY id LIMIT 1";
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = '$id'";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -87,6 +87,7 @@
       <div class="description">
       <label> <?php echo $data['description']; ?></textarea> </label>
       </div>
+      <a href=""><?php echo $data['id'];?></a>
       <?php }?>
       
       </fieldset>

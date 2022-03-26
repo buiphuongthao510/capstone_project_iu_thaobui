@@ -163,7 +163,7 @@
       <br />
       <br />
       <p align="right">
-        <button type="Create">More Info</button>
+        <a href="reserveEvent.php?id=<?php echo $data['id'];?>">More Info</a>
       <br />
       <br />
       <br /> 

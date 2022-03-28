@@ -15,10 +15,22 @@
 
 </head>
 
+<?php include './includes/header.php'; ?>
 
 <body>
-
-  <?php include './includes/header.php'; ?>
+<header>
+      <div class="logo">
+        <a href = "https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a>
+      </div>
+      <div class="menu-list">
+        <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
+        <a href="">Donation</a>
+        <a href="#"><?php include_once("../includes/search.php")?></a>
+      </div>
+      <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
+    </header>
+  
 
   <div class="main">
     <div class="left">

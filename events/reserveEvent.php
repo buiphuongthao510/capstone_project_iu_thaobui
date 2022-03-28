@@ -29,7 +29,7 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <p>Donation</p>
-        <p style="flex: 1 1 auto;">Search</p>
+        <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
     <div class="ui">UI</div>
   </header>

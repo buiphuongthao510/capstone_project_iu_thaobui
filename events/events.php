@@ -34,11 +34,9 @@
         </div>
     </div>
 </header>
-<div class="banner">
-    <div class="text">Welcome to Youthon</div>
-</div>
 
-</header>
+
+
 
 
 <div class="main">

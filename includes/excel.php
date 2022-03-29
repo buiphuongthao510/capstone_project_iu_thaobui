@@ -9,7 +9,7 @@ header("Content-type:application/vnd.ms-excel");
 header("Content-Disposition:filename=PHP_est.xls");
 
 $conn = mysqli_connect("db.luddy.indiana.edu", "i494f21_team21", "my+sql=i494f21_team21", "i494f21_team21");
-//ditermine data work or not
+//determine data work or not
 if (mysqli_connect_error($conn)) {
 die("connection failed :".mysqli_connect_error());
 }

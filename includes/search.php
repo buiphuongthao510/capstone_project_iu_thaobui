@@ -1,5 +1,6 @@
 
-<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="./jquery.js"></script>
+这个是服务器
 
 <span>
         <form style="float: right;margin-top: -10px"  id="form" onsubmit="return false" action="##" method="post">

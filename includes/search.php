@@ -1,6 +1,6 @@
 
-<script src="./jquery.js"></script>
-这个是服务器
+<script src="https://cgi.luddy.indiana.edu/~team21/includes/jquery.js"></script>
+
 
 <span>
         <form style="float: right;margin-top: -10px"  id="form" onsubmit="return false" action="##" method="post">

@@ -6,24 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./styleOrganizations.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet" />
   <title>Organization Page</title>
 </head>
 
-<?php include './includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <body>
 <header>
-      <div class="logo">
-        <a href = "https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a>
-      </div>
+     <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <a href="">Donation</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
-      <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
+      <div class="button-wrap">
+        <div class="button login">
+          <a href="profile.php"><button>User Profile</button></a>
+        </div>
+      </div>
     </header>
+    <div class="banner">
+      <div class="text">Welcome to Youthon</div>
+    </div>
 
   <div class="main">
     <div class="left">

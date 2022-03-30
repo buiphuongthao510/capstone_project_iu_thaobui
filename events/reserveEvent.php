@@ -29,7 +29,7 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <p>Donation</p>
-        <a href="#"><?php include_once("../includes/search.php")?></a>
+        <p style="flex: 1 1 auto;">Search</p>
       </div>
     <div class="ui">UI</div>
   </header>
@@ -53,11 +53,12 @@
             }
             session_start();
 			
-			      $id = $_POST["id"];
+			      $id = $_SESSION["id"];
 
 			
 			//select statements
       
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = 1";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -93,7 +94,7 @@
 				
 				<div>
 			</div>
-			<?php echo $POST["id"]; ?>
+			
 			<div class="button-wrap">
 				<a href="./sendReservationEmail.php">Reserve</a>
 			</div>

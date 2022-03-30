@@ -147,7 +147,7 @@
   ?>
 	
     <div class="overview-right">
-	<form action="reserveEvent.php" method="POST">
+	<form action="reserveEvent.php" method="GET">
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {?>

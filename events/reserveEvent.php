@@ -53,7 +53,7 @@
             }
             session_start();
 			
-			      $id = $_GET["id"];
+			      $id = $_POST["id"];
 
 			
 			//select statements
@@ -93,7 +93,7 @@
 				
 				<div>
 			</div>
-			<?php echo $GET["id"]; ?>
+			<?php echo $POST["id"]; ?>
 			<div class="button-wrap">
 				<a href="./sendReservationEmail.php">Reserve</a>
 			</div>

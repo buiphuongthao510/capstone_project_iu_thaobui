@@ -19,10 +19,11 @@ if(!$result) {
         $data_search[] = $data;
     }
 }
+//determine if database has data for search
 if (empty($data_search[0])){
   $data_search = 'no data';
 }
-$data_json = json_encode($data_search);
+$data_json = json_encode($data_search);//return to json data
 
-echo $data_json;
+echo $data_json;//output data
 ?>

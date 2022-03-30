@@ -14,15 +14,18 @@
     </div>
 </div>
 <script>
+    // ajax no refresh form submit
     function search() {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "../includes/dosearch.php",
+            url: "../includes/dosearch.php",//use url to submit
             data: $('#form').serialize(),
+            //data for returning
             success: function (data) {
+                //search out data using jquery to work ajax and turn on website 
                 $.each(data, function(i, n){
-                    $(".content").prepend("<br><a style='color: #FFFFFF;'>Name: "+n.name+" email: "+n.email+" phone: "+n.phone+"</a><br><br>")
+                    $(".content").prepend("<br><a href='?id=+n.oid' style='color: #FFFFFF;'>Name: "+n.name+" email: "+n.email+" phone: "+n.phone+"</a><br><br>")
                 })
 
             },

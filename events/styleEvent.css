@@ -4,29 +4,44 @@
   margin: 0;
 }
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  width: 1366px;
-  margin: 0 auto;
-  padding: 8px 0;
-  color: #842818;
-  cursor: pointer;
+  height: 60px;
+  background: #fff;
+  padding: 0 16px;
 }
-header p {
+header .logo {
+  color: #990000;
+  font-size: 32px;
+  margin: 0 32px 0 0;
+  text-decoration: none;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+.menu-list a {
+  color: #990000;
+  text-decoration: none;
   margin: 0 32px 0 0;
 }
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+a:link {
+  text-decoration: none;
 }
-.ui {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background: rgb(228, 228, 228);
-  border-radius: 50%;
+.button-wrap {
+  flex: 1;
+  text-align: right;
+}
+.button-wrap .login {
+  color: #990000;
+  background: #fff;
+  border: 1px solid #990000;
+  margin: 0 16px 0 0;
 }
 
 .main {
@@ -175,4 +190,10 @@ input:focus {
 .b-line {
   padding: 0 0 32px;
   border-bottom: 1px solid #ccc;
+}
+header .logo {
+  color: #990000;
+  font-size: 32px;
+  margin: 0 32px 0 0;
+  text-decoration: none;
 }

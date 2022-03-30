@@ -53,7 +53,7 @@
             }
             session_start();
 			
-			      $id = $_SESSION["id"];
+			      $id = $_GET["id"];
 
 			
 			//select statements

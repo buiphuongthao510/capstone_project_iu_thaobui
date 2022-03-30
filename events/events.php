@@ -162,6 +162,7 @@
       <br />
       <br />
       <br />
+      <input type="hidden" name="id" value="id">
       <p align="right">
         <button type="Create">More Info</button>
       <br />

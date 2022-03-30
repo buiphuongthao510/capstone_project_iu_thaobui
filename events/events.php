@@ -180,7 +180,6 @@
         <?php }?>
         
       </div>
-=======
         <div>Clubs:</div>
         <div class="checkbox">
             <div class="koukou"></div>

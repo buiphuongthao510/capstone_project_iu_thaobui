@@ -31,11 +31,7 @@
     <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
 
 </header>
-<div class="banner">
-    <div class="text">Welcome to Youthon</div>
-</div>
 
-</header>
 
 
 <div class="main">

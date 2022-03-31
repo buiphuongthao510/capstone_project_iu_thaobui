@@ -65,7 +65,7 @@
 
         </fieldset>
 			  <br />
-			  <button type="submit" name="submit">Create Event</button>
+			  <button type="file" name="image" accept="image/*" >Create Event</button>
 			</form>
 			
 			</div>

@@ -163,9 +163,7 @@
       <br />
       <br />
       <p align="right">
-      <button class = "btn" type="hidden" name="id" value="<?php echo 3; ?>">
-    
-       
+        <button type="Create">More Info</button>
       <br />
       <br />
       <br /> 

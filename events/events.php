@@ -167,7 +167,7 @@
       <br />
       <br />
       <br />
-      <input type="hidden" name="id" value="<?php echo 1; ?>">
+      <input type="hidden" name="id" value="<?php echo 'id'; ?>">
       <p align="right">
         <button type="Create">More Info</button>
       <br />

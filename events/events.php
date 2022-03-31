@@ -169,10 +169,9 @@
       <br />
       <br />
       <br />
+      <button class = "button" type="hidden" name="id" value="<?php echo 3; ?>">
       <p align="right">
-      <button class = "btn btn-primary btn-lg" data-toggle = "modal" data-target = "#myModal">
-          More Info
-      </button>
+        <button type="Create">More Info</button>
       <br />
       <br />
       <br /> 
@@ -182,9 +181,9 @@
 
         <?php }?>
 
-                </div>
-            </div>
+  </div>
     </div>
+      </div>
 </div>
 </body>
 

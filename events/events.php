@@ -137,7 +137,7 @@
             }
             
 			
-		
+			      $id = $_GET["id"];
 			
 			//select statements
 			
@@ -146,7 +146,7 @@
   ?>
 	
     <div class="overview-right">
-	
+	<form action="reserveEvent.php" method="GET">
       <div class="up-item b-line">
 
         <?php 
@@ -169,12 +169,9 @@
       <br />
       <br />
       <br />
-      <!-- Trigger Button -->
+      <button class = "button" type="hidden" name="id" value="<?php echo 3; ?>">
       <p align="right">
-        <!-- Sets event id and attaching on click -->
-      <button class = "btn btn-primary btn-lg" data-toggle = "modal" data-target = "#myModal" id="<?php echo $data->id; ?>" onclick="showDetails(this);">
-       More Info
-      </button>
+        <button type="Create">More Info</button>
       <br />
       <br />
       <br /> 
@@ -183,43 +180,6 @@
       </p>
 
         <?php }?>
-
-      <!-- Display pop-up -->
-      <!-- Modal -->
-      <div class = "modal fade" id = "myModal" tabindex = "-1" role = "dialog" 
-        aria-labelledby = "myModalLabel" aria-hidden = "true">
-        
-        <div class = "modal-dialog">
-            <div class = "modal-content">
-              
-              <div class = "modal-header">
-                  <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true">
-                        &times;
-                  </button>
-                  
-                  <h4 class = "modal-title" id = "myModalLabel">
-                    This Modal title
-                  </h4>
-              </div>
-              
-              <div class = "modal-body">
-                  <p>Event Name: <span id="event_name"></span></p>
-                  <p>Event Date: <span id="event_date"></span></p>
-                  <p>Event Time: <span id="event_Time"></span></p>
-                  <p>Location: <span id="address"></span></p>
-              </div>
-
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-        
-      </div><!-- /.modal -->
-
-      <script> 
-      function showDetails(button) {
-        var id = button.id;
-      }
-      </script>
-
         
       </div>
         <div>Clubs:</div>

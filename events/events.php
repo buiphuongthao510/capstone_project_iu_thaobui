@@ -140,9 +140,8 @@
 			      $id = $_GET["id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address FROM events;";
 			
-			$select = mysqli_query($conn, $sql_select);
+			$select = mysqli_query($conn, "SELECT * FROM events");
 		
   ?>
 	

@@ -53,7 +53,7 @@
             }
     
 			
-			      
+			      $id = $_GET["id"];
 
 			
 			//select statements

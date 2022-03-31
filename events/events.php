@@ -162,7 +162,8 @@
       <br />
       <br />
       <br />
-      <a href="reserveEvent.php" class="btn">More Info</a>
+      <p align="right">
+        <button type="Create">More Info</button>
       <br />
       <br />
       <br /> 

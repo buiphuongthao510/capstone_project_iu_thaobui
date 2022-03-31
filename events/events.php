@@ -146,7 +146,7 @@
   ?>
 	
     <div class="overview-right">
-	<form action="reserveEvent.php" method="GET">
+	
       <div class="up-item b-line">
 
         <?php 

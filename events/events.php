@@ -142,7 +142,7 @@
   ?>
 	
     <div class="overview-right">
-	
+	<form action="reserveEvent.php" method="GET">
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
@@ -161,7 +161,7 @@
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label>  
       <br />
       <br />
-      <br />
+    
       <p align="right">
         <button type="Create">More Info</button>
       <br />

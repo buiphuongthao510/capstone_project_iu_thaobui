@@ -39,21 +39,27 @@
 			. mysqli_error($conn);
 		}
 
-		if(isset($_POST['submit']))
-		{
-			$file = addslashes(file_get_contents($_FILES["picEvent"]["tmp_name"]));
-			
-			$query = "INSERT INTO 'events'('picEvent') VALUES ('$file') ";
-			$query_run = mysqli_query($conn,$query);
+		if(isset($_POST['submit'])) {
 
-			if($query_run)
-			{
-				echo '<script type="text/javascript"> alert("Image Uploaded") </script>';
-
+			//Process the image that is uploaded by the user
+		
+			$tar_dir = "uploads/";
+			$tar_file = $tar_dir . basename($_FILES["picEvent"]["picName"]);
+			$uploadOk = 1;
+			$imageFileType = pathinfo($tar_file,PATHINFO_EXTENSION);
+		
+			if (move_uploaded_file($_FILES["picEvent"]["tmp_name"], $tar_file)) {
+				echo "The file ". basename( $_FILES["picEvent"]["picName"]). " has been uploaded.";
+			} else {
+				echo "Sorry, there was an error uploading your file.";
 			}
-			else {
-				echo '<script type="text/javascript"> alert("Image NOT Uploaded") </script>';
-			}
+		
+			$image=basename( $_FILES["picEvent"]["picName"],".jpg"); // used to store the filename in a variable
+		
+			//storind the data in your database
+			$query= "INSERT INTO events VALUES ('$image')";
+			mysql_query($query);
+		
 		}
 		
 		// Close Connection 

@@ -145,10 +145,12 @@
 	<form action="reserveEvent.php" method="GET">
       <div class="up-item b-line">
 
-        <?php while ($data = mysqli_fetch_assoc($select)) {?>
+        <?php while ($data = mysqli_fetch_assoc($select)) {
+         echo "<img src='" . $data['image'] . "' /> <br />";
+          ?>
 		
       <div>
-      <?php echo "<img src='". $data['image'] ."' />"; ?>
+  
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />

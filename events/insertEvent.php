@@ -38,7 +38,7 @@
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
-			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description" );
+			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description\n $image" );
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);

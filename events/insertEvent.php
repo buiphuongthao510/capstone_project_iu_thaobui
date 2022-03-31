@@ -27,9 +27,14 @@
 		$event_time = $_REQUEST['event_time'];
 		$address = $_REQUEST['address'];
 		$description = $_REQUEST['description'];
+		$image = $_FILES["image"];
 
+		$path = $image['name'];
+		$path = "uploads/" . $path;
+		move_uploaded_file($image['tmp-name'], $path);
+		
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."')";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."',('$path')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
@@ -37,23 +42,6 @@
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
-		}
-
-		if(isset($_POST['submit']))
-		{
-			$file = addslashes(file_get_contents($_FILES["picEvent"]["tmp_name"]));
-			
-			$query = "INSERT INTO 'events'('picEvent') VALUES ('$file') ";
-			$query_run = mysqli_query($conn,$query);
-
-			if($query_run)
-			{
-				echo '<script type="text/javascript"> alert("Image Uploaded") </script>';
-
-			}
-			else {
-				echo '<script type="text/javascript"> alert("Image NOT Uploaded") </script>';
-			}
 		}
 		
 		// Close Connection 

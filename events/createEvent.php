@@ -59,14 +59,11 @@
 				<br />
 				<label>Upload Event Photo: </label>	
         <input type="file" name="picEvent" accept="image*/" />
-        <input type="submit" value="Upload" />
 			  <br />
 				<br />
 				<label>Event Description <br /> <textarea id="description" name="description" rows="10" cols="50"></textarea></label>
-
-        </fieldset>
-			  <br />
-			  <button type="submit" name="submit">Create Event</button>
+        <p align="right">
+        <input type="submit" value="Create Event" />
 			</form>
 			
 			</div>

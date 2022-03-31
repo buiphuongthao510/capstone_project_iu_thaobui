@@ -218,6 +218,7 @@
       function showDetails(button) {
         var id = button.id;
       }
+      </script>
 
         
       </div>

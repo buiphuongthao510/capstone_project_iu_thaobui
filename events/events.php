@@ -167,7 +167,7 @@
       <br />
       <br />
       <br />
-      <input type="hidden" name="id" value="id">
+      <input type="hidden" name="id" value="{$data['id']}">
       <p align="right">
         <button type="Create">More Info</button>
       <br />

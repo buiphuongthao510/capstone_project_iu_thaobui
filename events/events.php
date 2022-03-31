@@ -118,7 +118,7 @@
   </div>
 
     	<?php
-		  $servername = "db.luddy.indiana.edu";
+		      $servername = "db.luddy.indiana.edu";
           $username = "i494f21_team21";
           $password = "my+sql=i494f21_team21";
           $dbname = "i494f21_team21";
@@ -142,7 +142,7 @@
   ?>
 	
     <div class="overview-right">
-	<form action="reserveEvent.php" method="GET">
+	
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
@@ -162,9 +162,7 @@
       <br />
       <br />
       <br />
-      <input type="hidden" name="id" value="<?php echo 1; ?>">
-      <p align="right">
-        <button type="Create">More Info</button>
+      <a href="reserveEvent.php" class="btn">More Info</a>
       <br />
       <br />
       <br /> 

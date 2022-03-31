@@ -135,7 +135,7 @@
 			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address FROM events ORDER BY id;";
+			$sql_select = "SELECT event_name,event_date,event_time,address,image FROM events ORDER BY id;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -148,7 +148,7 @@
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
       <div>
-      <img src="img/IUlogo.png" ALIGN="left" />
+      <?php echo "<img src='". $data['image'] ."' />"; ?>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />

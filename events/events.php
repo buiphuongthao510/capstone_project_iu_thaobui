@@ -171,7 +171,7 @@
       <br />
       <button class = "button" type="hidden" name="id" value="<?php echo 3; ?>">
       <p align="right">
-
+        <button type="Create">More Info</button>
       <br />
       <br />
       <br /> 

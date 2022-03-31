@@ -34,7 +34,7 @@
 		move_uploaded_file($image['tmp-name'], $path);
 		
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$path."'";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$path."')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

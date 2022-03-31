@@ -39,20 +39,14 @@
 			. mysqli_error($conn);
 		}
 
-		if(isset($_POST['submit']))
-		{
-			$file = addslashes(file_get_contents($_FILES["picEvent"]["tmp_name"]));
-			
-			$query = "INSERT INTO 'events'('picEvent') VALUES ('$file') ";
-			$query_run = mysqli_query($conn,$query);
+		if (count($_FILES) > 0) {
+			if (is_uploaded_file($_FILES['picEvent']['tmp_name'])) {
 
-			if($query_run)
-			{
-				echo '<script type="text/javascript"> alert("Image Uploaded") </script>';
-
-			}
-			else {
-				echo '<script type="text/javascript"> alert("Image NOT Uploaded") </script>';
+				$picData = addslashes(file_get_contents($_FILES['picEvent']['tmp_name']));
+				$picProperties = getimageSize($_FILES['picEvent']['tmp_name']);
+				
+				$sql = "INSERT INTO events(picName ,picEvent) VALUES('{$picProperties['mime']}', '{$picData}')";
+		
 			}
 		}
 		

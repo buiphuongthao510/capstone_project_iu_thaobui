@@ -155,6 +155,7 @@
 		
       <div>
       <img src="img/IUlogo.png" ALIGN="left" />
+      <!-- Display records -->
 			  <label><b>Event Name:</b> <?php echo $data->event_name; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />
@@ -168,9 +169,10 @@
       <br />
       <br />
       <br />
-      <input type="hidden" name="id" value="<?php echo 3; ?>">
-      <p align="right">
-        <button type="Create">More Info</button>
+      <!-- Trigger Button -->
+      <button class = "btn btn-primary btn-lg" data-toggle = "modal" data-target = "#myModal">
+       More Info
+      </button>
       <br />
       <br />
       <br /> 

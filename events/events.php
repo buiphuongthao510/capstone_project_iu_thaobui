@@ -2,41 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styleEvent.css" rel="stylesheet">
-    <link href="https://cgi.luddy.indiana.edu/~team21/index/style.css" rel="stylesheet" />
-
-    <title>Events</title>
-    <style>
-        img{
-            border: 5px solid;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./styleEvent.css" rel="stylesheet">
+  <title>Events</title>
+<style>
+  img{
+    border: 5px solid;
+  }
+  </style>
 
 </head>
 
 <?php include './includes/header.php'; ?>
 
 <body>
-<header>
+  <header>
     <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
-    <div class="menu-list">
+      <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <a href="">Donation</a>
-        <a href="#"><?php include_once("../includes/search.php")?></a>
-    </div>
+        <a href="">Search</a>
+        <!-- <p style="flex: 1 1 auto;">Search</p> -->
+      </div>
     <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
+  </header>
 
-</header>
-
-
-
-<div class="main">
+  <div class="main">
     <div class="left">
-<<<<<<< HEAD
       <div>Clubs:</div>
       <div class="checkbox">
         <div class="koukou"></div>
@@ -135,27 +130,25 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
-            
+            session_start();
 			
-			      $id = $_GET["id"];
+			      $id = $_SESSION["id"];
 			
 			//select statements
+			$sql_select = "SELECT event_name,event_date,event_time,address FROM events ORDER BY id;";
 			
-			$select = mysqli_query($conn, "SELECT * FROM events");
+			$select = mysqli_query($conn, $sql_select);
 		
   ?>
 	
     <div class="overview-right">
-	<form action="reserveEvent.php" method="GET">
+	<form action="reserveEvent.php" method="POST">
       <div class="up-item b-line">
 
-        <?php 
-          while ($data = mysqli_fetch_assoc($select)) {
-        ?>
+        <?php while ($data = mysqli_fetch_assoc($select)) {?>
 		
       <div>
       <img src="img/IUlogo.png" ALIGN="left" />
-      <!-- Display records -->
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />
@@ -169,9 +162,9 @@
       <br />
       <br />
       <br />
+      <input type="hidden" name="id" value="id">
       <p align="right">
-      <button class = "button" type="hidden" name="id" value="<?php echo 1; ?>">
-
+        <button type="Create">More Info</button>
       <br />
       <br />
       <br /> 
@@ -180,11 +173,11 @@
       </p>
 
         <?php }?>
-
-  </div>
-    </div>
+        
       </div>
-</div>
+        </div>
+    </div>
+  </div>
 </body>
 
 </html>

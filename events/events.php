@@ -170,6 +170,7 @@
       <br />
       <br />
       <!-- Trigger Button -->
+      <p align="right">
       <button class = "btn btn-primary btn-lg" data-toggle = "modal" data-target = "#myModal">
        More Info
       </button>

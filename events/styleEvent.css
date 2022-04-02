@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-header {
+/* header {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,7 +21,21 @@ header .logo {
   font-size: 32px;
   margin: 0 32px 0 0;
   text-decoration: none;
+} */
+
+header {
+  display: flex;
+  align-items: center;
+  width: 1366px;
+  margin: 0 auto;
+  padding: 8px 0;
+  color: #842818;
+  cursor: pointer;
 }
+
+header p {
+  margin: 0 32px 0 0;
+} 
 
 header p {
   margin: 0 32px 0 0;

@@ -15,9 +15,15 @@
   header p {
     margin: 0 32px 0 0;
   }
-  .logo {
+  /* .logo {
     font-size: 24px;
     font-weight: bold;
+  } */
+  header .logo {
+    color: #990000;
+    font-size: 32px;
+    margin: 0 32px 0 0;
+    text-decoration: none;
   }
   .ui {
     display: flex;

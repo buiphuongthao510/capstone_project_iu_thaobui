@@ -3,7 +3,7 @@
 * {
     margin: 0;
   }
-  header {
+  /* header {
     display: flex;
     align-items: center;
     width: 1366px;
@@ -14,11 +14,24 @@
   }
   header p {
     margin: 0 32px 0 0;
-  }
+  } */
   /* .logo {
     font-size: 24px;
     font-weight: bold;
   } */
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background: #fff;
+    padding: 0 16px;
+  }
+  
   header .logo {
     color: #990000;
     font-size: 32px;

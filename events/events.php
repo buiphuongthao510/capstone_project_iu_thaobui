@@ -11,6 +11,16 @@
   img{
     border: 5px solid;
   }
+
+  .ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: rgb(228, 228, 228);
+  border-radius: 50%;
+  }
   </style>
 
 </head>

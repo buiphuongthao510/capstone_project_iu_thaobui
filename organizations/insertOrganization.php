@@ -22,7 +22,7 @@
 		}
 
 	// Get User Ticket
-		$cas_username = $_SESSION["username"];
+		$username = $_SESSION["username"];
 
 	// Taking values from form data 
 		$name = $_REQUEST['name'];
@@ -43,7 +43,7 @@
 			. mysqli_error($conn);
 		}
 
-		$sql_members = "INSERT INTO members (created_organizations) VALUES ('".$name."') 
+		$sql_members = "INSERT INTO members (created_organizations) VALUES ('".$name."')";
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
 			echo nl2br("\n$name");

@@ -30,7 +30,7 @@
 		$image = $_FILES["image"];
 
 		$path = $image['name'];
-		$path = "uploads/" . $path;
+		$path = "img/" . $path;
 		move_uploaded_file($image['tmp-name'], $path);
 		
 	// Insert Query 

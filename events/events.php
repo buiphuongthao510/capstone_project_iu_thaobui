@@ -158,6 +158,9 @@
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
           
       <div>
+      <?php echo "<img src='img/".$data['image']."' >"; ?> 
+
+      <p align="right">
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />
@@ -168,7 +171,6 @@
 			<!-- <input type="text" placeholder="hh:mm:ss" /> -->
 			<br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label> 
-        <?php echo "<img src='img/".$data['image']."' >"; ?> 
       <br />
       <br />
       <br />

@@ -15,7 +15,7 @@
   .ui {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: right;
   width: 50px;
   height: 50px;
   background: rgb(228, 228, 228);

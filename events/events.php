@@ -159,7 +159,7 @@
 		
       
       <div>
-      <?php echo "<img src='uploads/".$data['image']."'"; ?>
+      <?php echo "<img src='img/".$data['image']."'"; ?>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />

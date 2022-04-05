@@ -3,6 +3,7 @@
 * {
   margin: 0;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -14,12 +15,13 @@ header {
   background: #fff;
   padding: 0 16px;
 }
+
 header .logo {
   color: #990000;
   font-size: 32px;
   margin: 0 32px 0 0;
   text-decoration: none;
-}
+} 
 
 a:link{
   text-decoration: none;
@@ -197,3 +199,4 @@ header .logo {
   margin: 0 32px 0 0;
   text-decoration: none;
 }
+

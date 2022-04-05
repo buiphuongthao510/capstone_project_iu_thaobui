@@ -12,13 +12,16 @@
     color: #842818;
     cursor: pointer;
   }
+  
   header p {
     margin: 0 32px 0 0;
-  }
+  } 
+  
   .logo {
     font-size: 24px;
     font-weight: bold;
-  }
+  } 
+
   .ui {
     display: flex;
     justify-content: center;

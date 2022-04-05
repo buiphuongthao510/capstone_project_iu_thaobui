@@ -11,6 +11,16 @@
   img{
     border: 5px solid;
   }
+
+  .ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: rgb(228, 228, 228);
+  border-radius: 50%;
+  }
   </style>
 
 </head>
@@ -24,8 +34,8 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
         <a href="">Donation</a>
-        <a href="">Search</a>
-        <!-- <p style="flex: 1 1 auto;">Search</p> -->
+        <a href="#"><?php include_once("../includes/search.php")?></a>
+        
       </div>
     <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
   </header>

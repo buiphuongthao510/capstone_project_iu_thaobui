@@ -44,11 +44,11 @@
 		}
 
 		$sql_members = "INSERT INTO members (created_organizations) VALUES ('".$name."')";
-		if(mysqli_query($conn, $sql)){
+		if(mysqli_query($conn, $sql_members)){
 			echo "Data updated successfully";
 			echo nl2br("\n$name");
 		}	else{
-			echo "ERROR: Hush! Sorry $sql. "
+			echo "ERROR: Hush! Sorry $sql_members. "
 			. mysqli_error($conn);
 		}
 

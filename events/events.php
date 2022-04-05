@@ -156,8 +156,9 @@
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {?>
-          <?php echo "<img src='img/".$data['image']."' >"; ?>
+          
       <div>
+      <?php echo "<img src='img/".$data['image']."' >"; ?>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
 			<br />

@@ -158,6 +158,7 @@
           
       <div>
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
+      <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
       <p align="left">
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
@@ -169,7 +170,6 @@
 			<!-- <input type="text" placeholder="hh:mm:ss" /> -->
 			<br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label> 
-        <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
       <br />
       <br />
       <br />

@@ -154,11 +154,12 @@
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
           $id = $data['id'];
+           echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>";
           ?>
           
       <div>
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
-      <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
+     
       <p align="left">
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->

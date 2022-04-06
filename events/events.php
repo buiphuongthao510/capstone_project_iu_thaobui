@@ -140,10 +140,7 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
-            session_start();
-			
-			      $id = $_SESSION["id"];
-			
+            
 			//select statements
 			$sql_select = "SELECT * FROM events;";
 			
@@ -155,10 +152,13 @@
 	<form action="reserveEvent.php" method="GET">
       <div class="up-item b-line">
 
-        <?php while ($data = mysqli_fetch_assoc($select)) {?>
+        <?php while ($data = mysqli_fetch_assoc($select)) {
+          $id = $data['id'];
+          ?>
           
       <div>
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
+      <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
       <p align="left">
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->
@@ -173,9 +173,7 @@
       <br />
       <br />
       <br />
-      <input type="hidden" name="id" value="<?php echo 1; ?>">
-      <p align="right">
-        <button type="submit">More Info</button>
+     
       <br />
       <br />
       <br /> 

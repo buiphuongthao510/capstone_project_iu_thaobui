@@ -159,8 +159,8 @@
       
       <div>
       <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
-      <?php echo "<img src='img/".$data['image']."' >"; ?> 
-      
+     
+      <img src="img/IUlogo.png" ALIGN="left" />
       <p align="left">
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->

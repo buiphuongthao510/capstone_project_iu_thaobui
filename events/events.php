@@ -145,7 +145,7 @@
 			$sql_select = "SELECT * FROM events;";
 			
 			$select = mysqli_query($conn, $sql_select);
-		
+      $id = $data['id'];
   ?>
 	
     <div class="overview-right">
@@ -153,7 +153,7 @@
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
-          $id = $data['id'];
+        
           
           ?>
       

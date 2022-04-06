@@ -158,7 +158,7 @@
           ?>
       
       <div>
-      <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
+      <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button></a>"; ?>
      
       <img src="img/IUlogo.png" ALIGN="left" />
     

@@ -11,7 +11,7 @@ $servername = "db.luddy.indiana.edu";
 $username = "i494f21_team21";
 $password = "my+sql=i494f21_team21";
 $dbname = "i494f21_team21";
-$conn = mysqli_connect("db.luddy.indiana.edu", "i494f21_team21", "my+sql=i494f21_team21", "i494f21_team21");
+$conn = mysqli_connect("$servername", "$username", "$password", "$dbname");
 //determine data work or not
 if (mysqli_connect_error($conn)) {
 die("connection failed :".mysqli_connect_error());
@@ -27,7 +27,7 @@ $sql = "SELECT first_name,last_name,email FROM members";
 
 $result = $conn->query($sql);
 //add header in excel
-$filename = array("first name","last name","email");
+$filename = array("first name","last name","email","events name","event_time","event_date","address","state_address");
 foreach ($filename as $key => $value) {
 //make sure excel has no error
 $name = mb_convert_encoding($value, "gb2312" , "utf-8" );

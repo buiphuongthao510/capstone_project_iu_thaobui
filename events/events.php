@@ -153,12 +153,12 @@
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
-          $id = $data['id'];
-          
+         
+          echo "<button type='button' >More Info</button>";
           ?>
       
       <div>
-      <? echo "<a href='reserveEvent.php?id=$id'<button type='button'>More Info</button>"?>
+     
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
       
       <p align="left">

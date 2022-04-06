@@ -154,7 +154,7 @@
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
           $id = $data['id'];
-          echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; 
+           
           ?>
           
       <div>
@@ -175,7 +175,7 @@
       <br />
       <br />
       <br />
-     
+      <button type="submit">More Info <?php echo "<a href='reserveEvent.php?id=$id'"; ?> </button>
       <br />
       <br />
       <br /> 

@@ -174,7 +174,7 @@
       <br />
       <br />
       <br />
-      <button type="submit">More Info <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button></a>"; ?></button>
+      <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button></a>"; ?>
       <br />
       <br />
       <br /> 

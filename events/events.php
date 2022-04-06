@@ -169,10 +169,11 @@
 			<!-- <input type="text" placeholder="hh:mm:ss" /> -->
 			<br />
 			  <label><b>Location:</b> <?php echo $data['address']; ?> </label> 
+        <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
       <br />
       <br />
       <br />
-      <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
+     
       <br />
       <br />
       <br /> 

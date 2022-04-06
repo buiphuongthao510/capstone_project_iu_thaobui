@@ -158,7 +158,7 @@
           ?>
           
       <div>
-      echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>";
+      <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
      
       <p align="left">

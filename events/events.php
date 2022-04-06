@@ -156,9 +156,9 @@
           $id = $data['id'];
           
           ?>
-          
+      
       <div>
-      <? echo "button type='button' class='btn btn-info'>More Info</button>"?>
+      <? echo "<a href='reserveEvent.php?id=$id'<button type='button' class='btn btn-info'>More Info</button>"?>
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
       
       <p align="left">

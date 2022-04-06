@@ -174,10 +174,14 @@
       <br />
       <br />
       <br />
-      <button> <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button></a>"; ?> </button>
       <br />
+      <p align="right">
+      <button> <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button></a>"; ?> </button>
+      
       <br />
       <br /> 
+      <br />
+      <br />
       <hr>    
       <br />
       </p>

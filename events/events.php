@@ -155,8 +155,7 @@
         <?php while ($data = mysqli_fetch_assoc($select)) {
           $id = $data['id'];
           ?>
-      <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>    
-
+          
       <div>
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
       <p align="left">
@@ -173,7 +172,7 @@
       <br />
       <br />
       <br />
-     
+      <?php echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button>"; ?>
       <br />
       <br />
       <br /> 

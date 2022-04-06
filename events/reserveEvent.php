@@ -94,7 +94,6 @@
 				
 				<div>
 			</div>
-			<br />
       <br />
       <br />
 			<div class="button-wrap">

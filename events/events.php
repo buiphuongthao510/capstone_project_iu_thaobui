@@ -154,11 +154,11 @@
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
          
-          echo "<button type='button' >More Info</button>";
+          
           ?>
       
       <div>
-     
+      <? echo "<button type='button' >More Info</button>"; ?>
       <?php echo "<img src='img/".$data['image']."' >"; ?> 
       
       <p align="left">

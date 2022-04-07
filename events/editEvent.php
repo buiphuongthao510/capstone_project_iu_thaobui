@@ -29,10 +29,7 @@
         <a href="">Donation</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
-      <div class="button-wrap">
-        <div class="button login">Log in</div>
-        <div class="button">Register</div>
-      </div>
+      
   </header>
 	
 	  <?php include './includes/header.php'; ?>

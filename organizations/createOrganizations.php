@@ -1,26 +1,15 @@
 <?php
-   session_start();
-   if (isset($_GET["ticket"])) {
-     $ticket = $_GET['ticket'];
-     // $ticket = "ST-AADXGZLDOJSXIMPIGNZABZNY4VKQTHKRWBB5ABWQRPZBT4T2V4HFLPMUATRL2VYNR7BUN74MUKRPW7WIIXSGYPBHNYGOJEOOL2HPNWRJH7NQO4WNC6NDAVRS5CIAESRJAYF5ZFGSPLHITMNCRLZSWH2ZHN7L2JSSCYVF7HDM63BMRZDU4SEXIIRZKERVDGH5SL4VKEXSXSZKRGVCDYRRVBUPNWIDXJ4W6GB6K4TGTBU4TBUNRJ63J332TTZD237VS3HXCAMHRO6OSKKSMBSGRBWSAREXY7FGB7HYXHCQELRFRIEEUGSVVYWAFECPREUATQYG4NRVBWORAI6EVRKKLD5S7RZL3VT7ICMKLGL2IEH7ACPBL3YHEE35YOJU3NJ46CGE5G4OIK2Z4MNEH7TBQ---";
-     $validate_url = "https://idp.login.iu.edu/idp/profile/cas/serviceValidate?ticket=".$ticket."&service=https://cgi.luddy.indiana.edu/~team21/index/index.php";
-     $contents = file_get_contents($validate_url);
-     // echo "username: " .$cas_username. "<br>";
-     // echo "contents: " .$contents. "<br>";
-     $dom = new DomDocument();
-     $dom->loadXML($contents);
-     $xpath = new DomXPath($dom);
-     $node = $xpath->query("//cas:user");
-     if ($node->length) {
-     $username=$node[0]->textContent;
-     $cas_username = $username;
-
-
-     $_SESSION['username'] = $cas_username;
-
-     $_SESSION['authenticated'] = true;
-   }
+    session_start();
+    if(!isset($_SESSION['username'])){
+      echo '<script type="text/javascript">';
+      echo 'alert("Unauthorized page! Please login first!");';
+      echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/index/login.php";';
+      echo '</script>';
+    }
 ?>
+
+
+
 
 
 <!DOCTYPE html>

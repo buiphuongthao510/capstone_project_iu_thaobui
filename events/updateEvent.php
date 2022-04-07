@@ -25,7 +25,7 @@
 			$id = $_SESSION["id"];
 			
 			//Update new data 
-			$sql = "UPDATE events SET event_name = '$event_name', event_date = '$event_date', event_time = '$event_time', address = '$address', description = '$description' WHERE id = $id ;";
+			$sql = "UPDATE events SET event_name = '$event_name', event_date = '$event_date', event_time = '$event_time', address = '$address', description = '$description' WHERE id = 1 ;";
 			
 			$update = mysqli_query($conn, $sql);
 			

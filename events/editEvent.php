@@ -107,12 +107,9 @@
       <label> <?php echo $data['description']; ?></textarea> </label>
       
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
       <p align="left">
       <button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Edit Event Information</button></a>"; ?> </button>
+      <hr>
         <?php }?>
       
 

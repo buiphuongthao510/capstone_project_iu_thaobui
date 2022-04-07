@@ -13,6 +13,12 @@ $o_id = $_GET['o_id'];//get id
 $sql = "SELECT * FROM organizations WHERE o_id=$o_id";//search o_id in database
 $result = $conn->query($sql);//execute the sql
 $data = $result->fetch_assoc();//transform queries to associative array
+
+// 
+$o_id = $data['o_id'];// organizations 的 o_id
+$events_sql = "SELECT * FROM events WHERE o_id=$o_id";//search o_id in database
+$events_result = $conn->query($events_sql);//execute the sql
+$events_data = $events_result->fetch_assoc();//transform queries to associative array
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,6 +80,10 @@ $data = $result->fetch_assoc();//transform queries to associative array
                   <label>bio: <?php echo $data['bio'] ?></label>
                   <br />
                   <label>picProfile: <?php echo $data['picProfile'] ?></label>
+                  <br />
+                  <label>events data username: <?php echo $events_data['username'] ?></label>
+                  <br />
+                  <label>events data event_name: <?php echo $events_data['event_name'] ?></label>
                   <br />
 			
 			</div>

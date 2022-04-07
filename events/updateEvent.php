@@ -13,7 +13,7 @@
             }
             session_start();
 			
-			$id = $_POST["id"];
+			$id = $_SESSION["id"];
 			
 			//variable assignments
 			$event_name = $_POST['event_name'];
@@ -22,6 +22,7 @@
 			$address = $_POST['address'];
 			$description = $_POST['description'];
 
+			$id = $_SESSION["id"];
 			
 			
 			//Update new data 

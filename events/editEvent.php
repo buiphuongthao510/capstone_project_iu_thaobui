@@ -21,6 +21,9 @@
     .right {
     border: 5px solid black;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   </style>
 

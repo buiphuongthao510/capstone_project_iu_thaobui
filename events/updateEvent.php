@@ -22,7 +22,7 @@
 			$address = $_POST['address'];
 			$description = $_POST['description'];
 
-			$id = $_SESSION["id"];
+			
 			
 			
 			//Update new data 

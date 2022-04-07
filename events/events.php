@@ -159,7 +159,7 @@
       
       <div>
      
-      <img src="img/IUlogo.png" ALIGN="left" />
+      <?php echo "<img src='/events/img/".$data['image']."' >"; ?> 
     
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
 			<!-- <input type="text" placeholder="Culture Show" /> -->

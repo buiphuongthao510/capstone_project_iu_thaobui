@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " .$conn->connect_error);
 }
 $search_name = $_POST['name'];
-$sql = "SELECT name,email,phone FROM organizations WHERE name LIKE '%$search_name%'";
+$sql = "SELECT o_id,name,email,phone FROM organizations WHERE name LIKE '%$search_name%'";
 $result = mysqli_query($conn, $sql);
 if(!$result) {
     echo $sql;

@@ -67,7 +67,7 @@
 			$select = mysqli_query($conn, $sql_select);
 		
   ?>
-	<form action="updateEvent.php" method="POST">
+	<form action="updateEvent.php" method="GET">
 		  <div class="right">
 				<div class="title ei">Event Information</div>      
 			<div class="line"> 

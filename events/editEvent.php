@@ -15,6 +15,7 @@
       border-width: thin;
       border-color: black;
       padding: 15px;
+      margin: auto;
     }
 
     .right {

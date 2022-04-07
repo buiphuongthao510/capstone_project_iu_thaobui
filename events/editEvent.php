@@ -88,7 +88,7 @@
         $id = $data['id'];
         ?>
 		  <div class="form-item">
-        <fieldset>
+        
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />
@@ -107,7 +107,7 @@
       <label> <?php echo $data['description']; ?></textarea> </label>
       </div>
         <?php }?>
-      </fieldset>
+      
 
       </div>
       </div>

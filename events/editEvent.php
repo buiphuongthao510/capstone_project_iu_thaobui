@@ -105,6 +105,12 @@
       <b>Event Description</b>
       <div class="description">
       <label> <?php echo $data['description']; ?></textarea> </label>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p align="right">
+      <button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Edit Event Information</button></a>"; ?> </button>
       </div>
         <?php }?>
       
@@ -112,7 +118,6 @@
       </div>
       </div>
 
-			<button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Edit Event Information</button></a>"; ?> </button>
         <a href="../includes/excel.php?id=<?php echo $data['id']?>" target="_blank"><button>excel</button></a>
       </div>
     </section>

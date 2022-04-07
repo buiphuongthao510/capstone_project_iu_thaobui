@@ -111,7 +111,7 @@
       <br />
       <br />
       <br />
-      <p align="right">
+      <p align="left">
       <button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Edit Event Information</button></a>"; ?> </button>
         <?php }?>
       

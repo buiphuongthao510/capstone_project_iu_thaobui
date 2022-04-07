@@ -138,7 +138,7 @@
     ?>
 
     <div class="overview-right">
-        <form action="reserveEvent.php" method="POST">
+        <form action="orgDetail.php" method="POST">
             <div class="up-item b-line">
                 <img src="../img/banner2.png" alt="">
 

@@ -1,7 +1,7 @@
 <?php
 
 // CONNECT DATABASE
-// $servername = "db.luddy.indiana.edu";
+$servername = "db.luddy.indiana.edu";
 $username = "i494f21_team21";
 $password = "my+sql=i494f21_team21";
 $dbname = "i494f21_team21"; 

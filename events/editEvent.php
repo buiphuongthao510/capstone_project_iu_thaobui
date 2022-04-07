@@ -16,6 +16,11 @@
       border-color: black;
       padding: 15px;
     }
+
+    .right {
+    border: 5px solid black;
+    text-align: center;
+}
   </style>
 
   </head>

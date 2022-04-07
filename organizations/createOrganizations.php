@@ -6,9 +6,7 @@
       echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/index/login.php";';
       echo '</script>';
     }
-?>
-
-<?php 
+    else{
             $servername = "db.luddy.indiana.edu";
             $username = "i494f21_team21";
             $password = "my+sql=i494f21_team21";
@@ -21,9 +19,9 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
-            session_start();
-
+            
             $cas_username = $_SESSION["username"];
+          }
 ?>
 
 <!DOCTYPE html>

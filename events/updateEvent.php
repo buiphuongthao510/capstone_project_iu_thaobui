@@ -13,16 +13,16 @@
             }
             session_start();
 			
-			$id = $_SESSION["id"];
+			$id = $_GET["id"];
 			
 			//variable assignments
-			$event_name = $_POST['event_name'];
-			$event_date = $_POST['event_date'];
-			$event_time = $_POST['event_time'];
-			$address = $_POST['address'];
-			$description = $_POST['description'];
+			$event_name = $_REQUEST['event_name'];
+			$event_date = $_REQUEST['event_date'];
+			$event_time = $_REQUEST['event_time'];
+			$address = $_REQUEST['address'];
+			$description = $_REQUEST['description'];
 
-			$id = $_SESSION["id"];
+			
 			
 			//Update new data 
 			$sql = "UPDATE events SET event_name = '$event_name', event_date = '$event_date', event_time = '$event_time', address = '$address', description = '$description' WHERE id = $id ;";

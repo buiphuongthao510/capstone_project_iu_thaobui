@@ -18,10 +18,7 @@
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
       </div>
-      <div class="button-wrap">
-        <div class="button login">Log in</div>
-        <div class="button">Register</div>
-      </div>
+      
   </header>
 
     <section class="nav">

@@ -99,6 +99,9 @@
       <div class="description">
       <label> <?php echo $data['description']; ?></textarea> </label>
       </div>
+      <br />
+      <p align="right">
+      <button> <? echo "<a href='cancelEvent.php?id=$id'<button type='button' >Cancel Event</button></a>"; ?> </button>
         <?php }?>
       </fieldset>
 

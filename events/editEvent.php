@@ -15,13 +15,7 @@
       border-width: thin;
       border-color: black;
       padding: 15px;
-     
     }
-
-    .right {
-    border: 5px solid black;
- 
-}
   </style>
 
   </head>
@@ -81,7 +75,7 @@
 			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT * FROM events;";
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = 1 ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -90,11 +84,9 @@
   <div class="right">
 		<div class="title ei">Event Information</div>      
     <div class="line"> 
-			<?php while ($data = mysqli_fetch_assoc($select)) {
-        $id = $data['id'];
-        ?>
+			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">
-        
+        <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />
@@ -111,21 +103,14 @@
       <b>Event Description</b>
       <div class="description">
       <label> <?php echo $data['description']; ?></textarea> </label>
-      
       </div>
-      <p align="left">
-      <button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Edit Event Information</button></a>"; ?> </button>
-      <br />
-      <br />
-      <br />
-      
         <?php }?>
-
-      
+      </fieldset>
 
       </div>
       </div>
 
+			  <a href="saveEvent.php"><button>Edit Event Information</button></a>
         <a href="../includes/excel.php?id=<?php echo $data['id']?>" target="_blank"><button>excel</button></a>
       </div>
     </section>

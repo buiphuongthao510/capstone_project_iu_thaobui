@@ -59,10 +59,10 @@
             }
             session_start();
 			
-			      $id = $_GET["id"];
+			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = $id";
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = 1 ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		

@@ -22,7 +22,8 @@
 		}
 
 	// Get User Ticket
-		$username = $_SESSION["username"];
+		session_start();
+		$cas_username = $_SESSION["username"];
 
 	// Taking values from form data 
 		$name = $_REQUEST['name'];
@@ -33,7 +34,7 @@
 		
 
 	// Insert Query 
-		$sql = "INSERT INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '"$username"')";
+		$sql = "INSERT INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '"$cas_username"')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

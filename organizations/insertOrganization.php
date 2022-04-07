@@ -33,7 +33,7 @@
 		
 
 	// Insert Query 
-		$sql = "INSERT INTO organizations(name,email,phone,bio) VALUES ('".$name."','".$email."','".$phone."','".$bio."')";
+		$sql = "INSERT INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '"$username"')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
@@ -43,14 +43,7 @@
 			. mysqli_error($conn);
 		}
 
-		$sql_members = "INSERT INTO members (created_organizations) VALUES ('".$name."')";
-		if(mysqli_query($conn, $sql_members)){
-			echo "Data updated successfully";
-			echo nl2br("\n$name");
-		}	else{
-			echo "ERROR: Hush! Sorry $sql_members. "
-			. mysqli_error($conn);
-		}
+		
 
 		
 		// Close Connection 

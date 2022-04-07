@@ -92,7 +92,7 @@
 			  </div>
 			  </div>
         <p align="right">
-      <button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Save Edit</button></a>"; ?> </button>
+      <button> <? echo "<a href='updateEvent.php?id=$id'<button type='button' >Save Edit</button></a>"; ?> </button>
 			
 			  </div>
 			</section>

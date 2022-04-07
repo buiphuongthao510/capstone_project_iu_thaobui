@@ -101,14 +101,15 @@
       <div class="description">
       <label> <?php echo $data['description']; ?></textarea> </label>
       </div>
+      <a href="saveEvent.php"><button>Edit Event Information</button></a>
+        <a href="../includes/excel.php?id=<?php echo $data['id']?>" target="_blank"><button>excel</button></a>
         <?php }?>
       </fieldset>
 
       </div>
       </div>
 
-			  <a href="saveEvent.php"><button>Edit Event Information</button></a>
-        <a href="../includes/excel.php?id=<?php echo $data['id']?>" target="_blank"><button>excel</button></a>
+			  
       </div>
     </section>
 

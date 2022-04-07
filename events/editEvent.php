@@ -109,9 +109,10 @@
       </div>
       <p align="left">
       <button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Edit Event Information</button></a>"; ?> </button>
-      <hr>
-        <?php }?>
       
+        <?php }?>
+        
+      <hr>
 
       </div>
       </div>

@@ -75,7 +75,7 @@
 			      $id = $_SESSION["id"];
 			
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = 1 ;";
+			$sql_select = "SELECT * FROM events;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -84,7 +84,9 @@
   <div class="right">
 		<div class="title ei">Event Information</div>      
     <div class="line"> 
-			<?php while ($data = mysqli_fetch_assoc($select)) {?>
+			<?php while ($data = mysqli_fetch_assoc($select)) {
+        $id = $data['id'];
+        ?>
 		  <div class="form-item">
         <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
@@ -110,7 +112,7 @@
       </div>
       </div>
 
-			  <a href="saveEvent.php"><button>Edit Event Information</button></a>
+			<button> <? echo "<a href='saveEvent.php?id=$id'<button type='button' >Edit Event Information</button></a>"; ?> </button>
         <a href="../includes/excel.php?id=<?php echo $data['id']?>" target="_blank"><button>excel</button></a>
       </div>
     </section>

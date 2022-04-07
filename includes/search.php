@@ -23,9 +23,9 @@
             data: $('#form').serialize(),
             //data for returning
             success: function (data) {
-                //search out data using jquery to work ajax and turn on website 
+                //search out data using jquery to work ajax and turn on website   你这还没改成我发给你的呀
                 $.each(data, function(i, n){
-                    $(".content").prepend("<br><a href='?id=+n.oid' style='color: #FFFFFF;'>Name: "+n.name+" email: "+n.email+" phone: "+n.phone+"</a><br><br>")
+                    $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;">Name: '+n.name+'</a><br><br>')
                 })
 
             },

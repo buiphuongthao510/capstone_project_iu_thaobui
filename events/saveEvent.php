@@ -91,9 +91,8 @@
 			  </fieldset>
 			  </div>
 			  </div>
-        <p align="right">
-      <button> <? echo "<a href='updateEvent.php?id=$id'<button type='button' >Save Edit</button></a>"; ?> </button>
-			
+
+					  <button type="submit">Save Edit</button>
 			  </div>
 			</section>
 

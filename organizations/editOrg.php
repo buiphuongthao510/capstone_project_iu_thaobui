@@ -83,7 +83,7 @@
      
       
       //select statements
-      $sql_select = "SELECT name, email, phone, bio FROM organizations WHERE m_username = $cas_username "; 
+      $sql_select = "SELECT name, email, phone, bio FROM organizations WHERE m_username = $cas_username;"; 
 
       $select = mysqli_query($conn, $sql_select);
 
@@ -96,16 +96,16 @@
 		  <div class="form-item">
         <fieldset>
 			  <label><b>Organization Name:</b> <?php echo $data['name']; ?> </label>
-        <!-- <input type="text" placeholder="Culture Show" /> -->
+        <!-- <input type="text" placeholder="Culture Club" /> -->
       <br />
 			  <label><b>Contact Email:</b> <?php echo $data['email']; ?></label>
-        <!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
+        <!-- <input type="text" placeholder="xx@xx.xx" /> -->
       <br />
 			  <label><b>Contact Phone:</b> <?php echo $data['phone']; ?> </label>
-        <!-- <input type="text" placeholder="hh:mm:ss" /> -->
+        <!-- <input type="text" placeholder="xxxxxxxxxx" /> -->
       <br />
 			  <label><b>Description:</b> <?php echo $data['bio']; ?> </label>
-        <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
+        <!-- <input type="text" placeholder="xzfhdxjtxkyxcoco" /> -->
       <br />
       <br />
       </div>

@@ -1,3 +1,31 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+      echo '<script type="text/javascript">';
+      echo 'alert("Unauthorized page! Please login first!");';
+      echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/index/login.php";';
+      echo '</script>';
+    }
+    else{
+            $servername = "db.luddy.indiana.edu";
+            $username = "i494f21_team21";
+            $password = "my+sql=i494f21_team21";
+            $dbname = "i494f21_team21";
+            
+            // Create connection
+            $conn = mysqli_connect($servername,$username,$password,$dbname);
+            
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " .$conn->connect_error);
+            }
+            
+            $cas_username = $_SESSION["username"];
+          }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,19 +80,47 @@
       if ($conn->connect_error) {
           die("Connection failed: " .$conn->connect_error);
       }
-      session_start();
-
-      $username = $_SESSION["username"];
+     
       
       //select statements
-      $sql_select = ""; 
+      $sql_select = "SELECT name, email, phone, bio FROM organizations WHERE m_username = $cas_username "; 
 
       $select = mysqli_query($conn, $sql_select);
 
     ?>
 
     <div class="right">
+    <div class="title ei">Organization Information</div>      
+    <div class="line"> 
+			<?php while ($data = mysqli_fetch_assoc($select)) {?>
+		  <div class="form-item">
+        <fieldset>
+			  <label><b>Organization Name:</b> <?php echo $data['name']; ?> </label>
+        <!-- <input type="text" placeholder="Culture Show" /> -->
+      <br />
+			  <label><b>Contact Email:</b> <?php echo $data['email']; ?></label>
+        <!-- <input type="text" placeholder="yyyy-mm-dd" /> -->
+      <br />
+			  <label><b>Contact Phone:</b> <?php echo $data['phone']; ?> </label>
+        <!-- <input type="text" placeholder="hh:mm:ss" /> -->
+      <br />
+			  <label><b>Description:</b> <?php echo $data['bio']; ?> </label>
+        <!-- <input type="text" placeholder="Wilkie Auditorium" /> -->
+      <br />
+      <br />
+      </div>
+      <br /> 
+      <p align="right">
+      <a href="saveEditOrg.php"><button>Edit Event Information</button></a>
         
+
+      </fieldset>
+
+      </div>
+      </div>
+
+			  
+      </div>
     </section>
     <footer>
       <div class="link-wrap">

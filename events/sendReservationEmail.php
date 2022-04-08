@@ -30,7 +30,13 @@ if(!isset($_SESSION['username'])){
     $user_email = $data['email'];
 
     $sql_update = "UPDATE members SET e_id = ".$id." WHERE username = '".$cas_username."';";
-    $sql_idupdate = mysqli_query($conn, $sql_update);
+    if ($conn->query($sql_update) === TRUE) {
+        echo "username: " .$cas_username. "<br>";
+        echo "id: " .$id. "<br>";
+
+      } else {
+        echo "Error: " .$sql_update. "<br>".$conn->error;
+      }
 
     $to = $user_email;
     $subject = 'Event Reservation Confirmation Youthon';

@@ -27,8 +27,10 @@ if(!isset($_SESSION['username'])){
     if ($conn->query($sql_update) === TRUE) {
         // echo "username: " .$cas_username. "<br>";
         // echo "id: " .$id. "<br>";
+        
       } else {
         echo "Error: " .$sql_update. "<br>".$conn->error;
+       
       }
 }
 

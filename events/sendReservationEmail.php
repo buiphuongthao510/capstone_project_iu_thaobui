@@ -21,11 +21,16 @@ if(!isset($_SESSION['username'])){
     }
 
     $cas_username = $_SESSION["username"];
+    $id = $_GET["id"];
+
     //select statements
     $sql_select = "SELECT email FROM members WHERE username = '".$cas_username."';";
     $sql_email = mysqli_query($conn, $sql_select);
     $data = mysqli_fetch_assoc($sql_email);
     $user_email = $data['email'];
+
+    $sql_update = "UPDATE members SET e_id = ".$id.";";
+    $sql_idupdate = mysqli_query($conn, $sql_update);
 
     $to = $user_email;
     $subject = 'Event Reservation Confirmation Youthon';

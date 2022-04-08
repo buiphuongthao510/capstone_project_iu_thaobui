@@ -16,6 +16,7 @@ $conn = mysqli_connect("$servername", "$username", "$password", "$dbname");
 if (mysqli_connect_error($conn)) {
 die("connection failed :".mysqli_connect_error());
 }
+var_dump(122);exit;
 
 //get data from sql database, set code 
 mysqli_query($conn, "SET NAMES utf8");

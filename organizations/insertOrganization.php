@@ -61,24 +61,24 @@
 		
 
 	// Insert Query 
-	
+	$sql = "INSERT IGNORE INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '".$cas_username."')";
+
 		$select_query = "SELECT * FROM organizations WHERE m_username = '".$cas_username."' ;";
 		$result = mysqli_query($conn, $select_query)
 
 		if($result) {
-			exit("You can only create one organization")
+			die("You can only create one organization")
 		} else{
-			mysqli_query($conn, "INSERT IGNORE INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '".$cas_username."')")
-			if(mysqli_query($conn, $sql)){
-				echo "Data updated successfully";
-				echo nl2br("\n$name\n $email\n $phone\n $bio");
-			}	else{
-				echo "ERROR: Hush! Sorry $sql. "
-				. mysqli_error($conn);
-			}
+			mysqli_query($conn, $sql)
 		}
 
-		
+		if(mysqli_query($conn, $sql)){
+			echo "Data updated successfully";
+			echo nl2br("\n$name\n $email\n $phone\n $bio");
+		}	else{
+			echo "ERROR: Hush! Sorry $sql. "
+			. mysqli_error($conn);
+		}
 
 		
 		// Close Connection 

@@ -65,9 +65,7 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
-            session_start();
-			
-			      $id = $_SESSION["id"];
+           
 			
 			//select statements
 			$sql_select = "SELECT events.event_name, events.event_date, events.event_time, events.address, events.description, members.e_id FROM events, members WHERE events.id = members.e_id ;";

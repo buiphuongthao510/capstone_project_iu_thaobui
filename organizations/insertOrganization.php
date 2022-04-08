@@ -69,20 +69,22 @@
 		if($result) {
 			die("You can only create one organization")
 		} else{
-			mysqli_query($conn, $sql);
+			mysqli_query($conn, $sql)
 		}
 
 		if(mysqli_query($conn, $sql)){
-			echo "Data updated successfully";
-			echo nl2br("\n$name\n $email\n $phone\n $bio");
-		}	else{
-			echo "ERROR: Hush! Sorry $sql. "
-			. mysqli_error($conn)
-		}
+				echo "Data updated successfully";
+				echo nl2br("\n$name\n $email\n $phone\n $bio");
+			}	else{
+				echo "ERROR: Hush! Sorry $sql. "
+				. mysqli_error($conn);
+			}
+
 
 		
 		// Close Connection 
 		mysqli_close($conn);
+
 		?>
 	</center>
 </body>

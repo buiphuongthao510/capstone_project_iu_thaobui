@@ -21,7 +21,7 @@ if(!isset($_SESSION['username'])){
     }
 
     $cas_username = $_SESSION["username"];
-    $id = $_GET["id"];
+    $id = $_SESSION['id'];
 
     //select statements
     $sql_select = "SELECT email FROM members WHERE username = '".$cas_username."';";

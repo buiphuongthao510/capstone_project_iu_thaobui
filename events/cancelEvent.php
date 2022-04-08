@@ -29,6 +29,7 @@ if(!isset($_SESSION['username'])){
         // echo "id: " .$id. "<br>";
       } else {
         echo "Error: " .$sql_update. "<br>".$conn->error;
+        echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php";';
       }
 }
 

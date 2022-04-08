@@ -101,7 +101,7 @@
       </div>
       <br />
       <p align="right">
-      <button> <? echo "<a href='cancelEvent.php?id=$id'<button type='button' >Cancel Event</button></a>"; ?> </button>
+      <button> <? echo "<a href='cancelEvent.php?id=$id'<button type='button' >Cancel Registration</button></a>"; ?> </button>
         <?php }?>
       </fieldset>
 

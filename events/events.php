@@ -28,7 +28,9 @@
 <?php include './includes/header.php'; ?>
 
 <body>
-  <header style=“width:1280px;margin: 0 auto;”>
+  <div style="width:1280px;margin: 0 auto;">
+
+  <header>
     <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
@@ -39,6 +41,8 @@
       </div>
     <div class="ui"><a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php">UI</a></div>
   </header>
+</div>
+
 
   <div class="main">
     <div class="left">

@@ -105,7 +105,7 @@
       <br /> 
       <p align="right">
       <a href="saveEvent.php"><button>Edit Event Information</button></a>
-        <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel66</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel</button></a>
  <?php }?>
 
       </fieldset>

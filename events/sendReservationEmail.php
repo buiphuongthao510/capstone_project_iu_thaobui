@@ -29,7 +29,7 @@ if(!isset($_SESSION['username'])){
     $data = mysqli_fetch_assoc($sql_email);
     $user_email = $data['email'];
 
-    $sql_update = "UPDATE members SET e_id = ".$id." WHERE username = '".$cas_username."';";
+    $sql_update = "UPDATE members SET e_id = $id WHERE username = '".$cas_username."';";
     if ($conn->query($sql_update) === TRUE) {
         echo "username: " .$cas_username. "<br>";
         echo "id: " .$id. "<br>";

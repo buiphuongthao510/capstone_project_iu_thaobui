@@ -4,6 +4,7 @@ session_start();
 if(!isset($_SESSION['username'])){
     echo '<script type="text/javascript">';
     echo 'alert("You need to login in order to register for the event.");';
+    echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php";';
     echo '</script>';
 } else {
     // CONNECT DATABASE
@@ -27,7 +28,7 @@ if(!isset($_SESSION['username'])){
     if ($conn->query($sql_update) === TRUE) {
         // echo "username: " .$cas_username. "<br>";
         // echo "id: " .$id. "<br>";
-        echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php";';
+        
       } else {
         echo "Error: " .$sql_update. "<br>".$conn->error;
        

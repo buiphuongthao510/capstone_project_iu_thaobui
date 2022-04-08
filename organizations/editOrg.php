@@ -112,6 +112,7 @@
       <br /> 
       <p align="right">
       <a href="saveEditOrg.php"><button>Edit Event Information</button></a>
+      <?php }?>
         
 
       </fieldset>

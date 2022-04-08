@@ -53,7 +53,15 @@
 		</div>
 		
 		<?php
-		  $servername = "db.luddy.indiana.edu";
+    session_start();
+    if(!isset($_SESSION['username'])){
+        echo '<script type="text/javascript">';
+        echo 'alert("You need to login in order to register for the event.");';
+        echo '</script>';
+    } else {
+
+        // CONNECT DATABASE 
+		      $servername = "db.luddy.indiana.edu";
           $username = "i494f21_team21";
           $password = "my+sql=i494f21_team21";
           $dbname = "i494f21_team21";
@@ -72,9 +80,19 @@
 			
 			//select statements
 			$sql_select = "SELECT events.event_name, events.event_date, events.event_time, events.address, events.description FROM events, members WHERE events.id = members.e_id AND members.username = '".$cas_username."';";
-			
-			$select = mysqli_query($conn, $sql_select);
-		
+			$sql_update = "UPDATE members SET e_id = null WHERE username = '".$cas_username."';";
+      $select = mysqli_query($conn, $sql_select);
+      
+      // IF statement
+      if ($conn->query($sql_update) === TRUE) {
+        // echo "username: " .$cas_username. "<br>";
+        // echo "id: " .$id. "<br>";
+        
+      } else {
+        echo "Error: " .$sql_update. "<br>".$conn->error;
+       
+      }
+}
   ?>
 		
   <div class="right">
@@ -102,7 +120,7 @@
       </div>
       <br />
       <p align="right">
-      <button> <? echo "<a href='cancelEvent.php?username=$cas_username'<button type='button' >Cancel Registration</button></a>"; ?> </button>
+      <button> <? echo "<a href='registeredEvent.php?username=$cas_username'<button type='button' >Cancel Registration</button></a>"; ?> </button>
         <?php }?>
       </fieldset>
 

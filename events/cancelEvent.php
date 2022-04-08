@@ -4,7 +4,6 @@ session_start();
 if(!isset($_SESSION['username'])){
     echo '<script type="text/javascript">';
     echo 'alert("You need to login in order to register for the event.");';
-    echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php";';
     echo '</script>';
 } else {
     // CONNECT DATABASE

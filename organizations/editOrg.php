@@ -83,7 +83,7 @@
      
       
       //select statements
-      $sql_select = "SELECT name, email, phone, bio FROM organizations WHERE m_username = $cas_username;"; 
+      $sql_select = "SELECT name,email,phone,bio FROM organizations WHERE m_username = '".$cas_username."';"; 
 
       $select = mysqli_query($conn, $sql_select);
 
@@ -111,7 +111,7 @@
       </div>
       <br /> 
       <p align="right">
-      <a href="saveEditOrg.php"><button>Edit Event Information</button></a>
+      <a href="saveEditOrg.php"><button>Edit Organization Information</button></a>
       <?php }?>
         
 

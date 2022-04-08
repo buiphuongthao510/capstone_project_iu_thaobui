@@ -59,7 +59,8 @@
           $username = "i494f21_team21";
           $password = "my+sql=i494f21_team21";
           $dbname = "i494f21_team21";
-            
+
+	//  var_dump(122);exit;
             // Create connection
             $conn = mysqli_connect($servername,$username,$password,$dbname);
             
@@ -105,7 +106,8 @@
       <p align="right">
       <a href="saveEvent.php"><button>Edit Event Information</button></a>
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel66</button></a>
-        <?php }?>
+ <?php }?>
+
       </fieldset>
 
       </div>

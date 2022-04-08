@@ -62,7 +62,7 @@
 
 	// Insert Query 
 
-	$sql = "INSERT IGNORE INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '".$cas_username."')";		
+	$sql = "INSERT INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '".$cas_username."')";		
 		
 	if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

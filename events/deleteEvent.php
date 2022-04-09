@@ -19,6 +19,7 @@ if(!isset($_SESSION['username'])){
     if ($conn->connect_error) {
     die("Connection failed: " .$conn->connect_error);
     }
+    
 
     $cas_username = $_SESSION["username"];
     

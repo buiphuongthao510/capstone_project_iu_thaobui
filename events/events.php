@@ -144,7 +144,10 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
-            
+            session_start();
+
+            $cas_username = $_SESSION["username"];
+			      
 			//select statements
       $sql_select = "SELECT event_name, event_date, event_time, address FROM events WHERE username = '".$cas_username."';";
 
@@ -156,10 +159,7 @@
 	<form action="reserveEvent.php" method="GET">
       <div class="up-item b-line">
 
-        <?php while ($data = mysqli_fetch_assoc($select)) {
-          $cas_username = $data['username'];
-          
-          ?>
+        <?php while ($data = mysqli_fetch_assoc($select)) {?>
       
       <div>
      

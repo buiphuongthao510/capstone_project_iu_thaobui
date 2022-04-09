@@ -65,6 +65,10 @@
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";
 			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description\n $image" );
+			echo '<script type="text/javascript">';
+			echo 'alert("You have succesfully CREATED your event!!");';
+			echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/createEvent.php";';
+			echo '</script>';
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);

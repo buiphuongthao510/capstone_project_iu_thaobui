@@ -146,10 +146,10 @@
             }
             session_start();
 
-            $cas_username = $_SESSION["username"];
+            $username = $_SESSION["username"];
 			      
 			//select statements
-      $sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE username = '".$cas_username."';"; 
+      $sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE username = '".$_SESSION["username"]."';"; 
 
 			$select = mysqli_query($conn, $sql_select);
 	
@@ -180,7 +180,7 @@
       <br />
       <br />
       <p align="right">
-      <button> <? echo "<a href='reserveEvent.php?username=$cas_username'<button type='button' >More Info</button></a>"; ?> </button>
+      <button> <? echo "<a href='reserveEvent.php?username=$username'<button type='button' >More Info</button></a>"; ?> </button>
       
       <br />
       <br /> 

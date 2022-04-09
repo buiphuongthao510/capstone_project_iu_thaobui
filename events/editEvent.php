@@ -108,7 +108,7 @@
     <div class="line"> 
 			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">
-        
+        <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />
@@ -129,10 +129,12 @@
       <br /> 
       <p align="right">
       <a href="saveEvent.php"><button>Edit Event Information</button></a>
+      <button> <? echo "<a href='deleteEvent.php?username=$cas_username'<button type='button' >Delete Event</button></a>"; ?> </button>
+      <br />
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel</button></a>
  <?php }?>
 
-      
+      </fieldset>
 
       </div>
       </div>

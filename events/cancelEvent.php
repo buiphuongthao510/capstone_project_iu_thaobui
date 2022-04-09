@@ -27,7 +27,10 @@ if(!isset($_SESSION['username'])){
     if ($conn->query($sql_update) === TRUE) {
         // echo "username: " .$cas_username. "<br>";
         // echo "id: " .$id. "<br>";
-        echo '<script>alert("You have succesfully CANCELED your event!!")</script>';
+        echo '<script type="text/javascript">';
+        echo 'alert("You have succesfully CANCELED your event!!");';
+        echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php";';
+        echo '</script>';
 
         
       } else {

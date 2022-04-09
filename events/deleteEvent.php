@@ -28,7 +28,7 @@ if(!isset($_SESSION['username'])){
         // echo "username: " .$cas_username. "<br>";
         // echo "id: " .$id. "<br>";
         echo '<script type="text/javascript">';
-        echo 'alert("You have succesfully CANCELED your event!!");';
+        echo 'alert("You have succesfully DELETED your event!!");';
         echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/editEvent.php";';
         echo '</script>';
       

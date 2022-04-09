@@ -146,7 +146,7 @@
             }
             
 			//select statements
-			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE username = $username;";
+			$sql_select = "SELECT * FROM events;";
 			
 			$select = mysqli_query($conn, $sql_select);
 	

@@ -28,7 +28,7 @@ $sql = "SELECT first_name,last_name,email FROM members";
 
 $result = $conn->query($sql);
 //add header in excel
-$filename = array("first name","last name","email","events name","event_time","event_date","address","state_address");
+$filename = array("first name","last name","email");
 foreach ($filename as $key => $value) {
 //make sure excel has no error
 $name = mb_convert_encoding($value, "gb2312" , "utf-8" );

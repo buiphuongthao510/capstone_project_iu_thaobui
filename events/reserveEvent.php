@@ -57,13 +57,13 @@
             }
             session_start();
 			
-			      $id = $_GET["id"];
-            $_SESSION['id'] = $id;
+			      $username = $_GET["username"];
+            $_SESSION['username'] = $username;
 
 			
 			//select statements
       
-			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE id = $id";
+			$sql_select = "SELECT event_name,event_date,event_time,address,description FROM events WHERE username = $username";
 			
 			$select = mysqli_query($conn, $sql_select);
 		

@@ -68,9 +68,7 @@
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
-			echo '<script type="text/javascript">';
-			echo ' alert("Test")'; 
-			echo '</script>';
+			
 		}
 		
 		// Close Connection 

@@ -22,7 +22,7 @@ if(!isset($_SESSION['username'])){
 
     $cas_username = $_SESSION["username"];
     
-    $sql_update = "DELETE FROM events WHERE username = '".$cas_username."';";
+    $sql_update = "UPDATE events SET username = null WHERE username = '".$cas_username."';";
 
     if ($conn->query($sql_update) === TRUE) {
         // echo "username: " .$cas_username. "<br>";

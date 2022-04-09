@@ -182,8 +182,8 @@
       <br />
       <br />
       <p align="right">
-      <button> <? echo "<a href='reserveEvent.php?id=".$data['id']."'<button type='button' >More Info</button></a>"; ?> </button>
       
+      <form action="reserveEvent.php?id=<?php echo $id; ?>" method="GET">
       <br />
       <br /> 
       <br />

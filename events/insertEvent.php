@@ -68,11 +68,6 @@
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
-			echo '<script type="text/javascript">';
-			echo ' alert("IMPORTANT NOTICE #1: PLEASE MAKE SURE ALL ENTRIES ARE ENTERED!!
-							IMPORTANT NOTICE #2: YOU CANNOT CREATE MORE THAN ONE EVENT!!
-							IMPORTANT NOTICE #3: PLEASE DELETE THE EVENT YOU HAVE CREATED BEFORE CREATING A NEW EVENT!!!")'; 
-			echo '</script>';
 
 		
 		// Close Connection 

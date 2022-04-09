@@ -157,7 +157,7 @@
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
-          if(!empty($data['username'])){
+          if(!NULL($data['username'])){
             $username = $data['username'];
           }
           

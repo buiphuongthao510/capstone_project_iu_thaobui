@@ -143,16 +143,11 @@
             // Check connection
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
-                
-                session_start();
-
-                $cas_username = $_SESSION["username"];
             }
             
 			//select statements
-      $sql_select = "SELECT events.event_name, events.event_date, events.event_time, events.address FROM events WHERE username = '".$cas_username."';";
+      $sql_select = "SELECT event_name, event_date, event_time, address FROM events WHERE username = '".$cas_username."';";
 
-			
 			$select = mysqli_query($conn, $sql_select);
 	
   ?>
@@ -162,6 +157,7 @@
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
+          $cas_username = $data['username'];
           
           ?>
       

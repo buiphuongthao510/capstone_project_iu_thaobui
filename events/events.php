@@ -150,7 +150,7 @@
 			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE username IS NOT NULL;";
 			
 			$select = mysqli_query($conn, $sql_select);
-      $id = get("id");
+      
   ?>
 	
     <div class="overview-right">

@@ -66,9 +66,13 @@
 			echo "Data updated successfully";
 			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description\n $image" );
 		}	else{
-			echo "PLEASE make sure all entries are entered!!
-			IMPORTANT NOTICE: You cannot create more than one event!! Please delete the event you have already created before creating a new event!!  $sql. "
+			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
+			echo '<script type="text/javascript">';
+			echo ' alert("IMPORTANT NOTICE #1: PLEASE MAKE SURE ALL ENTRIES ARE ENTERED!!
+							IMPORTANT NOTICE #2: YOU CANNOT CREATE MORE THAN ONE EVENT!!
+							IMPORTANT NOTICE #3: PLEASE DELETE THE EVENT YOU HAVE CREATED BEFORE CREATING A NEW EVENT!!!")'; 
+			echo '</script>';
 
 		
 		// Close Connection 

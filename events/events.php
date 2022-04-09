@@ -144,6 +144,8 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
+            session_start();
+            $id = $_SESSION["id"];
             
 			//select statements
 			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE (username IS NOT NULL AND id = $id);";

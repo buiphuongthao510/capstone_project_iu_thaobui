@@ -27,6 +27,7 @@ if(!isset($_SESSION['username'])){
     if ($conn->query($sql_update) === TRUE) {
         // echo "username: " .$cas_username. "<br>";
         // echo "id: " .$id. "<br>";
+        echo '<script>alert("You have succesfully deleted your event!!")</script>';
         
       } else {
         echo "Error: " .$sql_update. "<br>".$conn->error;

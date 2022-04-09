@@ -68,6 +68,7 @@
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
+			echo '<script>alert("You cannot create more than one event!! Please delete the event you have already created before creating a new event!! ")</script>';
 		}
 		
 		// Close Connection 

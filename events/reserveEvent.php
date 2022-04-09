@@ -57,7 +57,7 @@
             }
             session_start();
 			
-			      $username = $_GET["id"];
+			      $id = $_GET["id"];
             $_SESSION['id'] = $id;
 
 			

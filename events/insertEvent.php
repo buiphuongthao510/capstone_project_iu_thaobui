@@ -56,7 +56,7 @@
 		$image = $_FILES["image"];
 
 		$path = $image['name'];
-		$path = "team-21/events/img/" . $path;
+		$path = "C:/Users/13175/ykien/team-21/events/img" . $path;
 		move_uploaded_file($image['tmp-name'], $path);
 		
 	// Insert Query 

@@ -157,7 +157,7 @@
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
-          $username = $data['username'];
+          $id = $data['id'];
           
           ?>
       
@@ -180,7 +180,7 @@
       <br />
       <br />
       <p align="right">
-      <button> <? echo "<a href='reserveEvent.php?username=$username'<button type='button' >More Info</button></a>"; ?> </button>
+      <button> <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button></a>"; ?> </button>
       
       <br />
       <br /> 

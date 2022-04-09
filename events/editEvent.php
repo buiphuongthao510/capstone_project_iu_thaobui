@@ -108,7 +108,7 @@
     <div class="line"> 
 			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">
-        <fieldset>
+        
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />
@@ -132,7 +132,7 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel</button></a>
  <?php }?>
 
-      </fieldset>
+      
 
       </div>
       </div>

@@ -162,7 +162,6 @@
       <div class="up-item b-line">
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
-          $id = $data['id'];
           
           ?>
       

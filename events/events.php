@@ -150,7 +150,7 @@
 			$sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE username IS NOT NULL;";
 			
 			$select = mysqli_query($conn, $sql_select);
-	
+      
   ?>
 	
     <div class="overview-right">
@@ -159,6 +159,7 @@
 
         <?php while ($data = mysqli_fetch_assoc($select)) {
           $id = $data['id'];
+          $id = GET(['id']);
           
           ?>
       

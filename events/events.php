@@ -149,7 +149,7 @@
             $cas_username = $_SESSION["username"];
 			      
 			//select statements
-      $sql_select = "SELECT event_name, event_date, event_time, address FROM events WHERE username = '".$cas_username."';";
+      $sql_select = "SELECT event_name,event_date,event_time,address FROM events WHERE username = '".$cas_username."';"; 
 
 			$select = mysqli_query($conn, $sql_select);
 	

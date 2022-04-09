@@ -131,6 +131,8 @@
       <a href="saveEvent.php"><button>Edit Event Information</button></a>
       <button> <? echo "<a href='deleteEvent.php?username=$cas_username'<button type='button' >Delete Event</button></a>"; ?> </button>
       <br />
+      <br/>
+      <br />
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel</button></a>
  <?php }?>
 

@@ -147,7 +147,7 @@
             
             
 			//select statements
-			$sql_select = "SELECT * FROM events WHERE username IS NOT NULL;";
+			$sql_select = "SELECT event_name,event_date,event_time,address,id FROM events WHERE username IS NOT NULL;";
 			
 			$select = mysqli_query($conn, $sql_select);
       

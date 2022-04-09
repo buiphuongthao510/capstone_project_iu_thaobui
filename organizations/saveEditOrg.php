@@ -52,24 +52,24 @@
 	  <?php include './includes/header.php'; ?>
 	
     <section class="nav">
-      <div class="left">
+    <div class="left">
         <div class="avatar">
-        <div class="user-name">Username</div>
+          <div class="user-name">Username</div>
         </div>
         <div class="nav-item">
-          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Registered Events</a></div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/organizations/org_membership.php">Membership</a></div>
         </div>
         <div class="nav-item">
-          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/createEvent.php">Create Event</a></div>
+          <div><a href = "https://cgi.luddy.indiana.edu/~team21/organizations/createOrganizations.php">Create Organization</a></div>
         </div>
         <div class="nav-item">
-          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/editEvent.php">Edit Event</a></div>
+          <div><a href="https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php">Edit Organization</a></div>
         </div>
         <div class="nav-item">
           <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>
         </div>
-		</div>
-		
+      </div>
+      
 		<?php
 		    $servername = "db.luddy.indiana.edu";
           $username = "i494f21_team21";

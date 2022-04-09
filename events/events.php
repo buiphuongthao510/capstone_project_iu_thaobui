@@ -143,10 +143,15 @@
             // Check connection
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
+                
+                session_start();
+
+                $cas_username = $_SESSION["username"];
             }
             
 			//select statements
-			$sql_select = "SELECT * FROM events;";
+      $sql_select = "SELECT events.event_name, events.event_date, events.event_time, events.address FROM events WHERE username = '".$cas_username."';";
+
 			
 			$select = mysqli_query($conn, $sql_select);
 	
@@ -180,7 +185,7 @@
       <br />
       <br />
       <p align="right">
-      <button> <? echo "<a href='reserveEvent.php?id=$id'<button type='button' >More Info</button></a>"; ?> </button>
+      <button> <? echo "<a href='reserveEvent.php?username=$cas_username'<button type='button' >More Info</button></a>"; ?> </button>
       
       <br />
       <br /> 

@@ -33,7 +33,7 @@
       </div>
       <div class="button-wrap">
         <div class="button login">
-          <a href="profile.php"><button>User Profile</button></a>
+          <a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php"><button>User Profile</button></a>
         </div>
       </div>
   </header>

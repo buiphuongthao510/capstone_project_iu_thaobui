@@ -22,9 +22,22 @@ if(!$result) {
 }
 //determine if database has data for search
 if (empty($data_search[0])){
-  $data_search = 'no data';
-}
-$data_json = json_encode($data_search);//return to json data
 
-echo $data_json;//output data
+    //如果organizations表没有数据执行 events表
+    $sql = "SELECT event_name,id  FROM events WHERE event_name LIKE '%$search_name%'";
+    $result = mysqli_query($conn, $sql);
+    if(!$result) {
+        echo $sql;
+    } else{
+        while($data = mysqli_fetch_assoc($result)) {
+            $data_search[] = $data;
+        }
+    }
+    $data_search['event_name'] = 'event_name';
+}
+
+var_dump($data_search);
+// $data_json = json_encode($data_search);//return to json data
+
+// echo $data_json;//output data
 ?>

@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
         // $events_sql = "SELECT * FROM events WHERE id=$events_id";
         // $events_result = $conn->query($events_sql);//execute the sql
         // $events_data = $events_result->fetch_assoc();//event's data
-       var_dump($row);exit;
+    //    var_dump($row);exit;
     
     // $dataArr[] = $row;
         //export data

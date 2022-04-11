@@ -79,12 +79,7 @@ $events_data = $events_result->fetch_assoc();//transform queries to associative 
                   <br />
                   <label>bio: <?php echo $data['bio'] ?></label>
                   <br />
-                  <label>picProfile: <?php echo $data['picProfile'] ?></label>
-                  <br />
-                  <label>events data username: <?php echo $events_data['username'] ?></label>
-                  <br />
-                  <label>events data event_name: <?php echo $events_data['event_name'] ?></label>
-                  <br />
+              
 			
 			</div>
   

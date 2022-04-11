@@ -20,8 +20,9 @@ die("connection failed :".mysqli_connect_error());
 //get data from sql database, set code 
 mysqli_query($conn, "SET NAMES utf8");
 
+$e_id = $_GET['e_id'];
 // search from member database
-$sql = "SELECT first_name,last_name,email,e_id FROM members";
+$sql = "SELECT first_name,last_name,email,e_id FROM members where e_id=$e_id";
 //$id = $_GET['id'];
 //$sql = "SELECT first_name,last_name,email FROM members WHERE id=$id";
 

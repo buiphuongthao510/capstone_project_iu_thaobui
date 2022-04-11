@@ -133,7 +133,7 @@
       <br />
       <br/>
       <br />
-        <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
  <?php }?>
 
       </fieldset>

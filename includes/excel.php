@@ -2,11 +2,11 @@
 
 //must have, for export excel;
 //set code
-header('Content-type: text/html; charset=utf-8');
+// header('Content-type: text/html; charset=utf-8');
 //set Excel
-header("Content-type:application/vnd.ms-excel");
+// header("Content-type:application/vnd.ms-excel");
 //set Excel filename
-header("Content-Disposition:filename=PHP_est.xls");
+// header("Content-Disposition:filename=PHP_est.xls");
 $servername = "db.luddy.indiana.edu";
 $username = "i494f21_team21";
 $password = "my+sql=i494f21_team21";
@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
         // $events_sql = "SELECT * FROM events WHERE id=$events_id";
         // $events_result = $conn->query($events_sql);//execute the sql
         // $events_data = $events_result->fetch_assoc();//event's data
-    //    var_dump($events_data);exit;
+       var_dump($row);exit;
     
     // $dataArr[] = $row;
         //export data

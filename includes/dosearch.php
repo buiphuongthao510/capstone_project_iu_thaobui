@@ -18,6 +18,7 @@ if(!$result) {
 } else{
     while($data = mysqli_fetch_assoc($result)) {
         $data_search[] = $data;
+        
     }
 }
 //determine if database has data for search
@@ -30,12 +31,14 @@ if (empty($data_search[0])){
         echo $sql;
     } else{
         while($data = mysqli_fetch_assoc($result)) {
-            $data_search[] = $data;
+            // $data_search[2]['event_name'] = 'event_name';
+
+            // $data_search[] = $data;
+
         }
     }
     // $data_search[2]['event_name'] = 'event_name';
 
-    $data_search[2]['event_name'] = 'event_name';
 }
 
 var_dump($data_search);

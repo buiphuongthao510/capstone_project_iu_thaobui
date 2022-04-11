@@ -2,11 +2,11 @@
 
 //must have, for export excel;
 //set code
-// header('Content-type: text/html; charset=utf-8');
+header('Content-type: text/html; charset=utf-8');
 //set Excel
-// header("Content-type:application/vnd.ms-excel");
+header("Content-type:application/vnd.ms-excel");
 //set Excel filename
-// header("Content-Disposition:filename=PHP_est.xls");
+header("Content-Disposition:filename=PHP_est.xls");
 $servername = "db.luddy.indiana.edu";
 $username = "i494f21_team21";
 $password = "my+sql=i494f21_team21";
@@ -16,7 +16,6 @@ $conn = mysqli_connect("$servername", "$username", "$password", "$dbname");
 if (mysqli_connect_error($conn)) {
 die("connection failed :".mysqli_connect_error());
 }
-var_dump(122);exit;
 
 //get data from sql database, set code 
 mysqli_query($conn, "SET NAMES utf8");
@@ -46,7 +45,7 @@ if ($result->num_rows > 0) {
         // $events_sql = "SELECT * FROM events WHERE id=$events_id";
         // $events_result = $conn->query($events_sql);//execute the sql
         // $events_data = $events_result->fetch_assoc();//event's data
-    //    var_dump($row);exit;
+    //    var_dump($events_data);exit;
     
     // $dataArr[] = $row;
         //export data

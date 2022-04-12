@@ -31,9 +31,8 @@
 
             //search out data using jquery to work ajax and turn on website 
             $.each(data, function(i, n){
-                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> event name: '+n.nevent_name+'</a><br><br>');
 
-                        $(".content").prepend('<br>< a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> name: '+n.name+'</ a><br><br>')
+                        $(".content").prepend('<br>< a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> name: '+n.name+'</ a><br><br><br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> event name: '+n.nevent_name+'</a><br><br>')
                     // $(".content").prepend('<br>< a href="?id=22" style="color: #FFFFFF;">Name: "'+n.name+'"</ a><br><br>')
                 })
 

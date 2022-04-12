@@ -2,11 +2,11 @@
 
 //must have, for export excel;
 //set code
-// header('Content-type: text/html; charset=utf-8');
-// //set Excel
-// header("Content-type:application/vnd.ms-excel");
-// //set Excel filename
-// header("Content-Disposition:filename=PHP_est.xls");
+header('Content-type: text/html; charset=utf-8');
+//set Excel
+header("Content-type:application/vnd.ms-excel");
+//set Excel filename
+header("Content-Disposition:filename=PHP_est.xls");
 $servername = "db.luddy.indiana.edu";
 $username = "i494f21_team21";
 $password = "my+sql=i494f21_team21";
@@ -40,7 +40,7 @@ echo "\n";
 if ($result->num_rows > 0) {
     //related sets of data
     while($row = mysqli_fetch_array($result,MYSQLI_NUM)) {
-var_dump($row);exit;
+// var_dump($row);exit;
 
     echo $row[0]."\t".$row[1]."\t".$row[2]."\t"."\t\n";
     }

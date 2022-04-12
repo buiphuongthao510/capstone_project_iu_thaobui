@@ -72,9 +72,7 @@
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);
 		}
-	
-		// Close Connection 
-		mysqli_close($conn);
+
 	
 		if(mysqli_query($conn, $sql_1)){
 			echo "Data updated successfully";

@@ -112,10 +112,7 @@ include_once 'db_connection.php';
 	    <div class="col__box">
 	      <h5><?php echo $row['price']; ?></h5>
         <h6>Price: <span> $<?php echo $row['price']; ?> </span> </h6>
-        <form class="paypal" action="request.php" method="post" id="paypal_form">
-          <input type="hidden" name="item_number" value="<?php echo $row['id']; ?>" >
-          <input type="hidden" name="amount" value="<?php echo $row['price']; ?>" >
-          <input type="hidden" name="currency_code" value="USD" >
+       
           <form action="https://www.paypal.com/donate" method="post" target="_top">
           <input type="hidden" name="business" value="P5EB6FFE9GWPS" />
           <input type="hidden" name="no_recurring" value="1" />
@@ -123,7 +120,7 @@ include_once 'db_connection.php';
           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
           <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
           </form>
-        </form>
+        
 	    </div>
     <?php } ?>
   </div>

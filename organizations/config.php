@@ -1,24 +1,6 @@
-<?php
-
-$servername = "db.luddy.indiana.edu";
-$username = "i494f21_team21";
-$password = "my+sql=i494f21_team21";
-$dbname = "i494f21_team21";
-
-// Create connection
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " .$conn->connect_error);
-}
-
-error_reporting(E_ALL);
-ini_set('display_errors','Off');
-
+<?php 
+include_once 'db_connection.php'; 
 ?>
-
- config.php 
 
 <?php
 use PayPal\Rest\ApiContext;

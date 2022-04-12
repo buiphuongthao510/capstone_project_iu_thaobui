@@ -148,7 +148,7 @@
                 <?php while ($data = mysqli_fetch_assoc($select)) {?>
 
                 <div>
-
+                <img src="events/img/IUlogo.png" ALIGN="left" />
                     <label><b>Organization Name:</b> <?php echo $data['name']; ?> </label>
 
                     <br />
@@ -162,7 +162,7 @@
                     <br />
                     <br />
                     <p align="right">
-                        <button type="Create">More Info</button>
+                    <button> <? echo "<a href='orgDetail.php?id=$id'<button type='button' >More Info</button></a>"; ?> </button>
                         <br />
                         <br />
                         <br />

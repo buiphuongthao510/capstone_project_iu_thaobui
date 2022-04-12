@@ -78,7 +78,7 @@
 				<br />
 				<label>Description: <input type="text" name="bio" rows = 10/></label>
 				<br />
-        <label>Donation: <input  type="text" placeholder = "1-5" name="price"/></label>
+        <label>Donation needed(required): <input  type="text" placeholder = "No more than 100" name="donation"/></label>
         <br />
 				<label>Upload Organization Photo: <input type="file" name="picProfile" value="" /></label>	
 			  </fieldset>

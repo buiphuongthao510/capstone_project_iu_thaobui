@@ -35,7 +35,7 @@
 
 			} else {
 				echo '<script>alert("New data successfully updated!!")</script>';
-				header("Location: https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php");
+				echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php";'
 			}
 			
 ?>

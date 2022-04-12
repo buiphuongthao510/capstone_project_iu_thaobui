@@ -116,7 +116,13 @@ include_once 'db_connection.php';
           <input type="hidden" name="item_number" value="<?php echo $row['id']; ?>" >
           <input type="hidden" name="amount" value="<?php echo $row['price']; ?>" >
           <input type="hidden" name="currency_code" value="USD" >
-          <input type="submit" name="submit" value="Donate Now" class="btn__default">
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+          <input type="hidden" name="business" value="P5EB6FFE9GWPS" />
+          <input type="hidden" name="no_recurring" value="1" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          </form>
         </form>
 	    </div>
     <?php } ?>

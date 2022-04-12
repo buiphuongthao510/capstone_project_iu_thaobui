@@ -75,7 +75,7 @@
 
 	
 	if(mysqli_query($conn, $sql_1)){
-		cho "Data updated successfully";
+		echo "Data updated successfully";
 		echo nl2br("\n$price");
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "

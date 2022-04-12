@@ -10,6 +10,9 @@ if ($conn->connect_error) {
 }
 
 $o_id = $_GET['o_id'];//get id
+if(empty($o_id)){
+    echo"<script>alert('o_id has not been set!');history.go(-1);</script>";exit;
+}
 $sql = "SELECT * FROM organizations WHERE o_id=$o_id";//search o_id in database
 $result = $conn->query($sql);//execute the sql
 $data = $result->fetch_assoc();//transform queries to associative array

@@ -31,10 +31,10 @@
                 //search out data using jquery to work ajax and turn on website
                 $.each(data, function(i, n){
                     if (n.event_name==null || n.event_name==""){
-                        $(".content").prepend('<a href="<br>https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> name: '+n.name+'</ a><br><br>')
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> name: '+n.name+'</ a><br><br>')
 
                     }else{
-                        $(".content").prepend('<br><a href="<br>https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> nevent name: '+n.event_name+'</ a><br><br>')
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> nevent name: '+n.event_name+'</ a><br><br>')
 
                     }
                 })

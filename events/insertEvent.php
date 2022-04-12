@@ -56,12 +56,13 @@
 		$image = $_FILES["image"];
 
 		$path = $image['name'];
+		
 
 		$path = "team-21/events/img/" . $path;
 		move_uploaded_file($image['tmp-name'], $path);
 		
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image, username, o_id) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$path."','".$cas_username."',);";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image, username, o_id) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$path."','".$cas_username."',0);";
 		$update_sql = "UPDATE events SET events.o_id = (SELECT organizations.o_id FROM organizations WHERE organizations.m_username = events.username);";
 
 		if(mysqli_query($conn, $sql)){
@@ -76,6 +77,20 @@
 			. mysqli_error($conn);
 			
 		}
+
+		if(mysqli_query($conn, $update_sql)){
+			echo "Data updated successfully";
+			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description\n $image" );
+			echo '<script type="text/javascript">';
+			echo 'alert("You have succesfully CREATED your event!! Please look at the Edit Event icon to edit your event information!!");';
+			echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/createEvent.php";';
+			echo '</script>';
+		}	else{
+			echo "ERROR: Hush! Sorry $sql. "
+			. mysqli_error($conn);
+			
+		}
+
 		
 		// Close Connection 
 		mysqli_close($conn);

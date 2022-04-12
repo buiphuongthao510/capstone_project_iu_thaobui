@@ -85,7 +85,7 @@
             }
 			
 			//select statements
-			$sql_select = "SELECT name,email,phone,bio FROM organizations WHERE m_username = '".$cas_username."' ;";
+			$sql_select = "SELECT name,email,phone,bio,donation FROM organizations WHERE m_username = '".$cas_username."' ;";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -108,6 +108,7 @@
 			  <br />
 				<label>Description: <input type="text" name="address" value="<?php echo $data['bio']; ?>"/> </label>
         <!-- <input type="text" placeholder="aenogirupbgeoiaknolvmpge" /> -->
+        <label>Donation Needed: <input type="number" name ="donation" value= "<?php echo $data['donation']; ?>"/> </label>
         <br />
 				<?php }?>
 			  </fieldset>

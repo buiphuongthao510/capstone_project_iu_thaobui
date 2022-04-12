@@ -34,8 +34,9 @@
 			echo $sql;
 
 			} else {
-				echo '<script>alert("New data successfully updated!!")</script>';
+				echo '<script>alert("New data successfully updated!!")';
 				echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/organizations/saveEditOrg.php";';
+				echo '</script>';
 			}
 			
 ?>

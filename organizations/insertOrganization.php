@@ -57,7 +57,7 @@
 		$email = $_REQUEST['email'];
 		$phone = $_REQUEST['phone'];
 		$bio = $_REQUEST['bio'];
-        $price = $_REQUEST['price']
+        $price = $_REQUEST['price'];
 		
 
 	// Insert Query 

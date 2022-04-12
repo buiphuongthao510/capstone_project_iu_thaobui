@@ -31,7 +31,7 @@
 			if (!$update) {
 			
 			//echo mysqli_error();
-			echo $sql;
+			echo "Error: " .$sql. "<br>";
 
 			} else {
 				

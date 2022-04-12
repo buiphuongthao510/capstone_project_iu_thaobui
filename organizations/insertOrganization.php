@@ -74,9 +74,9 @@
 		}
 
 	
-		if(mysqli_query($conn, $sql_1)){
-			echo "Data updated successfully";
-			echo nl2br("\n$name\n $email\n $phone\n $bio");
+	if(mysqli_query($conn, $sql_1)){
+		cho "Data updated successfully";
+		echo nl2br("\n$price");
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "
 			. mysqli_error($conn);

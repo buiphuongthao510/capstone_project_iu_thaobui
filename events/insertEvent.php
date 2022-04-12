@@ -61,7 +61,7 @@
 		move_uploaded_file($image['tmp-name'], $path);
 		
 	// Insert Query 
-		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image, username, o_id) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$path."','".$cas_username."','".$o_id."')";
+		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image, username) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$path."','".$cas_username."')";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

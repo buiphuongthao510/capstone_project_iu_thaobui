@@ -131,10 +131,8 @@
     }
     session_start();
 
-    $id = $_SESSION["id"];
-
     //select statements
-    $sql_select = "SELECT name,email,phone FROM organizations ORDER BY o_id ;";
+    $sql_select = "SELECT name,email,phone FROM organizations WHERE m_username IS NOT NULL;";
 
     $select = mysqli_query($conn, $sql_select);
 
@@ -145,7 +143,8 @@
             <div class="up-item b-line">
                 <img src="../img/banner2.png" alt="">
 
-                <?php while ($data = mysqli_fetch_assoc($select)) {?>
+                <?php while ($data = mysqli_fetch_assoc($select)) {
+                    $id = $data['id']?>
 
                 <div>
                 <img src="events\img\IUlogo.png" ALIGN="left" />

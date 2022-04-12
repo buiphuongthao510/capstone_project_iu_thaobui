@@ -57,14 +57,24 @@
 		$email = $_REQUEST['email'];
 		$phone = $_REQUEST['phone'];
 		$bio = $_REQUEST['bio'];
-        
+        $price = $_REQUEST['price']
 		
 
 	// Insert Query 
 
 	$sql = "INSERT INTO organizations(name,email,phone,bio, m_username) VALUES ('".$name."','".$email."','".$phone."','".$bio."', '".$cas_username."')";		
-		
+	$sql_1 = "INSERT INTO products (price) VALUES ('".$price."')";
+
 	if(mysqli_query($conn, $sql)){
+			echo "Data updated successfully";
+			echo nl2br("\n$name\n $email\n $phone\n $bio");
+		}	else{
+			echo "ERROR: Hush! Sorry $sql. "
+			. mysqli_error($conn);
+		}
+
+	
+		if(mysqli_query($conn, $sql_1)){
 			echo "Data updated successfully";
 			echo nl2br("\n$name\n $email\n $phone\n $bio");
 		}	else{

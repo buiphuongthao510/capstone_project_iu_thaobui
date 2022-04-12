@@ -77,7 +77,7 @@ $events_data = $events_result->fetch_assoc();//transform queries to associative 
             <div class="form-item">
 			  <fieldset style="width: 500px;text-align: center">
                   <h1>Search info</h1>
-				<label>Name: <?php echo $data['organization_name'] ?></label>
+				<label>organization_name: <?php echo $data['name'] ?></label>
 				<br />
                   <label>email: <?php echo $data['email'] ?></label>
                   <br />

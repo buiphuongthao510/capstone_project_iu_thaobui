@@ -63,7 +63,7 @@
 		
 	// Insert Query 
 		$sql = "INSERT INTO events(event_name,event_date,event_time,address,description,image, username, o_id) VALUES ('".$event_name."','".$event_date."','".$event_time."','".$address."','".$description."','".$path."','".$cas_username."',0);";
-		$update_sql = "UPDATE events SET events.o_id = (SELECT organizations.o_id FROM organizations WHERE organizations.m_username = events.username);";
+		$update_sql = "INSERT INTO events(o_id) SELECT organizations.o_id FROM organizations WHERE organizations.m_username = '".$cas_username."';";
 
 		if(mysqli_query($conn, $sql)){
 			echo "Data updated successfully";

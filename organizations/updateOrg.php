@@ -20,7 +20,7 @@
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$bio = $_POST['bio'];
-			$donation = $_POST['donation']
+			$donation = $_POST['donation'];
 
 			
 			//Update new data 

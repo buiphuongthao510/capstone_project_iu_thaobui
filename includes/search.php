@@ -28,13 +28,15 @@
             data: $('#form').serialize(),
             //data for returning
             success: function (data) {
+                //search out data using jquery to work ajax and turn on website
+                $.each(data, function(i, n){
+                    if (n.nevent_name==null || n.nevent_name==""){
+                        $(".content").prepend('<br>< a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> name: '+n.name+'</ a><br><br>')
 
-            //search out data using jquery to work ajax and turn on website 
-            $.each(data, function(i, n){
-                    // alert(n[0].name);
-                    console.log(n.name);
-                        $(".content").prepend('<br>< a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> name: '+n.name+'</ a><br><br><br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> event name: '+n.nevent_name+'</a><br><br>')
-                    // $(".content").prepend('<br>< a href="?id=22" style="color: #FFFFFF;">Name: "'+n.name+'"</ a><br><br>')
+                    }else{
+                        $(".content").prepend('<br>< a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> nevent name: '+n.nevent_name+'</ a><br><br>')
+
+                    }
                 })
 
             },

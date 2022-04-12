@@ -108,6 +108,7 @@
 			  <br />
 				<label>Description: <input type="text" name="address" value="<?php echo $data['bio']; ?>"/> </label>
         <!-- <input type="text" placeholder="aenogirupbgeoiaknolvmpge" /> -->
+        <label>Donation Needed: <input type="number" name ="donation" value= "<?php echo $data['donation']; ?>"/> </label>
         <br />
 				<?php }?>
 			  </fieldset>

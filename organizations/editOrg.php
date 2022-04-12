@@ -107,6 +107,8 @@
 			  <label><b>Description:</b> <?php echo $data['bio']; ?> </label>
         <!-- <input type="text" placeholder="xzfhdxjtxkyxcoco" /> -->
       <br />
+        <label><b>Donation needed:</b> <?php echo $data['donation']; ?> <label>
+      <br />
       <br />
       </div>
       <br /> 

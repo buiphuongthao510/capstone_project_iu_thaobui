@@ -20,10 +20,11 @@
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$bio = $_POST['bio'];
+			$donation = $_POST['donation']
 
 			
 			//Update new data 
-			$sql = "UPDATE organizations SET name = '$name', email = '$email', phone = '$phone', bio = '$bio' WHERE m_username = '".$cas_username."' ;";
+			$sql = "UPDATE organizations SET name = '$name', email = '$email', phone = '$phone', bio = '$bio', donation = '$dontation' WHERE m_username = '".$cas_username."' ;";
 			
 			$update = mysqli_query($conn, $sql);
 			

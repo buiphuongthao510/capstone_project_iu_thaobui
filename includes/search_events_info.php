@@ -21,7 +21,7 @@ $result = $conn->query($sql);//execute the sql
 $data = $result->fetch_assoc();//transform queries to associative array
 
 // 
-$o_id = $data['o_id'];// organizations 的 o_id
+$o_id = $data['o_id'];// organizations' o_id
 $events_sql = "SELECT * FROM events WHERE o_id=$o_id";//search o_id in database
 $events_result = $conn->query($events_sql);//execute the sql
 $events_data = $events_result->fetch_assoc();//transform queries to associative array

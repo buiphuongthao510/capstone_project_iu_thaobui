@@ -1,24 +1,6 @@
-<?php
-
-$servername = "db.luddy.indiana.edu";
-$username = "i494f21_team21";
-$password = "my+sql=i494f21_team21";
-$dbname = "i494f21_team21";
-
-// Create connection
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " .$conn->connect_error);
-}
-
-error_reporting(E_ALL);
-ini_set('display_errors','Off');
-
+<?php 
+include_once 'db_connection.php'; 
 ?>
-
- config.php 
 
 <?php
 use PayPal\Rest\ApiContext;
@@ -35,8 +17,8 @@ $enableSandbox = true;
 $paypalConfig = [
     'client_id' => 'AQUEYoQSYN_rCeR3FZ_xN8XEau6D467F7s1CnY54QFfBUMoSvQLkby8rDSSY1CadwM-b_yX4s44NxOsU',
     'client_secret' => 'EIDh3tuJ70_jrAoQYA_HGMHvd98ETOnklgPQWiNhKCaljxG4gYAtb68-re5byX545G-UwnB66ROWbYHL',
-    'return_url' => 'http:///response.php',
-    'cancel_url' => 'http:///payment-cancelled.html'
+    'return_url' => 'http://cgi.luddy.indiana.edu/~team21/organizations/response.php',
+    'cancel_url' => 'http://cgi.luddy.indiana.edu/~team21/organizations/payment-cancelled.html'
 ];
 
 // Database settings. Change these for your database configuration.

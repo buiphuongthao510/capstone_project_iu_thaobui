@@ -97,7 +97,7 @@
             
 			
 			//select statements
-      $sql_select = "SELECT event_name, event_date, event_time, address, description FROM events WHERE username = '".$cas_username."';";			
+      $sql_select = "SELECT id,event_name, event_date, event_time, address, description FROM events WHERE username = '".$cas_username."';";			
 			
       $select = mysqli_query($conn, $sql_select);
 		
@@ -133,7 +133,7 @@
       <br />
       <br/>
       <br />
-        <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php" target="_blank"><button>excel</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
  <?php }?>
 
       </fieldset>

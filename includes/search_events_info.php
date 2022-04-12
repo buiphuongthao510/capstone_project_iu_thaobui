@@ -11,17 +11,17 @@ if ($conn->connect_error) {
 
 $o_id = $_GET['o_id'];//get id
 if(empty($o_id)){
-  echo"<script>alert('o_id has not been set!');history.go(-1);</script>";exit;
+    echo"<script>alert('o_id has not been set!');history.go(-1);</script>";exit;
 }
 if($o_id == 'null'){
-  echo"<script>alert('o_id has not been set!');history.go(-1);</script>";exit;
-}
+    echo"<script>alert('o_id has not been set!');history.go(-1);</script>";exit;
+  }
 $sql = "SELECT * FROM organizations WHERE o_id=$o_id";//search o_id in database
 $result = $conn->query($sql);//execute the sql
 $data = $result->fetch_assoc();//transform queries to associative array
 
 // 
-$o_id = $data['o_id'];// organizations 的 o_id
+$o_id = $data['o_id'];// organizations' o_id
 $events_sql = "SELECT * FROM events WHERE o_id=$o_id";//search o_id in database
 $events_result = $conn->query($events_sql);//execute the sql
 $events_data = $events_result->fetch_assoc();//transform queries to associative array
@@ -77,13 +77,13 @@ $events_data = $events_result->fetch_assoc();//transform queries to associative 
             <div class="form-item">
 			  <fieldset style="width: 500px;text-align: center">
                   <h1>Search info</h1>
-				<label>organization_name: <?php echo $data['name'] ?></label>
+				<label>event_name: <?php echo $events_data['event_name'] ?></label>
 				<br />
-                  <label>email: <?php echo $data['email'] ?></label>
+                  <label>address: <?php echo $events_data['address'] ?></label>
                   <br />
-                  <label>phone: <?php echo $data['phone'] ?></label>
+                  <label>event_time: <?php echo $events_data['event_time'] ?></label>
                   <br />
-                  <label>bio: <?php echo $data['bio'] ?></label>
+                  <label>event_date: <?php echo $events_data['event_date'] ?></label>
                   <br />
               
 			

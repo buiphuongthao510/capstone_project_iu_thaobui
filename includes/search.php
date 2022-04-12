@@ -34,7 +34,7 @@
                         $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> name: '+n.name+'</ a><br><br>')
 
                     }else{
-                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_events_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> nevent name: '+n.event_name+'</ a><br><br>')
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_events_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"> event name: '+n.event_name+'</ a><br><br>')
 
                     }
                 })

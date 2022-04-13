@@ -109,7 +109,7 @@
         <label>Phone:  <input type="text" name="phone" value="<?php echo $data['phone']; ?>"/> </label>
 				<!-- <input type="text" placeholder="phone" /> -->
 			  <br />
-				<label>Description: <input type="text" name="address" value="<?php echo $data['bio']; ?>"/> </label>
+				<label>Description: <input type="text" name="bio" value="<?php echo $data['bio']; ?>"/> </label>
         <!-- <input type="text" placeholder="aenogirupbgeoiaknolvmpge" /> -->
         <label>Donation Needed: <input type="number" name ="donation" value= "<?php echo $data['donation']; ?>"/> </label>
         <br />

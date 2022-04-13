@@ -36,7 +36,7 @@
 			} else {
 				
 				echo '<script>alert("New data successfully updated!!")</script>';
-				header("https://cgi.luddy.indiana.edu/~team21/organizations/saveEditOrg.php");
+				header("https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php");
 				
 			}
 			

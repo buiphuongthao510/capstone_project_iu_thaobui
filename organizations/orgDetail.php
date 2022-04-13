@@ -1,8 +1,5 @@
-<?php 
-include_once 'db_connection.php'; 
-?>
-<!DOCTYPE html>
-<html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,13 +59,13 @@ include_once 'db_connection.php';
             }
             session_start();
 			
-			      $id = $_GET["id"];
-            $_SESSION['id'] = $id;
+			      $o_id = $_GET["o_id"];
+            $_SESSION['o_id'] = $o_id;
 
 			
 			//select statements
       
-			$sql_select = "SELECT name,email,phone,bio FROM organizations WHERE o_id = $id";
+			$sql_select = "SELECT name,email,phone,bio, donation FROM organizations WHERE o_id = $o_id";
 			
 			$select = mysqli_query($conn, $sql_select);
 		
@@ -89,7 +86,8 @@ include_once 'db_connection.php';
       <br />
 			  <label><b>Phone:</b> <?php echo $data['phone']; ?> </label>
         <!-- <input type="text" placeholder="hh:mm:ss" /> -->
-      
+      <br />
+        <label><b>Donation needed:</b> <?php echo $data['donation']; ?> </label>
       <br />
       <b>Organization Description</b>
       <div class="description">
@@ -104,14 +102,7 @@ include_once 'db_connection.php';
 			</div>
       <br />
       <br />
-      <div class="wrapper">
-    <?php 
-		  $results = mysqli_query($conn,"SELECT * FROM products where status=1");
-		  while($row = mysqli_fetch_array($results)){
-    ?>
-	    <div class="col__box">
-	      <h5><?php echo $row['price']; ?></h5>
-        <h6>Price: <span> $<?php echo $row['price']; ?> </span> </h6>
+      
        
           <form action="https://www.paypal.com/donate" method="post" target="_top">
           <input type="hidden" name="business" value="P5EB6FFE9GWPS" />
@@ -124,7 +115,7 @@ include_once 'db_connection.php';
           
         
 	    </div>
-    <?php } ?>
+   
   </div>
 			</div>
 		  </div> 

@@ -131,8 +131,9 @@
     }
     session_start();
 
+
     //select statements
-    $sql_select = "SELECT name,email,phone FROM organizations WHERE m_username IS NOT NULL;";
+    $sql_select = "SELECT name,email,phone,o_id FROM organizations WHERE m_username IS NOT NULL;";
 
     $select = mysqli_query($conn, $sql_select);
 
@@ -144,7 +145,7 @@
                 <img src=".events/img/banner2.png" alt="">
 
                 <?php while ($data = mysqli_fetch_assoc($select)) {
-                    $id = $data['id']?>
+                    $o_id = $data['o_id']?>
 
                 <div>
                 <img src="..\img\IUlogo.png" ALIGN="left" />
@@ -161,7 +162,7 @@
                     <br />
                     <br />
                     <p align="right">
-                    <button> <? echo "<a href='orgDetail.php?o_id=$id'<button type='button' >More Info</button></a>"; ?> </button>
+                    <button> <? echo "<a href='orgDetail.php?o_id=$o_id'<button type='button' >More Info</button></a>"; ?> </button>
                         <br />
                         <br />
                         <br />

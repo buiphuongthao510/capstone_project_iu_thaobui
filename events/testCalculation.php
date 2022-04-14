@@ -19,12 +19,13 @@ if(!isset($_SESSION['username'])){
     die("Connection failed: " .$conn->connect_error);
     }
 
-    if(isset($GET['submit'])){
     $a = $_GET['test1'];
     $b = $_GET['test2'];
-    $c = $_GET['test1']/$_GET['test2']
-    $d = $c * 100
-    $e = $d + 100
-    echo "Result: ", $e;
-    }
+    $result = 100 + (100*($b/$a));
+
+    echo "test: ".$result."";
+
 ?>
+    
+
+   

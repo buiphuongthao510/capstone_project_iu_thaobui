@@ -22,9 +22,9 @@ if(!isset($_SESSION['username'])){
     if(isset($GET['submit'])){
     $a = $_GET['test1'];
     $b = $_GET['test2'];
-    $c = $_GET['test1']/$_GET['test2']
-    $d = $c * 100
-    $e = $d + 100
-    echo "Result: ", $e;
+    $c = 100
+    100 + (100*($participation_amounts/$members_amount));
+    echo "Result: ",$c+($c*($b/$a));
     }
-?>
+
+   

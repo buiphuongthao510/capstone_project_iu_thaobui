@@ -108,13 +108,13 @@
     <div class="overview-right">
         <form action="orgDetail.php" method="POST">
             <div class="up-item b-line">
-                <img src=".events/img/banner2.png" alt="">
+                
 
                 <?php while ($data = mysqli_fetch_assoc($select)) {
                     $o_id = $data['o_id']?>
 
                 <div>
-                <img src="..\img\IUlogo.png" ALIGN="left" />
+                <img src="IUlogo.png" ALIGN="left" />
                     <label><b>Organization Name:</b> <?php echo $data['name']; ?> </label>
 
                     <br />

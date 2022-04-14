@@ -1,0 +1,87 @@
+<?php
+// CONNECT DATABASE
+ $servername = "db.luddy.indiana.edu";
+ $username = "i494f21_team21";
+ $password = "my+sql=i494f21_team21";
+ $dbname = "i494f21_team21";
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " .$conn->connect_error);
+}
+
+$o_id = $_GET['o_id'];//get id
+if(empty($o_id)){
+  echo"<script>alert('o_id has not been set!');history.go(-1);</script>";exit;
+}
+if($o_id == 'null'){
+  echo"<script>alert('o_id has not been set!');history.go(-1);</script>";exit;
+}
+$sql = "SELECT * FROM organizations WHERE o_id=$o_id";//search o_id in database
+$result = $conn->query($sql);//execute the sql
+$data = $result->fetch_assoc();//transform queries to associative array
+
+// 
+$o_id = $data['o_id'];// organizations 的 o_id
+$events_sql = "SELECT * FROM events WHERE o_id=$o_id";//search o_id in database
+$events_result = $conn->query($events_sql);//execute the sql
+$events_data = $events_result->fetch_assoc();//transform queries to associative array
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../events/createEvent.css" rel="stylesheet" />
+    <title>Search info</title>
+  </head>
+
+  <body>
+  <header>
+  <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
+      <div class="menu-list">
+        <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
+        <a href="">Donation</a>
+        <a href="#"><?php include_once("../includes/search.php")?></a>
+      </div>
+      </div>
+      <div class="button-wrap">
+        <div class="button login">Log in</div>
+        <div class="button">Register</div>
+      </div>
+  </header>
+
+    <section class="nav">
+    <div class="right">
+          <div class="line">
+            <div class="form-item">
+			  <fieldset style="width: 500px;text-align: center">
+                  <h1>Search info</h1>
+				<label>Event Name: <?php echo $events_data['event_name'] ?></label>
+				<br />
+                  <label>Event Date: <?php echo $events_data['event_date'] ?></label>
+                  <br />
+                  <label>Event Time: <?php echo $events_data['event_time'] ?></label>
+                  <br />
+                  <label>Location: <?php echo $events_data['address'] ?></label>
+                  <br />
+                  <a href="../events/reserveEvent.php?id=<?php echo $events_data['id'] ?>">More Info</a>
+			</div>
+  
+          </div>
+		</div>
+		
+    </section>
+
+    <footer>
+      <div class="link-wrap">
+        <a>Resource</a>
+        <a>Help desk</a>
+        <a>Report</a>
+        <a>Q&A</a>
+      </div>
+      <div class="f-logo">Youthon</div>
+    </footer>
+  </body>
+</html>

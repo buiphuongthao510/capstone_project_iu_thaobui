@@ -29,11 +29,11 @@
               <input type="text" style="height: 30px;padding-left: 10px;width: 110px;border-radius: 10px;" autocomplete="off" value="" placeholder="search name" name="name">
               <button style="height: 35px;border:0;background-color: #990000;color: #FFFFFF;border-radius: 10px;padding-left: 10px;padding-right: 10px;cursor:pointer;" onclick="search()">search</button>
           </form>
-      <div id="app" style="position: absolute;top: 130px;background-color: #990000;color:#FFFFFF;width: 240px;left: 10px;border-radius: 10px;text-align: center;z-index: 99999">
-        <div class="content">
+            <div id="app" style="position: absolute;top: 130px;background-color: #990000;color:#FFFFFF;width: 240px;left: 10px;border-radius: 10px;text-align: center;z-index: 99999">
+                <div class="content">
 
-        </div>
-      </div>
+                </div>
+            </div>
 </div>
 <script>
     // ajax no refresh form submit
@@ -53,9 +53,9 @@
                 //search out data using jquery to work ajax and turn on website
                 $.each(data, function(i, n){
                     if (n.nevent_name==null || n.nevent_name==""){
-                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> name: '+n.name+'</a><br><br>')
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info_events.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> name: '+n.name+'</a><br><br>')
                     }else{
-                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> nevent name: '+n.nevent_name+'</a><br><br>')
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info_events.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> nevent name: '+n.nevent_name+'</a><br><br>')
 
                     }
                 })

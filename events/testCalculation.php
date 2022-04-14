@@ -21,8 +21,9 @@ if(!isset($_SESSION['username'])){
 
     $a = $_GET['test1'];
     $b = $_GET['test2'];
-    $c = 100
-    echo "Result: ",$c+($c*($b/$a));
+    $result = 100 + (100*($b/$a));
+
+    echo "test: ".$result."";
 
 ?>
     

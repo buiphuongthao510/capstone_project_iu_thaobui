@@ -52,7 +52,7 @@
             success: function (data) {
                 //search out data using jquery to work ajax and turn on website
                 $.each(data, function(i, n){
-                    if (n.nevent_name==null || n.nevent_name==""){
+                    if (n.event_name==null || n.event_name==""){
                         $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> name: '+n.name+'</a><br><br>')
                     }else{
                         $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info_events.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> nevent name: '+n.nevent_name+'</a><br><br>')

@@ -19,6 +19,9 @@
               color: #fff;
               text-decoration:none;
           }
+          header{
+            width: 100%;
+          }
 </style>
 <div id="left-panel" class="panel">
           <form style="float: left;" name="myForm" id="form" onsubmit="return false" action="##" method="post">

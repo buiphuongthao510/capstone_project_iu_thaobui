@@ -52,7 +52,7 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <a href="">Donation</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/report/report.php">Report</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
       
@@ -160,7 +160,16 @@
       $error = "Enter Number first";
     }
   }
-  $sql_insert = "INSERT INTO events(points) VALUES ($result) WHERE usename = '".$cas_username."';";
+  $sql_insert = "INSERT INTO events(points) VALUES ($result) WHERE username = '".$cas_username."';";
+  if(mysqli_query($conn, $sql_insert)){
+    echo '<script type="text/javascript">';
+		echo 'alert("Points added successfully!");';
+		echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/editEvent.php";';
+		echo '</script>';
+  } else{
+    echo "ERROR: Hush! Sorry $sql_insert.  "
+			. mysqli_error($conn);
+  }
  ?>
       <div>
       <form action="editEvent.php" method="POST">

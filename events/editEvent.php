@@ -143,7 +143,7 @@
 
   if(is_numeric($members_amount) && is_numeric($participation_amounts)){
       $result = 100 + (100*($participation_amounts/$members_amount));
-      echo '<div>'.$result.' is the points for this event! </div>';
+      echo '<div>'.$members_amount.' is the points for this event! </div>';
       }
   }else{
       $error = "Enter Number first";
@@ -154,7 +154,7 @@
         <label>Number of members in your organization:</label><input type="text" name="members_amount"/><br>
         <label>Number of participations for this event:</label><input type="text" name="participation_amount"/><br>
         <input name="submit" type="submit" value="CALCULATE"/> 
-        <input type="text" id="result" value="<?= $result?>" disabled>
+        <input type="text" id="result" value="<?= $members_amount?>" disabled>
       </form>
       </div>
 

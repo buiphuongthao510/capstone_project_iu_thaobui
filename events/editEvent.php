@@ -158,12 +158,12 @@
       </form>
       </div>
 
-      <div>
+      <!-- <div>
         <form action="testCalculation.php" method="get">
           <label>test 1</label> <input name="test1">
           <label>test 2:</label> <input name="test2">
           <button type="submit">Calculate</button>
-      </div>
+      </div> -->
 
       </fieldset>
 

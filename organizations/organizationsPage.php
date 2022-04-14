@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styleOrganizations.css" rel="stylesheet">
     <link href="https://cgi.luddy.indiana.edu/~team21/index/style.css" rel="stylesheet" />
+    <script src="https://cgi.luddy.indiana.edu/~team21/includes/jquery.js"></script>
+
     <title>Organization Page</title>
 </head>
 <style type="text/css">
-          body{font-family:Arial;background:#eee;}
           h1, h2{margin-top:0;}
           p{color:#ccc;line-height:1.5;}
           #page{width:1280px;padding:20px;margin:0 auto;background:white;}
@@ -30,6 +31,35 @@
           </form>
 
 </div>
+<script>
+    // ajax no refresh form submit
+    function search() {
+        var name=document.forms["myForm"]["name"].value;
+        if (name==null || name==""){
+            alert("search name must be filled out");
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "../includes/dosearch.php",//use url to submit
+            data: $('#form').serialize(),
+            //data for returning
+            success: function (data) {
+                //search out data using jquery to work ajax and turn on website
+                $.each(data, function(i, n){
+                    if (n.nevent_name==null || n.nevent_name==""){
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> name: '+n.name+'</a><br><br>')
+                    }else{
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> nevent name: '+n.nevent_name+'</a><br><br>')
+
+                    }
+                })
+
+            },
+        });
+    }
+</script>
 <header>
       <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">

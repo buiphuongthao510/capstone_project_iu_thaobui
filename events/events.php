@@ -24,6 +24,27 @@
   </style>
 
 </head>
+      <style type="text/css">
+          body{font-family:Arial;background:#eee;}
+          h1, h2{margin-top:0;}
+          p{color:#ccc;line-height:1.5;}
+          #page{width:1280px;padding:20px;margin:0 auto;background:white;}
+          .panel{width:220px;height:700px;padding:20px;background-color:#333;color:#fff;box-shadow:inset 0 0 5px 5px #222;}
+          .panel a{
+              color: #fff;
+              text-decoration:none;
+          }
+      </style>
+
+      <!-- Left panel -->
+      <div id="left-panel" class="panel">
+          <form style="float: left;" name="myForm" id="form" onsubmit="return false" action="##" method="post">
+              <input type="text" style="height: 30px;padding-left: 10px;width: 110px;border-radius: 10px;" autocomplete="off" value=""  placeholder="search name" name="name">
+              <button style="height: 35px;border:0;background-color: #990000;color: #FFFFFF;border-radius: 10px;padding-left: 10px;padding-right: 10px;cursor:pointer;" onclick="search()">search</button>
+          </form>
+
+
+      </div>
 
 <?php include './includes/header.php'; ?>
 
@@ -45,34 +66,6 @@
  
 
   <div class="main">
-      <style type="text/css">
-          body{font-family:Arial;background:#eee;}
-          h1, h2{margin-top:0;}
-          p{color:#ccc;line-height:1.5;}
-          #page{width:1280px;padding:20px;margin:0 auto;background:white;}
-          .panel{width:220px;height:700px;padding:20px;background-color:#333;color:#fff;box-shadow:inset 0 0 5px 5px #222;}
-          .panel a{
-              color: #fff;
-              text-decoration:none;
-          }
-      </style>
-
-      <!-- Left panel -->
-      <div id="left-panel" class="panel">
-          <h2><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></h2>
-          <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a><br><br>
-          <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-          <br><br><a href="profile.php">User Profile</a>
-          <br>
-          <br>
-          <form style="float: left;" name="myForm" id="form" onsubmit="return false" action="##" method="post">
-              <input type="text" style="height: 30px;padding-left: 10px;width: 110px;border-radius: 10px;" autocomplete="off" value=""  placeholder="search name" name="name">
-              <button style="height: 35px;border:0;background-color: #990000;color: #FFFFFF;border-radius: 10px;padding-left: 10px;padding-right: 10px;cursor:pointer;" onclick="search()">search</button>
-          </form>
-
-          <button id="close-panel-bt" style="width: 100%;height: 35px;margin-top:20px;border:0;background-color: #990000;color: #FFFFFF;border-radius: 10px;padding-left: 20px;padding-right: 20px;cursor:pointer;">Close</button>
-
-      </div>
 
 
 

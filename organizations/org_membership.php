@@ -57,8 +57,7 @@
 			      $id = $_SESSION["o_id"];
 			
 			//select statements
-			$sql_select = "SELECT name,email,phone,bio FROM organizations WHERE o_id = 1 ;";
-			
+			$sql_select = "SELECT organizations.name, organizations.email, organizations.phone, organizations.bio FROM organizations, members WHERE organizations.o_id = members.o_id AND members.username = '".$cas_username."';";
 			$select = mysqli_query($conn, $sql_select);
 		
   ?>
@@ -78,7 +77,7 @@
 			  <label><b>Phone:</b> <?php echo $data['Phone']; ?> </label>
         
       <br />
-			  <label><b>Bio:</b> <?php echo $data['bio']; ?> </label>
+			  <label><b>Description:</b> <?php echo $data['bio']; ?> </label>
         
       <br />
       <br />

@@ -21,6 +21,13 @@
   background: rgb(228, 228, 228);
   border-radius: 50%;
   }
+
+  #formItem label {
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+}
   </style>
 
 </head>

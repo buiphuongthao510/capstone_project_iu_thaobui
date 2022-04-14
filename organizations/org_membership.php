@@ -54,7 +54,7 @@
             }
             session_start();
 			
-			      $id = $_SESSION["o_id"];
+			      $o_id = $_SESSION["o_id"];
 			
 			//select statements
 			$sql_select = "SELECT organizations.name, organizations.email, organizations.phone, organizations.bio FROM organizations, members WHERE organizations.o_id = members.o_id AND members.username = '".$cas_username."';";

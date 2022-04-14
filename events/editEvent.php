@@ -160,16 +160,17 @@
       $error = "Enter Number first";
     }
   }
-  $sql_points = "UPDATE events SET points = $result WHERE username = '".$cas_username."';
-                UPDATE organizations SET points = points + $result WHERE m_username ='".$cas_username."';";
+  $sql_points = "UPDATE events SET points = $result WHERE username = '".$cas_username."';";
+  $sql_points2 = "UPDATE organizations SET points = points + $result WHERE m_username ='".$cas_username."';";
 
-  if(mysqli_multi_query($conn, $sql_points)){
+  mysqli_query($conn, $sql_points);
+  if(mysqli_multi_query($conn, $sql_points2)){
     echo '<script type="text/javascript">';
 		echo 'alert("Points added successfully!");';
 		echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/editEvent.php";';
 		echo '</script>';
   }else{
-    echo "ERROR: Hush! Sorry $sql_points. "
+    echo "ERROR: Hush! Sorry $sql_points2. "
     . mysqli_error($conn);
   }
  ?>

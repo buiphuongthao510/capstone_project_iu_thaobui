@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,6 @@
   img{
     border: 5px solid;
   }
-
   .ui {
   display: flex;
   justify-content: center;
@@ -24,8 +22,10 @@
   </style>
 
 </head>
-      <style type="text/css">
-          body{font-family:Arial;background:#eee;}
+<script src="https://cgi.luddy.indiana.edu/~team21/includes/jquery.js"></script>
+
+<body>
+        <style type="text/css">
           h1, h2{margin-top:0;}
           p{color:#ccc;line-height:1.5;}
           #page{width:1280px;padding:20px;margin:0 auto;background:white;}
@@ -42,13 +42,41 @@
               <input type="text" style="height: 30px;padding-left: 10px;width: 110px;border-radius: 10px;" autocomplete="off" value=""  placeholder="search name" name="name">
               <button style="height: 35px;border:0;background-color: #990000;color: #FFFFFF;border-radius: 10px;padding-left: 10px;padding-right: 10px;cursor:pointer;" onclick="search()">search</button>
           </form>
-
-
       </div>
+      <div id="app" style="position: absolute;top: 280px;background-color: #990000;color:#FFFFFF;width: 80%;border-radius: 10px;text-align: center;z-index: 99999">
+    <div class="content">
 
-<?php include './includes/header.php'; ?>
+    </div>
+</div>
+<script>
+    // ajax no refresh form submit
+    function search() {
+        var name=document.forms["myForm"]["name"].value;
+        if (name==null || name==""){
+            alert("search name must be filled out");
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "../includes/dosearch.php",//use url to submit
+            data: $('#form').serialize(),
+            //data for returning
+            success: function (data) {
+                //search out data using jquery to work ajax and turn on website
+                $.each(data, function(i, n){
+                    if (n.nevent_name==null || n.nevent_name==""){
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> name: '+n.name+'</a><br><br>')
+                    }else{
+                        $(".content").prepend('<br><a href="https://cgi.luddy.indiana.edu/~team21/includes/search_info.php?o_id='+n.o_id+'" style="color: #FFFFFF;"><event></event> nevent name: '+n.nevent_name+'</a><br><br>')
 
-<body>
+                    }
+                })
+
+            },
+        });
+    }
+</script>
 <header>
       <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">

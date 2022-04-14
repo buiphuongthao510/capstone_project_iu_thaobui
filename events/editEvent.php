@@ -167,9 +167,6 @@
 		echo 'alert("Points added successfully!");';
 		echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/editEvent.php";';
 		echo '</script>';
-  } else{
-    echo "ERROR: Hush! Sorry $sql_insert.  "
-			. mysqli_error($conn);
   }
  ?>
       <div>

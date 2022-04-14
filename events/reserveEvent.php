@@ -18,6 +18,11 @@
       border-color: black;
       padding: 15px;
     }
+
+    img.img {
+    height: 30%;
+    width: 30%;
+    }
   </style>
 
 </head>

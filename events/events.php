@@ -29,7 +29,7 @@
           h1, h2{margin-top:0;}
           p{color:#ccc;line-height:1.5;}
           #page{width:1280px;padding:20px;margin:0 auto;background:white;}
-          .panel{width:220px;height:700px;padding:20px;background-color:#333;color:#fff;box-shadow:inset 0 0 5px 5px #222;    position: fixed;top: 0px;left: 0px;z-index: 9999;}
+          .panel{width:220px;height:700px;padding:20px;background-color:#333;color:#fff;box-shadow:inset 0 0 5px 5px #222;    position: fixed;top:60px;left: 0px;z-index: 9999;}
           .panel a{
               color: #fff;
               text-decoration:none;
@@ -49,7 +49,7 @@
 <?php include './includes/header.php'; ?>
 
 <body>
-<header style="width:1100px;margin:0 auto;">
+<header>
       <div class="logo"><a href="https://cgi.luddy.indiana.edu/~team21/index/index.php">Youthon</a></div>
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>

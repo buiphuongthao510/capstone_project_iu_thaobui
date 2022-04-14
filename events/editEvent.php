@@ -136,7 +136,7 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
  <?php }?>
       <div>
-      <form action="<?= $_REQUEST["self"]?>" method="GET">
+      <form action="<?= $_REQUEST["self"]?>" method="POST">
         <label>Number of members in your organization:</label><input type="text" name="members_amount"/><br>
         <label>Number of participations for this event:</label><input type="text" name="participation_amount"/><br>
         <input name="submit" type="submit" value="CALCULATE"/>
@@ -144,9 +144,9 @@
       </form>
       </div>
       <?php
-      if(isset($_GET['submit'])){
-        $members_amount = $_GET['members_amount'];
-        $participation_amounts = $_GET['participation_amounts'];
+      if(isset($_POST['submit'])){
+        $members_amount = $_POST['members_amount'];
+        $participation_amounts = $_POST['participation_amounts'];
         $result = 0;
 
         if(is_numeric($members_amount) && is_numeric($participation_amounts)){

@@ -161,6 +161,14 @@
     }
   }
   $sql_insert = "INSERT INTO events(points) VALUES ($result) WHERE usename = '".$cas_username."';";
+  if(mysqli_query($conn, $sql_insert)){
+    echo '<script type="text/javascript">';
+		echo 'alert("Points added successfully!");';
+		echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/editEvent.php";';
+		echo '</script>';
+  } else{
+    echo 'Error: ' .$sql_insert;
+  }
  ?>
       <div>
       <form action="editEvent.php" method="POST">

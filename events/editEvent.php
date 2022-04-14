@@ -143,7 +143,7 @@
 
   if(is_numeric($members_amount) && is_numeric($participation_amounts)){
       $result = 100 + (100*($participation_amounts/$members_amount));
-      echo '<div>Points for your team: ".$result.'</div>'';
+      echo '<div>Points for your team: '.$result.'</div>';
       }
   }else{
       $error = "Enter Number first";

@@ -53,7 +53,7 @@
                 die("Connection failed: " .$conn->connect_error);
             }
             session_start();
-			
+            $cas_username = $_SESSION["username"];
 			      $o_id = $_SESSION["o_id"];
 			
 			//select statements

@@ -160,7 +160,7 @@
       $error = "Enter Number first";
     }
   }
-  $sql_insert = "INSERT INTO events(points) VALUES ($result) WHERE usename = '".$cas_username."';";
+  $sql_insert = "INSERT INTO events(points) VALUES ($result) WHERE username = '".$cas_username."';";
   if(mysqli_query($conn, $sql_insert)){
     echo '<script type="text/javascript">';
 		echo 'alert("Points added successfully!");';

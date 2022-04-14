@@ -46,6 +46,12 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/report/report.php">Report</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
+      
+      <div class="button-wrap">
+        <div class="button login">
+          <a href="https://cgi.luddy.indiana.edu/~team21/index/profile.php"><button>User Profile</button></a>
+        </div>
+      </div>
     </header>
     
     <section>

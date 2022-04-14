@@ -1,10 +1,5 @@
 <?php
 session_start();
-if(!isset($_SESSION['username'])){
-    echo '<script type="text/javascript">';
-    echo 'alert("You need to login in order to register for the event.");';
-    echo '</script>';
-} else {
     // CONNECT DATABASE
     $servername = "db.luddy.indiana.edu";
     $username = "i494f21_team21";
@@ -31,6 +26,5 @@ if(!isset($_SESSION['username'])){
         }else{
             $error = "Enter Number first";
         }
-    }
 
 ?>

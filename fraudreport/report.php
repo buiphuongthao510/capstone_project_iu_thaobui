@@ -31,7 +31,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./createOrg.css" rel="stylesheet" />
-    <title>Create Org</title>
+    <title>Report</title>
   </head>
 
   <body>
@@ -42,10 +42,16 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <a href="https://cgi.luddy.indiana.edu/~team21/fraudreport/report.php">Fraud Report</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/fraudreport/report.php">Report</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
     </header>
+
+    <form action = "insertReport.php" method= "POST" enctype="multipart/form-data">
+      <input type ="text" placeholder = "Subject" name = "subject" >
+      <input type= "text" placeholder = "Desctiption" name = "description">
+      <button type="submit" name="submit">Create Organization </button>
+
     
 
   

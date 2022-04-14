@@ -136,13 +136,26 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
  <?php }?>
       <div>
-      <form action="pointsCalculator.php" method="GET">
+      <form action="<?= $_REQUEST["self"]?>" method="POST">
         <label>Number of members in your organization:</label><input type="text" name="members_amount"/><br>
         <label>Number of participations for this event:</label><input type="text" name="participation_amount"/><br>
         <input name="submit" type="submit" value="CALCULATE"/>
         <input type="text" id="result" value="<?= $result ?>" disabled>
       </form>
       </div>
+      <?php
+      if(isset($_POST['submit'])){
+        $members_amount = $_POST['members_amount'];
+        $participation_amounts = $_POST['participation_amounts'];
+        $result = 0;
+
+        if(is_numeric($members_amount) && is_numeric($participation_amounts)){
+            $result = 100 + (100*($participation_amounts/$members_amount));
+            }
+        }else{
+            $error = "Enter Number first";
+        }
+      ?>
 
       <div>
         <form action="testCalculation.php" method="get">

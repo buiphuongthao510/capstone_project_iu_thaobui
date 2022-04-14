@@ -136,34 +136,26 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
  <?php }?>
  <?php
- if (isset($_POST['submit'])){
-  $members_amount = $_POST['members_amount'];
-  $participation_amounts = $_POST['participation_amounts'];
-  $result = $_POST['result'];
+  if (isset($_POST['submit'])){
+        $members_amount = $_POST['members_amount'];
+        $participation_amount = $_POST['participation_amount'];
+        $result = $_POST['result'];
 
-  if(is_numeric($members_amount) && is_numeric($participation_amounts)){
-      $result = 100 + (100*($participation_amounts/$members_amount));
-      }
-  }else{
-      $error = "Enter Number first";
-  }
+        if(is_numeric($members_amount) && is_numeric($participation_amount)){
+            $result = 100 + (100*($participation_amount/$members_amount));
+            echo "<div>Points for your team: ".$result."</div>";
+            }
+        }else{
+            $error = "Enter Number first";
+        }
  ?>
       <div>
       <form action="editEvent.php" method="POST">
         <label>Number of members in your organization:</label><input type="text" name="members_amount"/><br>
         <label>Number of participations for this event:</label><input type="text" name="participation_amount"/><br>
         <input name="submit" type="submit" value="CALCULATE"/> 
-        <input type="text" id="result" value="<?= $result?>" disabled>
       </form>
       </div>
-
-      <div>
-        <form action="testCalculation.php" method="get">
-          <label>test 1</label> <input name="test1">
-          <label>test 2:</label> <input name="test2">
-          <button type="submit">Calculate</button>
-      </div>
-
       </fieldset>
 
       </div>

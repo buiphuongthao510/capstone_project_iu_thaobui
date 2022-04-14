@@ -28,7 +28,7 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <a href="">Donation</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/report/report.php">Report</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
       <div class="button-wrap">

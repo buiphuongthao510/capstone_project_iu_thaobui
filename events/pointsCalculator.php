@@ -19,18 +19,18 @@ if(!isset($_SESSION['username'])){
     die("Connection failed: " .$conn->connect_error);
     }
     
-    if(isset($_GET['submit'])){
-        $members_amount = $_GET['members_amount'];
-        $participation_amounts = $_GET['participation_amounts'];
-        $result = 0;
+    if($_POST){
+        $members_amount = $_POST['members_amount'];
+        $participation_amounts = $_POST['participation_amounts'];
+        $result = $_POST['result'];
 
         if(is_numeric($members_amount) && is_numeric($participation_amounts)){
             $result = 100 + (100*($participation_amounts/$members_amount));
+            echo "<p>Points for your team: " .$result."</p>";
             }
         }else{
             $error = "Enter Number first";
         }
-
-}
+    }
 
 ?>

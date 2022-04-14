@@ -18,10 +18,6 @@
       border-color: black;
       padding: 15px;
     }
-    img.img {
-    height: 30%;
-    width: 30%;
-}
   </style>
 
 </head>
@@ -32,7 +28,7 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <a href="https://cgi.luddy.indiana.edu/~team21/report/report.php">Report</a>
+        <a href="">Donation</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
       <div class="button-wrap">
@@ -77,8 +73,11 @@
 		  <div class="up-item b-line">
 			<img src="../img/banner2.png" alt="">
 			<div>
+      
+      <img class="img" src="img/IUlogo.png" ALIGN="left" />
+
+
       <?php while ($data = mysqli_fetch_assoc($select)) {?>
-        <img class="img" src="img/IUlogo.png" ALIGN="left" />
 			  <div class="form-item">
         <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>

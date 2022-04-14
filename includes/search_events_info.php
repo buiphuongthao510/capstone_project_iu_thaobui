@@ -85,7 +85,7 @@ $events_data = $events_result->fetch_assoc();//transform queries to associative 
                   <br />
                   <label>event_date: <?php echo $events_data['event_date'] ?></label>
                   <br />
-                  <a href="../organizations/orgDetail.php?o_id=<?php echo $events_data['o_id'] ?>">More Info</a>
+                  <a href="../events/reserveEvent.php?id=<?php echo $events_data['id'] ?>">More Info</a>
               
 			
 			</div>

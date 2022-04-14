@@ -15,7 +15,7 @@
           h1, h2{margin-top:0;}
           p{color:#ccc;line-height:1.5;}
           #page{width:1280px;padding:20px;margin:0 auto;background:white;}
-          .panel{width:220px;height:900px;padding:20px;background-color:#333;color:#fff;box-shadow:inset 0 0 5px 5px #222;    position: fixed;top:60px;left: 0px;z-index: 9999;}
+          .panel{width:250px;height:900px;padding:20px;background-color:#333;color:#fff;box-shadow:inset 0 0 5px 5px #222;    position: fixed;top:60px;left: 0px;z-index: 9999;}
           .panel a{
               color: #fff;
               text-decoration:none;

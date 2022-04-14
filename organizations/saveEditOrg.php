@@ -83,6 +83,9 @@
             if ($conn->connect_error) {
                 die("Connection failed: " .$conn->connect_error);
             }
+             
+            $cas_username = $_SESSION["username"];
+          
 			
 			//select statements
 			$sql_select = "SELECT name,email,phone,bio,donation FROM organizations WHERE m_username = '".$cas_username."' ;";
@@ -106,7 +109,7 @@
         <label>Phone:  <input type="text" name="phone" value="<?php echo $data['phone']; ?>"/> </label>
 				<!-- <input type="text" placeholder="phone" /> -->
 			  <br />
-				<label>Description: <input type="text" name="address" value="<?php echo $data['bio']; ?>"/> </label>
+				<label>Description: <input type="text" name="bio" value="<?php echo $data['bio']; ?>"/> </label>
         <!-- <input type="text" placeholder="aenogirupbgeoiaknolvmpge" /> -->
         <label>Donation Needed: <input type="number" name ="donation" value= "<?php echo $data['donation']; ?>"/> </label>
         <br />

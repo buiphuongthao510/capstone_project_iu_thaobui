@@ -20,22 +20,24 @@
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$bio = $_POST['bio'];
-			$donation = $_POST['donation']
+			$donation = $_POST['donation'];
 
 			
 			//Update new data 
-			$sql = "UPDATE organizations SET name = '$name', email = '$email', phone = '$phone', bio = '$bio', donation = '$dontation' WHERE m_username = '".$cas_username."' ;";
+			$sql = "UPDATE organizations SET name = '$name', email = '$email', phone = '$phone', bio = '$bio', donation = '$donation' WHERE m_username = '".$cas_username."' ;";
 			
 			$update = mysqli_query($conn, $sql);
 			
 			if (!$update) {
 			
 			//echo mysqli_error();
-			echo $sql;
+			echo "Error: " .$sql. "<br>";
 
 			} else {
+				
 				echo '<script>alert("New data successfully updated!!")</script>';
-				header("Location: https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php");
+				header("https://cgi.luddy.indiana.edu/~team21/organizations/editOrg.php");
+				
 			}
 			
 ?>

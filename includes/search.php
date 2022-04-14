@@ -8,7 +8,7 @@
             <button style="height: 35px;border:0;background-color: #990000;color: #FFFFFF;border-radius: 10px;padding-left: 20px;padding-right: 20px" onclick="search()">search</button>
     </form>
 </span>
-<div id="app" style="position: absolute;top: 50px;background-color: #990000;color:#FFFFFF;width: 70%;text-align: center;z-index: 99999">
+<div id="app" style="position: absolute;top: 130px;background-color: #990000;color:#FFFFFF;width: 240px;left:10px;text-align: center;z-index: 99999">
     <div class="content">
 
     </div>

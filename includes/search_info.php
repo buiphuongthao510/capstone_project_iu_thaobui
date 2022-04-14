@@ -53,25 +53,6 @@ $events_data = $events_result->fetch_assoc();//transform queries to associative 
   </header>
 
     <section class="nav">
-<!--      <div class="left">-->
-<!--        <div class="avatar">-->
-<!--        <div class="user-name">Username</div>-->
-<!--        </div>-->
-<!--        <div class="nav-item">-->
-<!--          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/registeredEvent.php">Registered Events</a></div>-->
-<!--        </div>-->
-<!--        <div class="nav-item">-->
-<!--          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/createEvent.php">Create Event</a></div>-->
-<!--        </div>-->
-<!--        <div class="nav-item">-->
-<!--          <div><a href="https://cgi.luddy.indiana.edu/~team21/events/editEvent.php">Edit Event</a></div>-->
-<!--        </div>-->
-<!--        <div class="nav-item">-->
-<!--          <div><a href = "https://cgi.luddy.indiana.edu/~team21/index/profile.php"> Back </a></div>-->
-<!--        </div>-->
-<!--		</div>-->
-	
-		
     <div class="right">
           <div class="line">
             <div class="form-item">
@@ -85,8 +66,7 @@ $events_data = $events_result->fetch_assoc();//transform queries to associative 
                   <br />
                   <label>bio: <?php echo $data['bio'] ?></label>
                   <br />
-              
-			
+                  <a href="../organizations/orgDetail.php?o_id=<?php echo $events_data['o_id'] ?>">More Info</a>
 			</div>
   
           </div>

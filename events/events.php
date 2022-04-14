@@ -20,7 +20,7 @@
   border-radius: 50%;
   }
 
-  #formItem label {
+  #label {
     display: block;
     text-align: center;
     line-height: 150%;

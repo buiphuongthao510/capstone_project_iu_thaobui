@@ -18,11 +18,6 @@
       border-color: black;
       padding: 15px;
     }
-
-    img.img {
-    height: 30%;
-    width: 30%;
-    }
   </style>
 
 </head>
@@ -78,10 +73,7 @@
 		  <div class="up-item b-line">
 			<img src="../img/banner2.png" alt="">
 			<div>
-      
-      <img class="img" src="img/IUlogo.png"  />
-
-
+        
       <?php while ($data = mysqli_fetch_assoc($select)) {?>
 			  <div class="form-item">
         <fieldset>

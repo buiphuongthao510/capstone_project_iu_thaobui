@@ -46,11 +46,33 @@
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
     </header>
+    
+    <section>
+      <div class= "container">
+        <form action = "insertReport.php" method= "POST" enctype="multipart/form-data">
+        
+          <div class = "form-group">
+            <input type ="text" placeholder = "Subject" name = "subject" >
+          </div>
+          <div class = "form-group">
+            <textarea type= "text" placeholder = "Desctiption" name = "description" cols= 40 rows=30> </textarea>
+          </div>
 
-    <form action = "insertReport.php" method= "POST" enctype="multipart/form-data">
-      <input type ="text" placeholder = "Subject" name = "subject" >
-      <input type= "text" placeholder = "Desctiption" name = "description">
-      <button type="submit" name="submit">Create Organization </button>
+            <button type="submit" name="submit">Create Report </button>
+        </form>
+      </div>
+    </section>
+    <footer>
+  <div class="link-wrap">
+    <a>Resources</a>
+    <a>Help desk</a>
+    <a>Report</a>
+    <a>Q&A</a>
+  </div>
+  <div class="f-logo">Youthon</div>
+</footer>
+</body>
+</html>
 
     
 

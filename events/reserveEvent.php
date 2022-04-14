@@ -79,7 +79,7 @@
 			<img src="../img/banner2.png" alt="">
 			<div>
       
-      <img class="img" src="img/IUlogo.png" ALIGN="left" />
+      <img class="img" src="img/IUlogo.png"  />
 
 
       <?php while ($data = mysqli_fetch_assoc($select)) {?>

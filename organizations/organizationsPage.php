@@ -114,7 +114,7 @@
                     $o_id = $data['o_id']?>
 
                 <div>
-                <img src="IUlogo.png" ALIGN="left" />
+                <img src="organizations\IUlogo.png.png" ALIGN="left" />
                     <label><b>Organization Name:</b> <?php echo $data['name']; ?> </label>
 
                     <br />

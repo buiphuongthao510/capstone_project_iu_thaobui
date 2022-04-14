@@ -140,6 +140,7 @@
         <label>Number of members in your organization:</label><input type="text" name="members_amount"/><br>
         <label>Number of participations for this event:</label><input type="text" name="participation_amount"/><br>
         <input name="submit" type="submit" value="CALCULATE"/>
+        <input type="text" id="result" value="<?= $result ?>" disabled>
       </form>
       </div>
 

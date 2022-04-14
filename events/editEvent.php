@@ -142,7 +142,7 @@
   $result = 0;
 
   if(is_numeric($members_amount) && is_numeric($participation_amounts)){
-      $result = 100 + 100;
+      $result = $members_amount + $participation_amounts;
       }
   }else{
       $error = "Enter Number first";

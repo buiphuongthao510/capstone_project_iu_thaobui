@@ -35,4 +35,6 @@ if(!isset($_SESSION['username'])){
         echo "Error: " .$sql_update. "<br>".$conn->error;
       }
 
+}
+
 ?>

@@ -20,8 +20,8 @@
   border-radius: 50%;
   }
 
-  #label {
-    display: block;
+  .label {
+    display: inner-block;
     text-align: center;
     line-height: 150%;
     font-size: .85em;

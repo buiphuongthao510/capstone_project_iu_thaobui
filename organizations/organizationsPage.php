@@ -27,95 +27,25 @@
         </div>
       </div>
   </header>
+<style type="text/css">
+          body{font-family:Arial;background:#eee;}
+          h1, h2{margin-top:0;}
+          p{color:#ccc;line-height:1.5;}
+          #page{width:1280px;padding:20px;margin:0 auto;background:white;}
+          .panel{width:220px;height:900px;padding:20px;background-color:#333;color:#fff;box-shadow:inset 0 0 5px 5px #222;    position: fixed;top:60px;left: 0px;z-index: 9999;}
+          .panel a{
+              color: #fff;
+              text-decoration:none;
+          }
+</style>
+<div id="left-panel" class="panel">
+          <form style="float: left;" name="myForm" id="form" onsubmit="return false" action="##" method="post">
+              <input type="text" style="height: 30px;padding-left: 10px;width: 110px;border-radius: 10px;" autocomplete="off" value="" placeholder="search name" name="name">
+              <button style="height: 35px;border:0;background-color: #990000;color: #FFFFFF;border-radius: 10px;padding-left: 10px;padding-right: 10px;cursor:pointer;" onclick="search()">search</button>
+          </form>
 
-
+</div>
 <div class="main">
-    <div class="left">
-        <div>Clubs:</div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-
-        <div>Rating:</div>
-        <div>
-            <div>☆☆☆☆☆</div>
-            <div>☆☆☆☆☆</div>
-            <div>☆☆☆☆☆</div>
-            <div>☆☆☆☆☆</div>
-        </div>
-
-        <div>Funding points:</div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>1through10</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-
-        <div>Engagement points:</div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>1 through10</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-
-        <div>Clubs view:</div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Top</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-        <div class="checkbox">
-            <div class="koukou"></div>
-            <div>Sports</div>
-        </div>
-    </div>
-
     <?php
     $servername = "db.luddy.indiana.edu";
     $username = "i494f21_team21";

@@ -103,7 +103,7 @@
       <br />
       <br />
       
-       
+          <button> <a href = "./joinOrg.php"> Join Organization </a></button>
           <form action="https://www.paypal.com/donate" method="post" target="_top">
           <input type="hidden" name="business" value="P5EB6FFE9GWPS" />
           <input type="hidden" name="no_recurring" value="1" />

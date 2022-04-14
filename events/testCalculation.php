@@ -23,7 +23,7 @@ if(!isset($_SESSION['username'])){
     $a = $_GET['test1'];
     $b = $_GET['test2'];
     $c = 100
-    100 + (100*($participation_amounts/$members_amount));
+    
     echo "Result: ",$c+($c*($b/$a));
     }
 

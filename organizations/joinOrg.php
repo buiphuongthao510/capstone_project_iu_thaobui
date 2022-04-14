@@ -32,7 +32,7 @@ if(!isset($_SESSION['username'])){
         echo "o_id: " .$o_id. "<br>";
         echo '<script type="text/javascript">';
         echo 'alert("Data successfully updated!");';
-        echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/organizations/organizationPage.php";';
+        echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php";';
         echo '</script>';
       } else {
         echo "Error: " .$sql_update. "<br>".$conn->error;

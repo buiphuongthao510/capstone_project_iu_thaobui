@@ -19,20 +19,9 @@ if(!isset($_SESSION['username'])){
     die("Connection failed: " .$conn->connect_error);
     }
 
-    
-    if(isset($_GET['submit'])){
-        $members_amount = $_GET['members_amount'];
-        $participation_amounts = $_GET['participation_amounts'];
-        $result = 0;
-
-        if(is_numeric($members_amount) && is_numeric($participation_amounts)){
-            $result = 100 + (100*($participation_amounts/$members_amount));
-            break;
-            }
-        }else{
-            $error = "Enter Number first";
-        }
-
-}
-
+    if(isset($GET['submit'])){
+    $a = $_GET['test1'];
+    $b = $_GET['test2'];
+    echo "Result: ",  100 + (100*($b/$a));
+    }
 ?>

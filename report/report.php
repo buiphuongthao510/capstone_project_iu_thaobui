@@ -31,6 +31,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./createOrg.css" rel="stylesheet" />
+    
     <title>Report</title>
   </head>
 
@@ -42,7 +43,7 @@
       <div class="menu-list">
         <a href="https://cgi.luddy.indiana.edu/~team21/events/events.php">Events</a>
         <a href="https://cgi.luddy.indiana.edu/~team21/organizations/organizationsPage.php">Organizations</a>
-        <a href="https://cgi.luddy.indiana.edu/~team21/fraudreport/report.php">Report</a>
+        <a href="https://cgi.luddy.indiana.edu/~team21/report/report.php">Report</a>
         <a href="#"><?php include_once("../includes/search.php")?></a>
       </div>
     </header>

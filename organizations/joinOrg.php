@@ -29,7 +29,7 @@ if(!isset($_SESSION['username'])){
     $sql_update = "UPDATE members SET o_id = $o_id WHERE username = '".$cas_username."';";
     if ($conn->query($sql_update) === TRUE) {
         echo "username: " .$cas_username. "<br>";
-        echo "o_id: " .o_$id. "<br>";
+        echo "o_id: " .$o_id. "<br>";
 
       } else {
         echo "Error: " .$sql_update. "<br>".$conn->error;

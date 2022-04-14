@@ -139,7 +139,7 @@
  if (isset($_POST['submit'])){
   $members_amount = $_POST['members_amount'];
   $participation_amounts = $_POST['participation_amounts'];
-  $result = $members_amount + $participation_amounts;
+  $result = 100 + (100*($members_amount + $participation_amounts));
   echo '<div>Points: '.$result.'</div>';
  } 
  ?>
@@ -150,14 +150,6 @@
         <input name="submit" type="submit" value="CALCULATE"/> 
       </form>
       </div>
-
-      <!-- <div>
-        <form action="testCalculation.php" method="get">
-          <label>test 1</label> <input name="test1">
-          <label>test 2:</label> <input name="test2">
-          <button type="submit">Calculate</button>
-      </div> -->
-
       </fieldset>
 
       </div>

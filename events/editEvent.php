@@ -136,18 +136,39 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
  <?php }?>
  <?php
+  $servername = "db.luddy.indiana.edu";
+  $username = "i494f21_team21";
+  $password = "my+sql=i494f21_team21";
+  $dbname = "i494f21_team21";
+   // Create connection
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+   
+   // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " .$conn->connect_error);
+   }
   if (isset($_POST['submit'])){
-        $members_amount = $_POST['members_amount'];
-        $participation_amount = $_POST['participation_amount'];
-        $result = $_POST['result'];
+    $members_amount = $_POST['members_amount'];
+    $participation_amount = $_POST['participation_amount'];
+    $result = $_POST['result'];
 
-        if(is_numeric($members_amount) && is_numeric($participation_amount)){
-            $result = 100 + (100*($participation_amount/$members_amount));
-            echo "<div>Points for your team: ".$result."</div>";
-            }
-        }else{
-            $error = "Enter Number first";
-        }
+    if(is_numeric($members_amount) && is_numeric($participation_amount)){
+      $result = 100 + (100*($participation_amount/$members_amount));
+      echo "<div>Points for your team: ".$result."</div>";
+    }
+    else{
+      $error = "Enter Number first";
+    }
+  }
+  $sql_insert = "INSERT INTO events(points) VALUES ($result) WHERE usename = '".$cas_username."';";
+  if(mysqli_query($conn, $sql_insert)){
+    echo '<script type="text/javascript">';
+		echo 'alert("Points added successfully!");';
+		echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/editEvent.php";';
+		echo '</script>';
+  } else{
+    echo 'Error: ' .$sql_insert;
+  }
  ?>
       <div>
       <form action="editEvent.php" method="POST">

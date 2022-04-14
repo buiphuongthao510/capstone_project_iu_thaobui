@@ -20,12 +20,6 @@
   border-radius: 50%;
   }
 
-  .label {
-    display: inner-block;
-    text-align: center;
-    line-height: 150%;
-    font-size: .85em;
-}
   </style>
 
 </head>

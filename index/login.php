@@ -85,7 +85,36 @@
     <section class="club">
       <img src="./img/banner2.png" />
       <div>
-        <div class="title">Club of the day</div>
+        <div class="title">
+        <?php
+        // CONNECT DATABASE
+          $servername = "db.luddy.indiana.edu";
+          $username = "i494f21_team21";
+          $password = "my+sql=i494f21_team21";
+          $dbname = "i494f21_team21";
+
+        // Create connection
+          $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+        // Check connection
+          if ($conn->connect_error) {
+            die("Connection failed: " .$conn->connect_error);
+          }
+
+        //query
+          $sql = 'SELECT name as name FROM organizations ORDER BY RAND() LIMIT 1;';
+          $result2 = mysqli_query($conn, $sql);
+
+        if(!$result2) {
+         echo $sql;
+        } else{
+          while($data = mysqli_fetch_assoc($result2)) {
+        // display content
+          echo '<div>'.$data['name'].'</div>';  
+        }
+      }
+      ?>  
+        </div>
         <div class="text">
         </div>
       </div>

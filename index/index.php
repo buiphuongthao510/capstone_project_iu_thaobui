@@ -330,7 +330,9 @@
             <?php echo '<div class="name">'.$rows['name'].'</div>'?>
             <?php echo '<div>'.$rows['points'].'</div>'?>
           </div>
-          <div class="row bg">
+        </div>
+      </div>
+          <!-- <div class="row bg">
             <div class="order order-2">2</div>
             <div class="name">Organization's name</div>
             <div>1920pt</div>
@@ -375,7 +377,7 @@
             <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
-        </div>
+        </div> -->
         <?php }
       }?>
         <div>

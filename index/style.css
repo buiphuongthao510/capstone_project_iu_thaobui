@@ -176,10 +176,10 @@ section {
   height: 50px;
   padding: 0 32px 0 16px;
 }
-.row.bg {
+/* .row.bg {
   background: #ccc;
-}
-.order {
+} */
+tr {
   width: 25px;
   height: 25px;
   text-align: center;

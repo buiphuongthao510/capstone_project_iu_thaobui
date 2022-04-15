@@ -159,9 +159,9 @@ section {
   justify-content: space-between;
   margin: 0 auto;
 }
-.rank-list-wrap > table {
+/* .rank-list-wrap > table {
   width: 45%;
-}
+} */
 .rank .title-sub {
   height: 60px;
   line-height: 60px;

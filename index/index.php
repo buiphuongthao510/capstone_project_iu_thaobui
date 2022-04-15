@@ -246,10 +246,6 @@
               }
             }
         ?>  
-    
-          </div>
-          <div class="text">
-          </div>
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />

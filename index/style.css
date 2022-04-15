@@ -156,7 +156,7 @@ section {
 }
 .rank-list-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
 }
 .rank-list-wrap > div {

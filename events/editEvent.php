@@ -154,7 +154,7 @@
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
  <?php }?>
     <?php
-    if($data !== null):
+    if($data['event_name'] !== null):
     ?>
       <div>
       <form action="editEvent.php" method="POST">

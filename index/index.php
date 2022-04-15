@@ -324,15 +324,16 @@
     while($rows = mysqli_fetch_array($result)){
   
   ?>
-
-    
           <div class="row">
             <?php echo '<div class="order order-1">'.$ranking.'</div>'?>
             <?php echo '<div class="name">'.$rows['name'].'</div>'?>
             <?php echo '<div>'.$rows['points'].'</div>'?>
+            $ranking++;
           </div>
         </div>
       </div>
+      <?php }
+      }?>
           <!-- <div class="row bg">
             <div class="order order-2">2</div>
             <div class="name">Organization's name</div>
@@ -379,8 +380,7 @@
             <div>1920pt</div>
           </div>
         </div> -->
-        <?php }
-      }?>
+        
         <div>
           <div class="title-sub">Enegagement Points Leaders</div>
           <div class="row">

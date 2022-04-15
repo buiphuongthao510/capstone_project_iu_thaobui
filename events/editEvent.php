@@ -152,20 +152,13 @@
       <br/>
       <br />
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
- <?php }?>
-    <?php
-    $DisplayForm = False;
-    if($data['event_name'] !== null){
-      $DisplayForm = True;
-    }
-    if($DisplayForm){
-    ?>
       <form action="editEvent.php" method="POST">
         <label>Number of members in your organization:</label><input type="text" name="members_amount"/><br>
         <label>Number of participations for this event:</label><input type="text" name="participation_amount"/><br>
         <input name="submit" type="submit" value="CALCULATE"/> 
       </form>
-      <?php }?>
+<?php }?>
+  
     </fieldset>
 
       </div>

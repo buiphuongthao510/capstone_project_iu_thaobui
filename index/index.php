@@ -328,60 +328,60 @@
             }?>
         </table>
         
-        <div>
-          <div class="title-sub">Enegagement Points Leaders</div>
-          <div class="row">
-            <div class="order order-1">1</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order order-2">2</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order order-3">3</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">4</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order">5</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">6</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order">7</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">8</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order">9</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">10</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-        </div>
-      </div>
+        <table>
+          <caption class="title-sub">Enegagement Points Leaders</caption>
+          <tr class="row">
+            <td class="order order-1">1</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row bg">
+            <td class="order order-2">2</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row">
+            <td class="order order-3">3</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row bg">
+            <td class="order">4</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row">
+            <td class="order">5</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row bg">
+            <td class="order">6</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row">
+            <td class="order">7</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row bg">
+            <td class="order">8</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row">
+            <td class="order">9</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+          <tr class="row bg">
+            <td class="order">10</td>
+            <td class="name">Organization's name</td>
+            <td>1920pt</td>
+          </tr>
+        </tr>
+      </table>
     </section>
 
     <footer>

@@ -327,14 +327,14 @@
           <div class="row">
             <?php echo '<div class="order order-1">'.$ranking.'</div>'?>
             <?php echo '<div class="name">'.$rows['name'].'</div>'?>
-            <?php echo '<div>'.$rows['points'].'</div>'?>
+            <?php echo '<div class="name">'.$rows['points'].'</div>'?>
             <?php $ranking++;?>
           </div>
-        </div>
-      </div>
       <?php }
       }?>
-          <!-- <div class="row bg">
+       </div>
+      </div>
+          <div class="row bg">
             <div class="order order-2">2</div>
             <div class="name">Organization's name</div>
             <div>1920pt</div>
@@ -379,7 +379,7 @@
             <div class="name">Organization's name</div>
             <div>1920pt</div>
           </div>
-        </div> -->
+        </div>
         
         <div>
           <div class="title-sub">Enegagement Points Leaders</div>

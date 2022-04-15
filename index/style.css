@@ -170,7 +170,7 @@ section {
   background: #990000;
   font-weight: bold;
 }
-.rank .row {
+tr{
   display: flex;
   align-items: center;
   height: 50px;

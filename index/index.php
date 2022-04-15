@@ -215,7 +215,7 @@
           </div>
         </div>
         <div class="events-item">
-          <img src="./img/banner2.png" />
+          <img src="./img/event-image-1.jpeg" />
           <?php
 
            // CONNECT DATABASE
@@ -248,7 +248,7 @@
         ?>  
         </div>
         <div class="events-item">
-          <img src="./img/banner2.png" />
+          <img src="./img/event-image-2.jpeg" />
           <div class="name">
             <?php
             // CONNECT DATABASE

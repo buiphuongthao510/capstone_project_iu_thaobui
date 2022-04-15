@@ -216,7 +216,6 @@
         </div>
         <div class="events-item">
           <img src="./img/banner2.png" />
-          <div class="name">
           <?php
 
            // CONNECT DATABASE
@@ -242,7 +241,7 @@
           } else{
               while($data = mysqli_fetch_assoc($result2)) {
         // display content
-                echo '<div>'.$data['event_name'].'</div>';  
+                echo '<div class="name">'.$data['event_name'].'</div>';  
                 echo '<div>'.$data['description'].'</div>';
               }
             }

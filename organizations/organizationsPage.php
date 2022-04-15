@@ -23,6 +23,9 @@
           header{
             width: 100%;
           }
+          img{
+    border: 5px solid;
+  }
 </style>
 <div id="left-panel" class="panel">
           <form style="float: left;" name="myForm" id="form" onsubmit="return false" action="##" method="post">
@@ -81,7 +84,7 @@
 
 <body>
 
-<div class="main">
+<div class="main" style="margin-left:450px;">
     <?php
     $servername = "db.luddy.indiana.edu";
     $username = "i494f21_team21";

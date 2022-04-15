@@ -82,6 +82,9 @@
         <img src="img/IUlogo.png" ALIGN="left" width="200" height="160"/>
         <br />
         <br />
+        <br />
+        <br />
+        <br />
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />

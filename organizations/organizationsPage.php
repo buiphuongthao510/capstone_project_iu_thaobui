@@ -23,6 +23,9 @@
           header{
             width: 100%;
           }
+          img{
+    border: 5px solid;
+  }
 </style>
 <div id="left-panel" class="panel">
           <form style="float: left;" name="myForm" id="form" onsubmit="return false" action="##" method="post">

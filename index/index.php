@@ -234,7 +234,7 @@
            }
           
           //query
-          $sql = 'SELECT event_name as name FROM events ORDER BY RAND() LIMIT 1;';
+          $sql = 'SELECT event_name, description FROM events ORDER BY RAND() LIMIT 1;';
           $result2 = mysqli_query($conn, $sql);
 
           if(!$result2) {
@@ -242,7 +242,8 @@
           } else{
               while($data = mysqli_fetch_assoc($result2)) {
         // display content
-                echo '<div>'.$data['name'].'</div>';  
+                echo '<div>'.$data['event_name'].'</div>';  
+                echo '<div>'.$data['description'].'</div>';
               }
             }
         ?>  

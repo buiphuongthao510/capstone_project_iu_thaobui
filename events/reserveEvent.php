@@ -76,7 +76,7 @@
         
       <?php while ($data = mysqli_fetch_assoc($select)) {?>
 			  <div>
-        <img src="img/IUlogo.png" ALIGN="left" width="400" height="400" />
+        <img src="img/IUlogo.png" ALIGN="left" width="200" height="150" />
         <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->

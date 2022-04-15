@@ -156,7 +156,7 @@ section {
 }
 .rank-list-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   margin: 0 auto;
 }
 .rank-list-wrap > div {
@@ -167,7 +167,7 @@ section {
   line-height: 60px;
   text-align: center;
   color: #fff;
-  background: #990000;
+  background: #990000; 
   font-weight: bold;
 }
 .rank .row {

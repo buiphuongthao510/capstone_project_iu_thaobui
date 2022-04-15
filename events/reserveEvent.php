@@ -79,7 +79,7 @@
         
         <fieldset>
           
-        <img src="img/IUlogo.png" ALIGN="left" width="200" height="160"/>
+        <img src="img/IUlogo.png" ALIGN="left" width="300" height="160"/>
         <br />
         <br />
         <br />

@@ -152,9 +152,7 @@ section {
   margin: 32px auto;
 }
 
-.rank {
-}
-.rank-list-wrap {
+.list-wrap {
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
@@ -162,7 +160,7 @@ section {
 /* .rank-list-wrap > table {
   width: 45%;
 } */
-.rank .title-sub {
+caption {
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -170,7 +168,7 @@ section {
   background: #990000;
   font-weight: bold;
 }
-tr{
+tr {
   display: flex;
   align-items: center;
   height: 50px;
@@ -179,7 +177,7 @@ tr{
 /* .row.bg {
   background: #ccc;
 } */
-tr {
+.order {
   width: 25px;
   height: 25px;
   text-align: center;
@@ -199,7 +197,7 @@ tr {
   color: #fff;
   background: rgb(255, 166, 0);
 }
-.row .name {
+tr .name {
   flex: 1;
   font-weight: bold;
 }

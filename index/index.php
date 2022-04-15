@@ -290,11 +290,11 @@
     <div style="text-align: center">
       <div class="button more"><a href = "https://cgi.luddy.indiana.edu/~team21/events/events.php">Explore more events</a></div>
     </div>
-    <section class="rank">
+    <section>
       <div class="title">Monthly Ranking</div>
       <div class="rank-list-wrap">
         <table>
-          <caption class="title-sub">Enegagement Points Leaders</caption>
+          <caption>Enegagement Points Leaders</caption>
           <?php
           // CONNECT DATABASE
           $servername = "db.luddy.indiana.edu";
@@ -318,7 +318,7 @@
             while($rows = mysqli_fetch_array($result)){
           
           ?>
-          <tr class="row">
+          <tr>
             <?php echo '<td class="order order-1">'.$ranking.'</td>'?>
             <?php echo '<td class="name">'.$rows['name'].'</td>'?>
             <?php echo '<td>'.$rows['points'].'</td>'?>
@@ -329,23 +329,23 @@
         </table>
         
         <table>
-          <caption class="title-sub">Enegagement Points Leaders</caption>
-          <tr class="row">
+          <caption>Enegagement Points Leaders</caption>
+          <tr>
             <td class="order order-1">1</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row bg">
+          <tr>
             <td class="order order-2">2</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row">
+          <tr>
             <td class="order order-3">3</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row bg">
+          <tr>
             <td class="order">4</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
@@ -355,27 +355,27 @@
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row bg">
+          <tr>
             <td class="order">6</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row">
+          <tr>
             <td class="order">7</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row bg">
+          <tr>
             <td class="order">8</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row">
+          <tr>
             <td class="order">9</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>
           </tr>
-          <tr class="row bg">
+          <tr>
             <td class="order">10</td>
             <td class="name">Organization's name</td>
             <td>1920pt</td>

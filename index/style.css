@@ -313,6 +313,6 @@ input:focus {
 }
 
 table {
-  width: 200%;
+  width: 500px;
 }
 tr:nth-child(even) {background-color: #d3d0d0;}

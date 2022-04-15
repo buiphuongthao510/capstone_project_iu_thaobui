@@ -293,8 +293,8 @@
     <section class="rank">
       <div class="title">Monthly Ranking</div>
       <div class="rank-list-wrap">
-        <div>
-          <div class="title-sub">Enegagement Points Leaders</div>
+        <table>
+          <caption class="title-sub">Enegagement Points Leaders</caption>
           <?php
           // CONNECT DATABASE
           $servername = "db.luddy.indiana.edu";
@@ -318,15 +318,15 @@
             while($rows = mysqli_fetch_array($result)){
           
           ?>
-          <div class="row">
-            <?php echo '<div class="order order-1">'.$ranking.'</div>'?>
-            <?php echo '<div class="name">'.$rows['name'].'</div>'?>
-            <?php echo '<div>'.$rows['points'].'</div>'?>
+          <tr class="row">
+            <?php echo '<td class="order order-1">'.$ranking.'</td>'?>
+            <?php echo '<td class="name">'.$rows['name'].'</td>'?>
+            <?php echo '<td>'.$rows['points'].'</td>'?>
             <?php $ranking++;?>
-          </div>
+          </tr>
           <?php }
             }?>
-        </div>
+        </table>
         
         <div>
           <div class="title-sub">Enegagement Points Leaders</div>

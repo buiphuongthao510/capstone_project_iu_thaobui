@@ -81,7 +81,7 @@
 
 <body>
 
-<div class="main">
+<div class="main" style="margin-left:450px;">
     <?php
     $servername = "db.luddy.indiana.edu";
     $username = "i494f21_team21";

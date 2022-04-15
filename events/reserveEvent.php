@@ -18,10 +18,6 @@
       border-color: black;
       padding: 15px;
     }
-
-    .img {
-      text-align: center;
-    }
   </style>
 
 </head>
@@ -84,8 +80,8 @@
         <fieldset>
           
         <img src="img/IUlogo.png" ALIGN="left" width="200" height="160"/>
-      
-      
+        <br />
+        <br />
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />

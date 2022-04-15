@@ -137,7 +137,7 @@
     </section>
 
     <section class="club">
-      <img src="./img/banner2.png" />
+      <img src="./img/event-image-1.jpeg" />
       <div>
         <div class="title">
         <?php
@@ -178,7 +178,7 @@
       <div class="title">Featured events</div>
       <div class="events-list">
         <div class="events-item">
-          <img src="./img/banner2.png" />
+          <img src="./img/event-image-2.jpeg" />
           <div class="name">
             <?php
 

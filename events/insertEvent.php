@@ -82,8 +82,8 @@
 			echo "Data updated successfully";
 			echo nl2br("\n$event_name\n $event_date\n $event_time\n $address\n $description\n $image" );
 			echo '<script type="text/javascript">';
-			echo 'alert("You have succesfully CREATED your event!! Please look at the Edit Event icon to edit your event information!!");';
-			// echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/createEvent.php";';
+			echo 'alert("YOU CANNOT CREATED MORE THAN ONE EVENT AT A TIME!! Please DELETE your current event and try again!!");';
+			echo 'window.location.href = "https://cgi.luddy.indiana.edu/~team21/events/createEvent.php";';
 			echo '</script>';
 		}	else{
 			echo "ERROR: Hush! Sorry $sql. "

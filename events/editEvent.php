@@ -124,8 +124,7 @@
   <div class="right">
 		<div class="title ei">Event Information</div>      
     <div class="line"> 
-			<?php 
-      while ($data = mysqli_fetch_assoc($select)) {?>
+			<?php while ($data = mysqli_fetch_assoc($select)) {?>
 		  <div class="form-item">
         <fieldset>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
@@ -153,13 +152,9 @@
       <br/>
       <br />
         <a href="https://cgi.luddy.indiana.edu/~team21/includes/excel.php?e_id=<?php  echo $data['id']; ?>" target="_blank"><button>excel</button></a>
-      <?php }
-      $DisplayForm = false;
-      if(isset($data['event_name'])){
-        $DisplayForm = true; 
-      }?>
+ <?php }?>
     <?php
-    if($DisplayForm){
+    if($data !== null):
     ?>
       <div>
       <form action="editEvent.php" method="POST">
@@ -168,7 +163,7 @@
         <input name="submit" type="submit" value="CALCULATE"/> 
       </form>
       </div>
-      <?php }?>
+      <?php endif?>
     </fieldset>
 
       </div>

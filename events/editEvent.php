@@ -164,12 +164,7 @@
   $sql_points2 = "UPDATE organizations SET points = points + $result WHERE m_username ='".$cas_username."';";
 
   mysqli_query($conn, $sql_points);
-  if(mysqli_multi_query($conn, $sql_points2)){
-    echo $sql_points2;
-  }else{
-    echo "ERROR: Hush! Sorry $sql_points2. "
-    . mysqli_error($conn);
-  }
+  mysqli_query($conn, $sql_points2);
  ?>
       <div>
       <form action="editEvent.php" method="POST">

@@ -294,6 +294,11 @@
     <div style="text-align: center">
       <div class="button more"><a href = "https://cgi.luddy.indiana.edu/~team21/events/events.php">Explore more events</a></div>
     </div>
+    <section class="rank">
+      <div class="title">Monthly Ranking</div>
+      <div class="rank-list-wrap">
+        <div>
+          <div class="title-sub">Enegagement Points Leaders</div>
 
   
   <?php
@@ -320,11 +325,7 @@
   
   ?>
 
-    <section class="rank">
-      <div class="title">Monthly Ranking</div>
-      <div class="rank-list-wrap">
-        <div>
-          <div class="title-sub">Enegagement Points Leaders</div>
+    
           <div class="row">
             <?php echo '<div class="order order-1">'.$ranking.'</div>'?>
             <?php echo '<div class="name">'.$rows['name'].'</div>'?>

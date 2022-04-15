@@ -242,7 +242,7 @@
               while($data = mysqli_fetch_assoc($result2)) {
         // display content
                 echo '<div class="name">'.$data['event_name'].'</div>';  
-                echo '<div>'.$data['description'].'</div>';
+               
               }
             }
         ?>  

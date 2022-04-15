@@ -324,7 +324,7 @@
           ?>
           <div class="row">
             <?php echo '<div class="order order-1">'.$ranking.'</div>'?>
-            <?php echo '<div class="name">'.$rows['name'].'</div>'?>
+            <?php echo '<div class="name">'.$rows['name'][2].'</div>'?>
             <?php echo '<div>'.$rows['points'].'</div>'?>
             <?php $ranking++;?>
           </div>

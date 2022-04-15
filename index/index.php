@@ -290,11 +290,11 @@
     <div style="text-align: center">
       <div class="button more"><a href = "https://cgi.luddy.indiana.edu/~team21/events/events.php">Explore more events</a></div>
     </div>
-    <section>
+    <section class="rank">
       <div class="title">Monthly Ranking</div>
       <div class="rank-list-wrap">
-        <table>
-          <caption>Enegagement Points Leaders</caption>
+        <div>
+          <div class="title-sub">Enegagement Points Leaders</div>
           <?php
           // CONNECT DATABASE
           $servername = "db.luddy.indiana.edu";
@@ -318,70 +318,70 @@
             while($rows = mysqli_fetch_array($result)){
           
           ?>
-          <tr>
-            <?php echo '<td class="order order-1">'.$ranking.'</td>'?>
-            <?php echo '<td class="name">'.$rows['name'].'</td>'?>
-            <?php echo '<td>'.$rows['points'].'</td>'?>
+          <div class="row">
+            <?php echo '<div class="order order-1">'.$ranking.'</div>'?>
+            <?php echo '<div class="name">'.$rows['name'].'</div>'?>
+            <?php echo '<div>'.$rows['points'].'</div>'?>
             <?php $ranking++;?>
-          </tr>
+          </div>
           <?php }
             }?>
-        </table>
+        </div>
         
-        <table>
-          <caption>Enegagement Points Leaders</caption>
-          <tr>
-            <td class="order order-1">1</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order order-2">2</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order order-3">3</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order">4</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr class="row">
-            <td class="order">5</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order">6</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order">7</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order">8</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order">9</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-          <tr>
-            <td class="order">10</td>
-            <td class="name">Organization's name</td>
-            <td>1920pt</td>
-          </tr>
-        </tr>
-      </table>
+        <div>
+          <div class="title-sub">Enegagement Points Leaders</div>
+          <div class="row">
+            <div class="order order-1">1</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row bg">
+            <div class="order order-2">2</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row">
+            <div class="order order-3">3</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row bg">
+            <div class="order">4</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row">
+            <div class="order">5</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row bg">
+            <div class="order">6</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row">
+            <div class="order">7</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row bg">
+            <div class="order">8</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row">
+            <div class="order">9</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+          <div class="row bg">
+            <div class="order">10</div>
+            <div class="name">Organization's name</div>
+            <div>1920pt</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>

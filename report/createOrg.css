@@ -52,11 +52,7 @@
   }
   .button:hover {
     opacity: 0.8;
-  }
-  section {
-    max-width: 1366px;
-    margin: 0 auto;
-  }
+
   .banner {
     display: flex;
     flex-direction: column;

@@ -122,7 +122,7 @@
       
   ?>
 	
-    <div class="overview-right" style="margin-left:300px">
+    <div class="overview-right" style="margin-left:450px">
 	<form action="reserveEvent.php" method="GET">
       <div class="up-item b-line">
 

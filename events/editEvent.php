@@ -170,12 +170,10 @@
 
     <footer>
       <div class="link-wrap">
-        <a>Resources</a>
-        <a>Help desk</a>
-        <a>Report</a>
-        <a>Q&A</a>
+        <a href="https://www.indiana.edu">Resources</a>
+        <a href="https://studentaffairs.indiana.edu/student-support/index.html">Help desk</a>
       </div>
       <div class="f-logo">Youthon</div>
-    </footer>
+    </footer> 
   </body>
 </html>

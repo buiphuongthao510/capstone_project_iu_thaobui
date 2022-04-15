@@ -278,62 +278,9 @@
           <?php }
             }?>
         </div>
-        
-        <div>
-          <div class="title-sub">Enegagement Points Leaders</div>
-          <div class="row">
-            <div class="order order-1">1</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order order-2">2</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order order-3">3</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">4</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order">5</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">6</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order">7</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">8</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row">
-            <div class="order">9</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
-          <div class="row bg">
-            <div class="order">10</div>
-            <div class="name">Organization's name</div>
-            <div>1920pt</div>
-          </div>
         </div>
-      </div>
     </section>
+
     <footer>
       <div class="link-wrap">
         <a href="https://www.indiana.edu">Resources</a>

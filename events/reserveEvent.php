@@ -81,6 +81,7 @@
           <div>
         <img src="img/IUlogo.png" ALIGN="left" width="200" height="160" />
       </div>
+      <div>
 			  <label><b>Event Name:</b> <?php echo $data['event_name']; ?> </label>
         <!-- <input type="text" placeholder="Culture Show" /> -->
       <br />
@@ -96,6 +97,7 @@
       <b>Event Description</b>
       <div class="description">
       <label> <?php echo $data['description']; ?></textarea> </label>
+      </div>
       </div>
       <?php }?>
       

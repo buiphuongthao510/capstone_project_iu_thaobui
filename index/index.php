@@ -318,7 +318,7 @@
             while($rows = mysqli_fetch_array($result)){
           
           ?>
-          <tr>
+          <tr class="row">
             <?php echo '<td class="order order-1">'.$ranking.'</td>'?>
             <?php echo '<td class="name">'.$rows['name'].'</td>'?>
             <?php echo '<td>'.$rows['points'].'</td>'?>

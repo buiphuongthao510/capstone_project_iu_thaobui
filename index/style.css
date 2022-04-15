@@ -159,7 +159,7 @@ section {
   justify-content: space-between;
   margin: 0 auto;
 }
-.rank-list-wrap > div {
+.rank-list-wrap > tr {
   width: 45%;
 }
 .rank .title-sub {

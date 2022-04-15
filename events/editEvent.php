@@ -155,7 +155,7 @@
  <?php }?>
     <?php
     $DisplayForm = false;
-    if(isset($data)){
+    if(isset($data['event_name'])){
       $DisplayForm = true; 
     }
     if($DisplayForm){
@@ -168,7 +168,7 @@
       </form>
       </div>
       <?php }?>
-      </fieldset>
+    </fieldset>
 
       </div>
       </div>
